@@ -1,0 +1,15 @@
+{
+  "hash": "33b7e71a0b8dd504092a8073e92d5870",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Neighborhood-Level Predictors of Late HIV Diagnosis\"\n---\n\n\n\n## Overview\n\nThis project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.\n\n> All data shown are simulated or de-identified.\n\n## Data\n\n-   Outcome: Late diagnosis (binary)\n-   Covariates: age at diagnosis, race, neighborhood poverty\n-   Clustering unit: health district\n\n## Statistical Methods\n\nA multilevel logistic regression model was used to account for clustering of individuals within health districts.\n\nModeling choices were guided by: - Public health interpretability - Stability under sparse geographic data - Alignment with study objectives\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(2024)\nn <- 1000\ndat <- data.frame(\nlate_dx = rbinom(n, 1, 0.30),\nage_dx = rnorm(n, 40, 9),\nrace = factor(sample(c(\"White\", \"Black\", \"Hispanic\", \"Other\"),\nn, replace = TRUE)),\npoverty = runif(n, 0.05, 0.45),\ndistrict = factor(sample(paste0(\"D\", 1:12), n, replace = TRUE))\n)\n\nlibrary(lme4)\n\nfit <- glmer(\n  late_dx ~ age_dx + race + poverty + (1 | district),\n  data = dat,\n  family = binomial\n)\n```\n:::\n\n\n\n## Interpretation\n\nHigher neighborhood poverty was associated with increased odds of late HIV\ndiagnosis after adjusting for individual-level factors.\n\nRacial disparities persisted, suggesting that neighborhood context alone does\nnot fully explain observed differences.\n\n## Analytical Decisions & Challenges\n\n- **Geographic unit**: Zip-code–level models were unstable due to sparse counts;\n  district-level aggregation improved model convergence.\n- **Missing data**: Multiple imputation was used instead of complete-case\n  analysis to reduce bias.\n- **Model complexity**: Penalized models were explored but not selected due to\n  interpretability concerns for stakeholders.\n\n## Impact\n\n- Findings informed geographically targeted HIV testing strategies.\n- Results were presented to public health leadership.\n- Supported a peer-reviewed manuscript submission.\n\n\n## Reproducibility\n\nAnalyses were conducted in R using Quarto for reproducible reporting and version\ncontrol via Git.\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,76 @@
+---
+title: "Neighborhood-Level Predictors of Late HIV Diagnosis"
+---
+
+## Overview
+
+This project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.
+
+> All data shown are simulated or de-identified.
+
+## Data
+
+-   Outcome: Late diagnosis (binary)
+-   Covariates: age at diagnosis, race, neighborhood poverty
+-   Clustering unit: health district
+
+## Statistical Methods
+
+A multilevel logistic regression model was used to account for clustering of individuals within health districts.
+
+Modeling choices were guided by: - Public health interpretability - Stability under sparse geographic data - Alignment with study objectives
+
+
+```{r, echo=FALSE}
+
+set.seed(2024)
+n <- 1000
+dat <- data.frame(
+late_dx = rbinom(n, 1, 0.30),
+age_dx = rnorm(n, 40, 9),
+race = factor(sample(c("White", "Black", "Hispanic", "Other"),
+n, replace = TRUE)),
+poverty = runif(n, 0.05, 0.45),
+district = factor(sample(paste0("D", 1:12), n, replace = TRUE))
+)
+```
+
+```{r}
+library(lme4)
+
+fit <- glmer(
+  late_dx ~ age_dx + race + poverty + (1 | district),
+  data = dat,
+  family = binomial
+)
+```
+
+## Interpretation
+
+Higher neighborhood poverty was associated with increased odds of late HIV
+diagnosis after adjusting for individual-level factors.
+
+Racial disparities persisted, suggesting that neighborhood context alone does
+not fully explain observed differences.
+
+## Analytical Decisions & Challenges
+
+- **Geographic unit**: Zip-code–level models were unstable due to sparse counts;
+  district-level aggregation improved model convergence.
+- **Missing data**: Multiple imputation was used instead of complete-case
+  analysis to reduce bias.
+- **Model complexity**: Penalized models were explored but not selected due to
+  interpretability concerns for stakeholders.
+
+## Impact
+
+- Findings informed geographically targeted HIV testing strategies.
+- Results were presented to public health leadership.
+- Supported a peer-reviewed manuscript submission.
+
+
+## Reproducibility
+
+Analyses were conducted in R using Quarto for reproducible reporting and version
+control via Git.
+

@@ -1,0 +1,9 @@
+---
+title: "about Me"
+---
+I hold a Master’s degree in Epidemiology and Biostatistics and have over five years
+of experience collaborating with clinicians, epidemiologists, and public health
+teams.
+
+My role often involves translating complex statistical results into actionable
+scientific insights.

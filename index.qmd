@@ -1,0 +1,19 @@
+---
+title: "Home"
+---
+
+## Senior Biostatistician
+
+I am a senior biostatistician with experience supporting clinical, epidemiologic,
+and public health research. My work focuses on rigorous study design, transparent
+statistical modeling, and reproducible reporting.
+
+### Areas of Expertise
+- Regression modeling (GLM, GLMM)
+- Survival analysis
+- Penalized regression (LASSO)
+- Multiple imputation
+- Neighborhood- and multilevel analyses
+
+### Tools
+R, SAS, Python, Quarto, Git

@@ -1,0 +1,13 @@
+---
+title: "Selected Projects"
+---
+
+## Research & Applied Projects
+
+- **Neighborhood-Level Predictors of Late HIV Diagnosis**  
+  Multilevel logistic regression using surveillance data  
+  [View project →](projects/hiv_multilevel.qmd)
+
+- **Predictors of Viral Suppression**  
+  Penalized regression and post-selection inference  
+  *(Methods-only example)*
