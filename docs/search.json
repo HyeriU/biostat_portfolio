@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about Me",
+    "section": "",
+    "text": "I hold a Master’s degree in Epidemiology and Biostatistics and have over five years of experience collaborating with clinicians, epidemiologists, and public health teams.\nMy role often involves translating complex statistical results into actionable scientific insights."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Selected Projects",
+    "section": "",
+    "text": "Neighborhood-Level Predictors of Late HIV Diagnosis\nMultilevel logistic regression using surveillance data\nView project →\nPredictors of Viral Suppression\nPenalized regression and post-selection inference\n(Methods-only example)"
+  },
+  {
+    "objectID": "projects.html#research-applied-projects",
+    "href": "projects.html#research-applied-projects",
+    "title": "Selected Projects",
+    "section": "",
+    "text": "Neighborhood-Level Predictors of Late HIV Diagnosis\nMultilevel logistic regression using surveillance data\nView project →\nPredictors of Viral Suppression\nPenalized regression and post-selection inference\n(Methods-only example)"
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html",
+    "href": "projects/hiv_multilevel.html",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "",
+    "text": "This project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.\n\nAll data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#overview",
+    "href": "projects/hiv_multilevel.html#overview",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "",
+    "text": "This project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.\n\nAll data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#data",
+    "href": "projects/hiv_multilevel.html#data",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Data",
+    "text": "Data\n\nOutcome: Late diagnosis (binary)\nCovariates: age at diagnosis, race, neighborhood poverty\nClustering unit: health district"
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#statistical-methods",
+    "href": "projects/hiv_multilevel.html#statistical-methods",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nA multilevel logistic regression model was used to account for clustering of individuals within health districts.\nModeling choices were guided by: - Public health interpretability - Stability under sparse geographic data - Alignment with study objectives\n\nlibrary(lme4)\n\nfit &lt;- glmer(\n  late_dx ~ age_dx + race + poverty + (1 | district),\n  data = dat,\n  family = binomial\n)"
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#interpretation",
+    "href": "projects/hiv_multilevel.html#interpretation",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Interpretation",
+    "text": "Interpretation\nHigher neighborhood poverty was associated with increased odds of late HIV diagnosis after adjusting for individual-level factors.\nRacial disparities persisted, suggesting that neighborhood context alone does not fully explain observed differences."
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#analytical-decisions-challenges",
+    "href": "projects/hiv_multilevel.html#analytical-decisions-challenges",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence.\nMissing data: Multiple imputation was used instead of complete-case analysis to reduce bias.\nModel complexity: Penalized models were explored but not selected due to interpretability concerns for stakeholders."
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#impact",
+    "href": "projects/hiv_multilevel.html#impact",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Impact",
+    "text": "Impact\n\nFindings informed geographically targeted HIV testing strategies.\nResults were presented to public health leadership.\nSupported a peer-reviewed manuscript submission."
+  },
+  {
+    "objectID": "projects/hiv_multilevel.html#reproducibility",
+    "href": "projects/hiv_multilevel.html#reproducibility",
+    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nAnalyses were conducted in R using Quarto for reproducible reporting and version control via Git."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. My work focuses on rigorous study design, transparent statistical modeling, and reproducible reporting.\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git"
+  },
+  {
+    "objectID": "index.html#senior-biostatistician",
+    "href": "index.html#senior-biostatistician",
+    "title": "Home",
+    "section": "",
+    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. My work focuses on rigorous study design, transparent statistical modeling, and reproducible reporting.\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git"
+  }
+]
