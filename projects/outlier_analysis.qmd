@@ -1,0 +1,108 @@
+---
+title: "Outlier Analysis"
+---
+
+## Overview
+
+In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.
+
+Beyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed.
+
+## Data
+The study included 2,262 people living with HIV diagnosed between 2020 and 2022. Individual-level data captured demographic characteristics, HIV transmission risk, clinical history, and availability of HIV genetic sequence data. To reflect the broader social and structural context, neighborhood-level measures—such as poverty, education, employment, racial/ethnic composition, and access to HIV testing and care—were incorporated at the health-district level.
+
+## Statistical Methods
+I used regression models that account for both individual- and neighborhood-level variation to evaluate factors associated with each HIV outcome. Health districts were treated as clustered units to capture shared community characteristics.
+
+Predictors were first evaluated in univariable models and then selected into multivariable models using penalized regression techniques, allowing for stable model estimation while reducing overfitting.
+
+To identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds.
+
+```{r, echo=FALSE}
+##Penalized LASSO Regression
+regression.output.list <- lapply(X = outcome_var_list,FUN = function(var_list){
+  outcome_var_i = var_list$outcome
+  print(outcome_var_i)
+
+  desc_res.df <- var_list$data %>%
+  select(all_of(var_list$predictors), !! outcome_var_i) %>%
+  tbl_summary(
+    by = !! outcome_var_i,
+    type = list(predictor_diagnosis_year ~ "continuous") # explicitly set type
+  ) %>%
+  as_tibble() %>%
+  rename(variable = `**Characteristic**`)
+
+  print('univariate')
+  uni_reg_res.df = univariate_reg(county.df = var_list$data,
+                                  predictors = var_list$predictors,
+                                  outcome_var = var_list$outcome,
+                                  random_effect_var = var_list$random)
+
+var_list$predictors <- var_list$predictors[!var_list$predictors %in% c("predictor_hispanic", "predictor_zc_per_hispanic_cur_binary", "predictor_zc_per_hispanic_rsd_binary", "predictor_hispanic_msm")]
+
+  set.seed(100)
+  print('lasso tune')
+  lambda_tune = Lasso_tune_lambda_cv.glmmLasso(county.df = var_list$data,
+                                    predictors = var_list$predictors,
+                                    kfold = 10,
+                                    outcome_var = var_list$outcome,
+                                    random_effect_var = var_list$random,
+                                    family =  binomial(link = logit))
+
+  print('lasso reg')
+  multi_reg_res.df = Lasso_reg(county.df = var_list$data,
+                                predictors = var_list$predictors,
+                               outcome_var = var_list$outcome,
+                               random_effect_var = var_list$random,
+                               lambda_tune = lambda_tune$lambda.1se)
+ #vif_values <- vif(multi_reg_res.df)
+#
+ reg_res.df = full_join(uni_reg_res.df$summary.table, multi_reg_res.df$summary.table, by = "variable")
+
+  outcome_res.df = left_join(desc_res.df, reg_res.df, by = "variable")
+  outcome_res.df.round <- outcome_res.df %>%
+    mutate(across(.cols = c(estimate_uni, estimate_multi),.fns = function(x){round(x,digits = 2)})) %>%
+    mutate(across(.cols = c(p_val_uni,p_val_multi ),.fns = function(x){pvalFormat(x,empty.cell.value = '-')}))
+
+  outcome_res.df.round.paper <- outcome_res.df.round %>%
+    mutate(estimate_uni_se = paste0(estimate_uni, " (", ifelse(se_uni < 1e-3,
+                                                               formatC(se_uni, format = "E", digits = 2),
+                                                               round(se_uni,3)), ")"),
+           estimate_multi_se = paste0(estimate_multi, " (", ifelse(se_multi < 1e-3,
+                                                                   formatC(se_multi, format = "E", digits = 2),
+                                                                   round(se_multi,3)), ")")) %>%
+    relocate(estimate_uni_se, .before = estimate_uni) %>%
+    relocate(estimate_multi_se, .before = estimate_multi)
+
+  write_csv(outcome_res.df, paste0(result_file_loc, outcome_var_i, "_all_tbl.csv", sep = ""))
+  write_csv(outcome_res.df.round, paste0(result_file_loc, outcome_var_i, "_all_tbl_rounded.csv", sep = ""))
+
+  return(list(lambda_tune = lambda_tune,
+              outcome_var = outcome_var_i,
+              univariate = uni_reg_res.df,
+              multi_reg_res.df = multi_reg_res.df,
+              reg_res.df = reg_res.df,
+              outcome_res.df = outcome_res.df,
+              outcome_res.df.round = outcome_res.df.round))
+})
+
+save(regression.output.list,file = paste0(result_file_loc, "regression.output.list_250409.RData", sep = ""))
+load(file = paste0(result_file_loc, "regression.output.list_250409.RData", sep = ""))
+```
+## Interpretation
+
+More favorable HIV outcomes were associated with indicators of care engagement and access to services, including older age at diagnosis, recent STI history, and availability of genetic sequence data. Higher rates of viral suppression and care engagement were also observed among individuals in genetic clusters and those born outside the U.S.
+
+Geographic comparisons identified areas with outcomes that differed from expectations, including higher-than-expected late diagnosis rates in Coral Gables/Kendall and lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset.
+
+## Analytical Decisions & Challenges
+
+Missing sequence data: HIV sequence availability was incomplete and required careful consideration during modeling.
+
+Geographic stability: Formal outlier detection was limited because most districts fell within expected ranges. Instead, districts were ranked by residual magnitude to identify areas with relatively higher or lower outcomes than predicted.
+
+Geographic unit: ZIP Code–level analyses were unstable due to sparse data; aggregation to the health-district level improved model reliability.
+
+## Impact
+This analysis demonstrates how integrating clinical, molecular, and neighborhood-level data can identify geographic patterns in HIV outcomes beyond individual risk factors alone. The findings support data-informed prioritization of HIV prevention and care efforts and provide a framework for identifying communities that may benefit from targeted public health interventions.

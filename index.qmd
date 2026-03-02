@@ -5,8 +5,12 @@ title: "Home"
 ## Senior Biostatistician
 
 I am a senior biostatistician with experience supporting clinical, epidemiologic,
-and public health research. My work focuses on rigorous study design, transparent
-statistical modeling, and reproducible reporting.
+and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analysis to support reliable scientific conclusions.
+
+I work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research and practice.
+
+#Research Background
+HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (diabetes).
 
 ### Areas of Expertise
 - Regression modeling (GLM, GLMM)
@@ -16,4 +20,4 @@ statistical modeling, and reproducible reporting.
 - Neighborhood- and multilevel analyses
 
 ### Tools
-R, SAS, Python, Quarto, Git
+R, SAS, Python, Quarto, Git, RShiny, Quarto, Markdown

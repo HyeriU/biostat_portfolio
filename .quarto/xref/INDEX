@@ -13,5 +13,23 @@
   },
   "projects/hiv_multilevel.qmd": {
     "hiv_multilevel.html": "da891f3f"
+  },
+  "R01_visualization.qmd": {
+    "R01_visualization.html": "8ab13737"
+  },
+  "projects/R01_visualization.qmd": {
+    "R01_visualization.html": "51477366"
+  },
+  "projects/outlier_analysis.qmd": {
+    "outlier_analysis.html": "013b51d5"
+  },
+  "projects/data_imputation.qmd": {
+    "data_imputation.html": "86ce39ab"
+  },
+  "projects/analytic_file.qmd": {
+    "analytic_file.html": "78c9203f"
+  },
+  "projects/sesame_project.qmd": {
+    "sesame_project.html": "fbbbfebb"
   }
 }

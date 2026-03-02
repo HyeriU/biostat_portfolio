@@ -4,21 +4,217 @@
     "href": "about.html",
     "title": "about Me",
     "section": "",
-    "text": "I hold a Master’s degree in Epidemiology and Biostatistics and have over five years of experience collaborating with clinicians, epidemiologists, and public health teams.\nMy role often involves translating complex statistical results into actionable scientific insights."
+    "text": "I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. I work closely with cross-functional teams—including clinicians, researchers, and program stakeholders—to support data-driven decision-making across the research lifecycle.\nMy expertise includes developing analytic strategies, conducting high-quality statistical analyses, and translating complex results into clear, actionable insights for both technical and non-technical audiences. I have a strong track record of delivering reproducible analyses that inform operational strategy, program evaluation, and evidence-based initiatives, with a focus on clarity, efficiency, and impact."
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Selected Projects",
     "section": "",
-    "text": "Neighborhood-Level Predictors of Late HIV Diagnosis\nMultilevel logistic regression using surveillance data\nView project →\nPredictors of Viral Suppression\nPenalized regression and post-selection inference\n(Methods-only example)"
+    "text": "RO1 Data Visualization Provide the Zip Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential Zip Code and were diagnosed from 2019 to 2021. View project →\nOutlier Analysis\nPenalized Lasso regression View project →\nThe Benefit of Molecular Epidemiology in San Diego\nLasso regression View project →\nData Imputation for Exposure Category\nLasso regression View project →\nCreate Analytic File\nLasso regression View project →"
   },
   {
     "objectID": "projects.html#research-applied-projects",
     "href": "projects.html#research-applied-projects",
     "title": "Selected Projects",
     "section": "",
-    "text": "Neighborhood-Level Predictors of Late HIV Diagnosis\nMultilevel logistic regression using surveillance data\nView project →\nPredictors of Viral Suppression\nPenalized regression and post-selection inference\n(Methods-only example)"
+    "text": "RO1 Data Visualization Provide the Zip Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential Zip Code and were diagnosed from 2019 to 2021. View project →\nOutlier Analysis\nPenalized Lasso regression View project →\nThe Benefit of Molecular Epidemiology in San Diego\nLasso regression View project →\nData Imputation for Exposure Category\nLasso regression View project →\nCreate Analytic File\nLasso regression View project →"
+  },
+  {
+    "objectID": "projects/analytic_file.html",
+    "href": "projects/analytic_file.html",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/analytic_file.html#overview",
+    "href": "projects/analytic_file.html#overview",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/analytic_file.html#data",
+    "href": "projects/analytic_file.html#data",
+    "title": "R01 Data Visualization",
+    "section": "Data",
+    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
+  },
+  {
+    "objectID": "projects/analytic_file.html#statistical-methods",
+    "href": "projects/analytic_file.html#statistical-methods",
+    "title": "R01 Data Visualization",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+  },
+  {
+    "objectID": "projects/analytic_file.html#interpretation",
+    "href": "projects/analytic_file.html#interpretation",
+    "title": "R01 Data Visualization",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
+  },
+  {
+    "objectID": "projects/analytic_file.html#analytical-decisions-challenges",
+    "href": "projects/analytic_file.html#analytical-decisions-challenges",
+    "title": "R01 Data Visualization",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+  },
+  {
+    "objectID": "projects/analytic_file.html#impact",
+    "href": "projects/analytic_file.html#impact",
+    "title": "R01 Data Visualization",
+    "section": "Impact",
+    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
+  },
+  {
+    "objectID": "projects/data_imputation.html",
+    "href": "projects/data_imputation.html",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/data_imputation.html#overview",
+    "href": "projects/data_imputation.html#overview",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/data_imputation.html#data",
+    "href": "projects/data_imputation.html#data",
+    "title": "R01 Data Visualization",
+    "section": "Data",
+    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
+  },
+  {
+    "objectID": "projects/data_imputation.html#statistical-methods",
+    "href": "projects/data_imputation.html#statistical-methods",
+    "title": "R01 Data Visualization",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+  },
+  {
+    "objectID": "projects/data_imputation.html#interpretation",
+    "href": "projects/data_imputation.html#interpretation",
+    "title": "R01 Data Visualization",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
+  },
+  {
+    "objectID": "projects/data_imputation.html#analytical-decisions-challenges",
+    "href": "projects/data_imputation.html#analytical-decisions-challenges",
+    "title": "R01 Data Visualization",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+  },
+  {
+    "objectID": "projects/data_imputation.html#impact",
+    "href": "projects/data_imputation.html#impact",
+    "title": "R01 Data Visualization",
+    "section": "Impact",
+    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html",
+    "href": "projects/outlier_analysis.html",
+    "title": "Outlier Analysis",
+    "section": "",
+    "text": "In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nBeyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#overview",
+    "href": "projects/outlier_analysis.html#overview",
+    "title": "Outlier Analysis",
+    "section": "",
+    "text": "In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nBeyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#data",
+    "href": "projects/outlier_analysis.html#data",
+    "title": "Outlier Analysis",
+    "section": "Data",
+    "text": "Data\nThe study included 2,262 people living with HIV diagnosed between 2020 and 2022. Individual-level data captured demographic characteristics, HIV transmission risk, clinical history, and availability of HIV genetic sequence data. To reflect the broader social and structural context, neighborhood-level measures—such as poverty, education, employment, racial/ethnic composition, and access to HIV testing and care—were incorporated at the health-district level."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#statistical-methods",
+    "href": "projects/outlier_analysis.html#statistical-methods",
+    "title": "Outlier Analysis",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nI used regression models that account for both individual- and neighborhood-level variation to evaluate factors associated with each HIV outcome. Health districts were treated as clustered units to capture shared community characteristics.\nPredictors were first evaluated in univariable models and then selected into multivariable models using penalized regression techniques, allowing for stable model estimation while reducing overfitting.\nTo identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#interpretation",
+    "href": "projects/outlier_analysis.html#interpretation",
+    "title": "Outlier Analysis",
+    "section": "Interpretation",
+    "text": "Interpretation\nMore favorable HIV outcomes were associated with indicators of care engagement and access to services, including older age at diagnosis, recent STI history, and availability of genetic sequence data. Higher rates of viral suppression and care engagement were also observed among individuals in genetic clusters and those born outside the U.S.\nGeographic comparisons identified areas with outcomes that differed from expectations, including higher-than-expected late diagnosis rates in Coral Gables/Kendall and lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#analytical-decisions-challenges",
+    "href": "projects/outlier_analysis.html#analytical-decisions-challenges",
+    "title": "Outlier Analysis",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\nMissing sequence data: HIV sequence availability was incomplete and required careful consideration during modeling.\nGeographic stability: Formal outlier detection was limited because most districts fell within expected ranges. Instead, districts were ranked by residual magnitude to identify areas with relatively higher or lower outcomes than predicted.\nGeographic unit: ZIP Code–level analyses were unstable due to sparse data; aggregation to the health-district level improved model reliability."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#impact",
+    "href": "projects/outlier_analysis.html#impact",
+    "title": "Outlier Analysis",
+    "section": "Impact",
+    "text": "Impact\nThis analysis demonstrates how integrating clinical, molecular, and neighborhood-level data can identify geographic patterns in HIV outcomes beyond individual risk factors alone. The findings support data-informed prioritization of HIV prevention and care efforts and provide a framework for identifying communities that may benefit from targeted public health interventions."
+  },
+  {
+    "objectID": "projects/R01_visualization.html",
+    "href": "projects/R01_visualization.html",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#overview",
+    "href": "projects/R01_visualization.html#overview",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#data",
+    "href": "projects/R01_visualization.html#data",
+    "title": "R01 Data Visualization",
+    "section": "Data",
+    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
+  },
+  {
+    "objectID": "projects/R01_visualization.html#statistical-methods",
+    "href": "projects/R01_visualization.html#statistical-methods",
+    "title": "R01 Data Visualization",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+  },
+  {
+    "objectID": "projects/R01_visualization.html#interpretation",
+    "href": "projects/R01_visualization.html#interpretation",
+    "title": "R01 Data Visualization",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#analytical-decisions-challenges",
+    "href": "projects/R01_visualization.html#analytical-decisions-challenges",
+    "title": "R01 Data Visualization",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#impact",
+    "href": "projects/R01_visualization.html#impact",
+    "title": "R01 Data Visualization",
+    "section": "Impact",
+    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
   },
   {
     "objectID": "projects/hiv_multilevel.html",
@@ -77,17 +273,66 @@
     "text": "Reproducibility\nAnalyses were conducted in R using Quarto for reproducible reporting and version control via Git."
   },
   {
+    "objectID": "projects/sesame_project.html",
+    "href": "projects/sesame_project.html",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/sesame_project.html#overview",
+    "href": "projects/sesame_project.html#overview",
+    "title": "R01 Data Visualization",
+    "section": "",
+    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/sesame_project.html#data",
+    "href": "projects/sesame_project.html#data",
+    "title": "R01 Data Visualization",
+    "section": "Data",
+    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
+  },
+  {
+    "objectID": "projects/sesame_project.html#statistical-methods",
+    "href": "projects/sesame_project.html#statistical-methods",
+    "title": "R01 Data Visualization",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+  },
+  {
+    "objectID": "projects/sesame_project.html#interpretation",
+    "href": "projects/sesame_project.html#interpretation",
+    "title": "R01 Data Visualization",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
+  },
+  {
+    "objectID": "projects/sesame_project.html#analytical-decisions-challenges",
+    "href": "projects/sesame_project.html#analytical-decisions-challenges",
+    "title": "R01 Data Visualization",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+  },
+  {
+    "objectID": "projects/sesame_project.html#impact",
+    "href": "projects/sesame_project.html#impact",
+    "title": "R01 Data Visualization",
+    "section": "Impact",
+    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. My work focuses on rigorous study design, transparent statistical modeling, and reproducible reporting.\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git"
+    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analysis to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research and practice.\n#Research Background HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (diabetes).\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git, RShiny, Quarto, Markdown"
   },
   {
     "objectID": "index.html#senior-biostatistician",
     "href": "index.html#senior-biostatistician",
     "title": "Home",
     "section": "",
-    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. My work focuses on rigorous study design, transparent statistical modeling, and reproducible reporting.\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git"
+    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analysis to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research and practice.\n#Research Background HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (diabetes).\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git, RShiny, Quarto, Markdown"
   }
 ]
