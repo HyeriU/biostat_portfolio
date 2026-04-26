@@ -1,6 +1,8 @@
 ---
 title: "about Me"
 ---
-I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. I work closely with cross-functional teams—including clinicians, researchers, and program stakeholders—to support data-driven decision-making across the research lifecycle.
+I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. My work focuses on analyzing large-scale surveillance and administrative health datasets to better understand health outcomes and disparities.
 
-My expertise includes developing analytic strategies, conducting high-quality statistical analyses, and translating complex results into clear, actionable insights for both technical and non-technical audiences. I have a strong track record of delivering reproducible analyses that inform operational strategy, program evaluation, and evidence-based initiatives, with a focus on clarity, efficiency, and impact.
+I collaborate closely with clinicians, researchers, and public health stakeholders to design analytic strategies, conduct rigorous statistical analyses, and translate complex findings into clear, actionable insights. My experience includes multilevel modeling, variable selection methods, and integrating individual- and area-level data to inform program evaluation and population health initiatives.
+
+I am particularly interested in using data to identify disparities, improve access to care, and support evidence-based decision-making in public health practice. I prioritize reproducible, efficient w
