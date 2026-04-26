@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "about Me",
     "section": "",
-    "text": "I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. I work closely with cross-functional teams—including clinicians, researchers, and program stakeholders—to support data-driven decision-making across the research lifecycle.\nMy expertise includes developing analytic strategies, conducting high-quality statistical analyses, and translating complex results into clear, actionable insights for both technical and non-technical audiences. I have a strong track record of delivering reproducible analyses that inform operational strategy, program evaluation, and evidence-based initiatives, with a focus on clarity, efficiency, and impact."
+    "text": "I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. My work focuses on analyzing large-scale surveillance and administrative health datasets to better understand health outcomes and disparities.\nI collaborate closely with clinicians, researchers, and public health stakeholders to design analytic strategies, conduct rigorous statistical analyses, and translate complex findings into clear, actionable insights. My experience includes multilevel modeling, variable selection methods, and integrating individual- and area-level data to inform program evaluation and population health initiatives.\nI am particularly interested in using data to identify disparities, improve access to care, and support evidence-based decision-making in public health practice. I prioritize reproducible, efficient w"
   },
   {
     "objectID": "projects.html",
@@ -326,13 +326,34 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analysis to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research and practice.\n#Research Background HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (diabetes).\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git, RShiny, Quarto, Markdown"
+    "text": "I am a biostatistician with over five years of experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analytic workflows to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research, program evaluation, and evidence-based practice."
   },
   {
     "objectID": "index.html#senior-biostatistician",
     "href": "index.html#senior-biostatistician",
     "title": "Home",
     "section": "",
-    "text": "I am a senior biostatistician with experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analysis to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research and practice.\n#Research Background HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (diabetes).\n\n\n\nRegression modeling (GLM, GLMM)\nSurvival analysis\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel analyses\n\n\n\n\nR, SAS, Python, Quarto, Git, RShiny, Quarto, Markdown"
+    "text": "I am a biostatistician with over five years of experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analytic workflows to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research, program evaluation, and evidence-based practice."
+  },
+  {
+    "objectID": "index.html#research-background",
+    "href": "index.html#research-background",
+    "title": "Home",
+    "section": "Research Background",
+    "text": "Research Background\nHIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (including diabetes)"
+  },
+  {
+    "objectID": "index.html#areas-of-expertise",
+    "href": "index.html#areas-of-expertise",
+    "title": "Home",
+    "section": "Areas of Expertise",
+    "text": "Areas of Expertise\nApplied biostatistics across clinical and public health research, including study design, longitudinal and survival analysis, and causal inference methods.\n\nRegression modeling (GLM, GLMM)\nLongitudinal data analysis\nSurvival analysis\nCausal inference using inverse probability of treatment weighting (IPTW)\nStudy design and power/sample size calculations\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel data analysis"
+  },
+  {
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
+    "title": "Home",
+    "section": "Tools",
+    "text": "Tools\nR, SAS, Python, Quarto, Git, R Shiny, Markdown"
   }
 ]

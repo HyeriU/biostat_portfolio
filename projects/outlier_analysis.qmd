@@ -19,76 +19,9 @@ Predictors were first evaluated in univariable models and then selected into mul
 To identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds.
 
 ```{r, echo=FALSE}
-##Penalized LASSO Regression
-regression.output.list <- lapply(X = outcome_var_list,FUN = function(var_list){
-  outcome_var_i = var_list$outcome
-  print(outcome_var_i)
 
-  desc_res.df <- var_list$data %>%
-  select(all_of(var_list$predictors), !! outcome_var_i) %>%
-  tbl_summary(
-    by = !! outcome_var_i,
-    type = list(predictor_diagnosis_year ~ "continuous") # explicitly set type
-  ) %>%
-  as_tibble() %>%
-  rename(variable = `**Characteristic**`)
 
-  print('univariate')
-  uni_reg_res.df = univariate_reg(county.df = var_list$data,
-                                  predictors = var_list$predictors,
-                                  outcome_var = var_list$outcome,
-                                  random_effect_var = var_list$random)
 
-var_list$predictors <- var_list$predictors[!var_list$predictors %in% c("predictor_hispanic", "predictor_zc_per_hispanic_cur_binary", "predictor_zc_per_hispanic_rsd_binary", "predictor_hispanic_msm")]
-
-  set.seed(100)
-  print('lasso tune')
-  lambda_tune = Lasso_tune_lambda_cv.glmmLasso(county.df = var_list$data,
-                                    predictors = var_list$predictors,
-                                    kfold = 10,
-                                    outcome_var = var_list$outcome,
-                                    random_effect_var = var_list$random,
-                                    family =  binomial(link = logit))
-
-  print('lasso reg')
-  multi_reg_res.df = Lasso_reg(county.df = var_list$data,
-                                predictors = var_list$predictors,
-                               outcome_var = var_list$outcome,
-                               random_effect_var = var_list$random,
-                               lambda_tune = lambda_tune$lambda.1se)
- #vif_values <- vif(multi_reg_res.df)
-#
- reg_res.df = full_join(uni_reg_res.df$summary.table, multi_reg_res.df$summary.table, by = "variable")
-
-  outcome_res.df = left_join(desc_res.df, reg_res.df, by = "variable")
-  outcome_res.df.round <- outcome_res.df %>%
-    mutate(across(.cols = c(estimate_uni, estimate_multi),.fns = function(x){round(x,digits = 2)})) %>%
-    mutate(across(.cols = c(p_val_uni,p_val_multi ),.fns = function(x){pvalFormat(x,empty.cell.value = '-')}))
-
-  outcome_res.df.round.paper <- outcome_res.df.round %>%
-    mutate(estimate_uni_se = paste0(estimate_uni, " (", ifelse(se_uni < 1e-3,
-                                                               formatC(se_uni, format = "E", digits = 2),
-                                                               round(se_uni,3)), ")"),
-           estimate_multi_se = paste0(estimate_multi, " (", ifelse(se_multi < 1e-3,
-                                                                   formatC(se_multi, format = "E", digits = 2),
-                                                                   round(se_multi,3)), ")")) %>%
-    relocate(estimate_uni_se, .before = estimate_uni) %>%
-    relocate(estimate_multi_se, .before = estimate_multi)
-
-  write_csv(outcome_res.df, paste0(result_file_loc, outcome_var_i, "_all_tbl.csv", sep = ""))
-  write_csv(outcome_res.df.round, paste0(result_file_loc, outcome_var_i, "_all_tbl_rounded.csv", sep = ""))
-
-  return(list(lambda_tune = lambda_tune,
-              outcome_var = outcome_var_i,
-              univariate = uni_reg_res.df,
-              multi_reg_res.df = multi_reg_res.df,
-              reg_res.df = reg_res.df,
-              outcome_res.df = outcome_res.df,
-              outcome_res.df.round = outcome_res.df.round))
-})
-
-save(regression.output.list,file = paste0(result_file_loc, "regression.output.list_250409.RData", sep = ""))
-load(file = paste0(result_file_loc, "regression.output.list_250409.RData", sep = ""))
 ```
 ## Interpretation
 
