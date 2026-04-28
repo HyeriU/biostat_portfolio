@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HIV Outlier Analysis (Miami-Dade, 2020–2022) – Hyeri | Senior Biostatistician</title>
+<title>Patient Perspective on Exercise in Pediatric NAFLD – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HIV Outlier Analysis (Miami-Dade, 2020–2022)</h1>
+<h1 class="title">Patient Perspective on Exercise in Pediatric NAFLD</h1>
 </div>
 
 
@@ -160,83 +160,43 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.</p>
-<p>Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
-<p>In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.</p>
+<p>This study grew out of a simple but important clinical question: although exercise is a cornerstone of treatment for pediatric nonalcoholic fatty liver disease (NAFLD), what does physical activity actually look like from the patient’s perspective, and what prevents children from being more active in their daily lives?</p>
+<p>To address this, we conducted a multicenter survey study to better understand how children with NAFLD engage in exercise, what types of activities they prefer, and what barriers they experience. The broader goal was to generate patient-centered evidence that could inform the design of more realistic and sustainable physical activity interventions.</p>
 <hr>
 </section>
 <section id="data-study-design" class="level2">
 <h2 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h2>
-<ul>
-<li><strong>Study design:</strong> Retrospective, population-based multilevel ecological cohort study (2020–2022)<br>
-</li>
-<li><strong>Population:</strong> 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)<br>
-</li>
-<li><strong>Level 1 (Individual):</strong> demographics, transmission risk, clinical history, HIV sequence availability<br>
-</li>
-<li><strong>Level 2 (Neighborhood):</strong> health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care<br>
-</li>
-<li><strong>Data sources:</strong> eHARS, American Community Survey (ACS), and AIDSVu</li>
-</ul>
+<p>We analyzed cross-sectional survey data collected from <strong>408 children aged 8–18 years</strong> with clinically diagnosed NAFLD across <strong>six academic pediatric gastroenterology centers in the United States</strong>. Diagnosis was confirmed using liver histology, imaging, and/or laboratory criteria depending on site-specific clinical practice.</p>
+<p>Data were collected between <strong>October 2019 and August 2021</strong>, with a temporary pause during the COVID-19 pandemic, which also influenced patterns of physical activity during the study period.</p>
+<p>At each site, children completed structured questionnaires during clinic visits. The survey captured multiple dimensions of physical activity, including school-based exercise (physical education and recess), extracurricular activity, preferred types of exercise, perceived barriers, and motivations. Parents completed a short complementary survey assessing their willingness and ability to support their child’s physical activity.</p>
 <hr>
 </section>
 <section id="statistical-methods" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
-<ul>
-<li>Multilevel regression models to account for both individual- and neighborhood-level variation<br>
-</li>
-<li>Health districts treated as clustered units to capture shared contextual effects<br>
-</li>
-<li>Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting<br>
-</li>
-<li>Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)</li>
-</ul>
+<p>The analysis was primarily descriptive, aimed at characterizing patterns of behavior and perception in this population. We used chi-square tests to examine differences in categorical variables such as sex and age group, and two-sample t-tests for continuous variables such as exercise frequency.</p>
+<p>All analyses were conducted in R (v4.0.2), and statistical significance was defined as a p-value less than 0.05. Given the exploratory nature of the study, emphasis was placed on patterns and consistency across domains rather than formal hypothesis testing.</p>
 <hr>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<ul>
-<li>Improved HIV outcomes were associated with indicators of care engagement and access, including:
-<ul>
-<li>older age at diagnosis<br>
-</li>
-<li>recent STI history<br>
-</li>
-<li>availability of HIV sequence data</li>
-</ul></li>
-<li>Higher rates of viral suppression and care engagement were observed among:
-<ul>
-<li>individuals in genetic clusters<br>
-</li>
-<li>individuals born outside the U.S.</li>
-</ul></li>
-<li>Geographic variation revealed districts with outcomes differing from expectations, including:
-<ul>
-<li>higher-than-expected late diagnosis in Coral Gables/Kendall<br>
-</li>
-<li>lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset</li>
-</ul></li>
-</ul>
+<p>A central finding from this study was that children with NAFLD are generally motivated to be more physically active, but their current activity levels are fragmented and highly dependent on environmental structure.</p>
+<p>While just over half of children participated in physical education at school, and nearly 60% engaged in some form of extracurricular activity, a meaningful proportion reported very limited or no physical activity at all. At the same time, more than 80% of participants expressed a desire to exercise more than they currently do.</p>
+<p>When asked about preferences, children consistently gravitated toward simple and accessible activities. Walking was the most commonly preferred activity, followed by bicycling and running. These preferences were notable because they reflect forms of exercise that require minimal resources and can be integrated into daily routines.</p>
+<p>Motivations for exercise were largely health-driven. Many children reported exercising to improve overall health, manage weight, or specifically improve liver health, often reflecting awareness of their underlying diagnosis.</p>
 <hr>
 </section>
 <section id="analytical-decisions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
-<ul>
-<li><strong>Outlier definition:</strong> most districts fell within expected ranges → used residual ranking instead of strict thresholds<br>
-</li>
-<li><strong>Geographic unit selection:</strong> ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts</li>
-</ul>
+<p>One of the key analytical considerations in this study was how to meaningfully define and categorize physical activity across multiple overlapping domains, including school-based exercise, recess activity, and extracurricular participation. Because children often engaged in more than one type of activity, we had to carefully structure variables to avoid double counting and to accurately reflect total activity patterns.</p>
+<p>Another challenge was the reliance on self-reported data, which may be subject to recall bias and social desirability bias, particularly in pediatric populations. Additionally, the study was conducted during a period partially affected by the COVID-19 pandemic, which likely influenced both access to and reporting of physical activity.</p>
+<p>Despite these limitations, the consistency of findings across multiple centers strengthened confidence in the overall patterns observed.</p>
 <hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
-<ul>
-<li>Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors<br>
-</li>
-<li>Supported targeted, data-driven public health decision-making<br>
-</li>
-<li>Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance</li>
-</ul>
+<p>This study highlights a critical gap between motivation and opportunity. Children with NAFLD are not generally unmotivated to exercise—in fact, most expressed a clear desire to be more active—but their ability to do so is constrained by time, school demands, and environmental structure.</p>
+<p>From a clinical perspective, these findings suggest that effective interventions may need to move beyond simply recommending “more exercise” and instead focus on integrating movement into daily life in realistic ways. Walking and bicycling, for example, emerged as highly preferred activities and may represent practical targets for intervention design.</p>
+<p>More broadly, the study underscores the importance of incorporating patient perspective into lifestyle intervention research, particularly in pediatric chronic disease settings where feasibility and adherence are closely tied to real-world constraints.</p>
 
 
 </section>

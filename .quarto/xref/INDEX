@@ -31,5 +31,26 @@
   },
   "projects/sesame_project.qmd": {
     "sesame_project.html": "fbbbfebb"
+  },
+  "projects/Pulmonary_vein_rehabilitation.qmd": {
+    "Pulmonary_vein_rehabilitation.html": "7d3f63c5"
+  },
+  "projects/nafld_exercise_survey.qmd": {
+    "nafld_exercise_survey.html": "c4a1e06a"
+  },
+  "projects/ldl_c_ffr_coronary_artery_trends.qmd": {
+    "ldl_c_ffr_coronary_artery_trends.html": "760b433f"
+  },
+  "projects/Risk_Parkinson.qmd": {
+    "Risk_Parkinson.html": "0d8ee7bb"
+  },
+  "projects/pv_rehabilitation.qmd": {
+    "pv_rehabilitation.html": "994df975"
+  },
+  "projects/pdp_antipsychotic_mortality_analysis.qmd": {
+    "pdp_antipsychotic_mortality_analysis.html": "f8e8d958"
+  },
+  "projects/hf_diuretic_transition_outcomes.qmd": {
+    "hf_diuretic_transition_outcomes.html": "956510ee"
   }
 }

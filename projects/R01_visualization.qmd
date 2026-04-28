@@ -6,10 +6,11 @@ title: "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 
 
 This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified.
 
-## Data
+## Data & Study Design
 
-- **Population:** People with HIV (PWH), Miami-Dade (2019–2021)  
-- **Unit of analysis:** ZIP Code  
+- **Study design:** Descriptive, cross-sectional analysis of HIV surveillance data (2019–2021)  
+- **Population:** People with HIV (PWH) diagnosed in Miami-Dade County (2019–2021)  
+- **Unit of analysis:** ZIP Code–level aggregation  
 
 **Outcomes:**
 - Viral non-suppression  

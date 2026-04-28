@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HIV Outlier Analysis (Miami-Dade, 2020–2022) – Hyeri | Senior Biostatistician</title>
+<title>Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,9 +129,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data-study-design" id="toc-data-study-design" class="nav-link" data-scroll-target="#data-study-design">Data &amp; Study Design</a></li>
-  <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
+  <li><a href="#statistical-approach" id="toc-statistical-approach" class="nav-link" data-scroll-target="#statistical-approach">Statistical Approach</a></li>
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
+  <li><a href="#analytical-challenges-decisions" id="toc-analytical-challenges-decisions" class="nav-link" data-scroll-target="#analytical-challenges-decisions">Analytical Challenges &amp; Decisions</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
   </ul>
 </nav>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HIV Outlier Analysis (Miami-Dade, 2020–2022)</h1>
+<h1 class="title">Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization</h1>
 </div>
 
 
@@ -160,83 +160,82 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.</p>
-<p>Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
-<p>In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.</p>
+<p>Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.</p>
+<p>This study was motivated by a clinically important question: <em>does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization?</em> Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.</p>
+<p>My role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes.</p>
 <hr>
 </section>
 <section id="data-study-design" class="level2">
 <h2 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h2>
+<p>We conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.</p>
+<p>After applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.</p>
+<p>Patients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:</p>
 <ul>
-<li><strong>Study design:</strong> Retrospective, population-based multilevel ecological cohort study (2020–2022)<br>
+<li>≥24 hours of oral diuretic observation<br>
 </li>
-<li><strong>Population:</strong> 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)<br>
-</li>
-<li><strong>Level 1 (Individual):</strong> demographics, transmission risk, clinical history, HIV sequence availability<br>
-</li>
-<li><strong>Level 2 (Neighborhood):</strong> health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care<br>
-</li>
-<li><strong>Data sources:</strong> eHARS, American Community Survey (ACS), and AIDSVu</li>
+<li>&lt;24 hours of oral diuretic observation</li>
 </ul>
+<p>A key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.</p>
+<p>In addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions.</p>
 <hr>
 </section>
-<section id="statistical-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
+<section id="statistical-approach" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-approach">Statistical Approach</h2>
+<p>We first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.</p>
+<p>For the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.</p>
+<p>Multivariable models adjusted for clinically relevant confounders, including:</p>
 <ul>
-<li>Multilevel regression models to account for both individual- and neighborhood-level variation<br>
+<li>Age<br>
 </li>
-<li>Health districts treated as clustered units to capture shared contextual effects<br>
+<li>Sex<br>
 </li>
-<li>Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting<br>
+<li>Left ventricular ejection fraction<br>
 </li>
-<li>Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)</li>
+<li>Renal function (creatinine)<br>
+</li>
+<li>Heart failure etiology</li>
 </ul>
+<p>Sensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.</p>
+<p>Given the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference.</p>
 <hr>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<ul>
-<li>Improved HIV outcomes were associated with indicators of care engagement and access, including:
-<ul>
-<li>older age at diagnosis<br>
-</li>
-<li>recent STI history<br>
-</li>
-<li>availability of HIV sequence data</li>
-</ul></li>
-<li>Higher rates of viral suppression and care engagement were observed among:
-<ul>
-<li>individuals in genetic clusters<br>
-</li>
-<li>individuals born outside the U.S.</li>
-</ul></li>
-<li>Geographic variation revealed districts with outcomes differing from expectations, including:
-<ul>
-<li>higher-than-expected late diagnosis in Coral Gables/Kendall<br>
-</li>
-<li>lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset</li>
-</ul></li>
-</ul>
+<p>Contrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was <strong>not associated with improved 30-day outcomes</strong>. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.</p>
+<p>Secondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.</p>
+<p>Notably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested.</p>
 <hr>
 </section>
-<section id="analytical-decisions-challenges" class="level2">
-<h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
+<section id="analytical-challenges-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-challenges-decisions">Analytical Challenges &amp; Decisions</h2>
+<p>A major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.</p>
+<p>Key methodological considerations included:</p>
 <ul>
-<li><strong>Outlier definition:</strong> most districts fell within expected ranges → used residual ranking instead of strict thresholds<br>
+<li><strong>Confounding by indication:</strong> Sicker patients were more likely to receive prolonged observation<br>
 </li>
-<li><strong>Geographic unit selection:</strong> ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts</li>
+<li><strong>Exposure misclassification risk:</strong> Reliance on EHR timestamps required careful validation of medication timing<br>
+</li>
+<li><strong>Heterogeneity in discharge practices:</strong> Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes<br>
+</li>
+<li><strong>Outcome dependence on system follow-up:</strong> Only patients followed within the health system were included, limiting external outcome capture</li>
 </ul>
+<p>These constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect.</p>
 <hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
+<p>This study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.</p>
+<p>From a methodological perspective, this project strengthened experience in:</p>
 <ul>
-<li>Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors<br>
+<li>Constructing exposure definitions from high-frequency EHR medication data<br>
 </li>
-<li>Supported targeted, data-driven public health decision-making<br>
+<li>Integrating clinical congestion metrics into observational study design<br>
 </li>
-<li>Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance</li>
+<li>Applying survival analysis methods in real-world hospital outcomes research<br>
+</li>
+<li>Interpreting treatment effects in the presence of strong confounding by clinical severity</li>
 </ul>
+<p>More broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure.</p>
 
 
 </section>

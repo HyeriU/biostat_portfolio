@@ -1,0 +1,60 @@
+---
+title: "Patient Perspective on Exercise in Pediatric NAFLD"
+format: html
+---
+
+## Overview
+
+This study grew out of a simple but important clinical question: although exercise is a cornerstone of treatment for pediatric nonalcoholic fatty liver disease (NAFLD), what does physical activity actually look like from the patient’s perspective, and what prevents children from being more active in their daily lives?
+
+To address this, we conducted a multicenter survey study to better understand how children with NAFLD engage in exercise, what types of activities they prefer, and what barriers they experience. The broader goal was to generate patient-centered evidence that could inform the design of more realistic and sustainable physical activity interventions.
+
+---
+
+## Data & Study Design
+
+We analyzed cross-sectional survey data collected from **408 children aged 8–18 years** with clinically diagnosed NAFLD across **six academic pediatric gastroenterology centers in the United States**. Diagnosis was confirmed using liver histology, imaging, and/or laboratory criteria depending on site-specific clinical practice.
+
+Data were collected between **October 2019 and August 2021**, with a temporary pause during the COVID-19 pandemic, which also influenced patterns of physical activity during the study period.
+
+At each site, children completed structured questionnaires during clinic visits. The survey captured multiple dimensions of physical activity, including school-based exercise (physical education and recess), extracurricular activity, preferred types of exercise, perceived barriers, and motivations. Parents completed a short complementary survey assessing their willingness and ability to support their child’s physical activity.
+
+---
+
+## Statistical Methods
+
+The analysis was primarily descriptive, aimed at characterizing patterns of behavior and perception in this population. We used chi-square tests to examine differences in categorical variables such as sex and age group, and two-sample t-tests for continuous variables such as exercise frequency.
+
+All analyses were conducted in R (v4.0.2), and statistical significance was defined as a p-value less than 0.05. Given the exploratory nature of the study, emphasis was placed on patterns and consistency across domains rather than formal hypothesis testing.
+
+---
+
+## Key Findings
+
+A central finding from this study was that children with NAFLD are generally motivated to be more physically active, but their current activity levels are fragmented and highly dependent on environmental structure.
+
+While just over half of children participated in physical education at school, and nearly 60% engaged in some form of extracurricular activity, a meaningful proportion reported very limited or no physical activity at all. At the same time, more than 80% of participants expressed a desire to exercise more than they currently do.
+
+When asked about preferences, children consistently gravitated toward simple and accessible activities. Walking was the most commonly preferred activity, followed by bicycling and running. These preferences were notable because they reflect forms of exercise that require minimal resources and can be integrated into daily routines.
+
+Motivations for exercise were largely health-driven. Many children reported exercising to improve overall health, manage weight, or specifically improve liver health, often reflecting awareness of their underlying diagnosis.
+
+---
+
+## Analytical Decisions & Challenges
+
+One of the key analytical considerations in this study was how to meaningfully define and categorize physical activity across multiple overlapping domains, including school-based exercise, recess activity, and extracurricular participation. Because children often engaged in more than one type of activity, we had to carefully structure variables to avoid double counting and to accurately reflect total activity patterns.
+
+Another challenge was the reliance on self-reported data, which may be subject to recall bias and social desirability bias, particularly in pediatric populations. Additionally, the study was conducted during a period partially affected by the COVID-19 pandemic, which likely influenced both access to and reporting of physical activity.
+
+Despite these limitations, the consistency of findings across multiple centers strengthened confidence in the overall patterns observed.
+
+---
+
+## Impact
+
+This study highlights a critical gap between motivation and opportunity. Children with NAFLD are not generally unmotivated to exercise—in fact, most expressed a clear desire to be more active—but their ability to do so is constrained by time, school demands, and environmental structure.
+
+From a clinical perspective, these findings suggest that effective interventions may need to move beyond simply recommending “more exercise” and instead focus on integrating movement into daily life in realistic ways. Walking and bicycling, for example, emerged as highly preferred activities and may represent practical targets for intervention design.
+
+More broadly, the study underscores the importance of incorporating patient perspective into lifestyle intervention research, particularly in pediatric chronic disease settings where feasibility and adherence are closely tied to real-world constraints.

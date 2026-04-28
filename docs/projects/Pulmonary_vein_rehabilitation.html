@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HIV Outlier Analysis (Miami-Dade, 2020–2022) – Hyeri | Senior Biostatistician</title>
+<title>pulmonary_vein_rehabilitation – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -127,118 +127,89 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis" id="toc-pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis" class="nav-link active" data-scroll-target="#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis">Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data-study-design" id="toc-data-study-design" class="nav-link" data-scroll-target="#data-study-design">Data &amp; Study Design</a></li>
-  <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
+  <li><a href="#statistical-analysis" id="toc-statistical-analysis" class="nav-link" data-scroll-target="#statistical-analysis">Statistical Analysis</a></li>
+  <li><a href="#key-analytical-contributions" id="toc-key-analytical-contributions" class="nav-link" data-scroll-target="#key-analytical-contributions">Key Analytical Contributions</a></li>
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">HIV Outlier Analysis (Miami-Dade, 2020–2022)</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.</p>
-<p>Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
-<p>In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.</p>
-<hr>
+<section id="pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis" class="level2">
+<h2 class="anchored" data-anchor-id="pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis">Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis</h2>
+<p><em>Aljohani OA, Mackie D, Frazer J, You H, et al.&nbsp;(2021), Progress in Pediatric Cardiology</em></p>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>This study evaluated outcomes of serial balloon angioplasty as a management strategy for pediatric pulmonary vein stenosis (PVS), a progressive and high-mortality congenital condition. The analysis used retrospective data from a single tertiary center (2008–2017) including 23 pediatric patients.</p>
 </section>
-<section id="data-study-design" class="level2">
-<h2 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h2>
+<section id="data-study-design" class="level3">
+<h3 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h3>
 <ul>
-<li><strong>Study design:</strong> Retrospective, population-based multilevel ecological cohort study (2020–2022)<br>
+<li>Retrospective cohort study of children (&lt;18 years) with PVS<br>
 </li>
-<li><strong>Population:</strong> 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)<br>
+<li>Clinical, procedural, and longitudinal catheterization data extracted from institutional records<br>
 </li>
-<li><strong>Level 1 (Individual):</strong> demographics, transmission risk, clinical history, HIV sequence availability<br>
-</li>
-<li><strong>Level 2 (Neighborhood):</strong> health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care<br>
-</li>
-<li><strong>Data sources:</strong> eHARS, American Community Survey (ACS), and AIDSVu</li>
+<li>Outcomes assessed across multiple anatomical subgroups (e.g., TAPVC vs.&nbsp;non-TAPVC, univentricular vs.&nbsp;biventricular circulation)</li>
 </ul>
-<hr>
 </section>
-<section id="statistical-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
+<section id="statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-analysis">Statistical Analysis</h3>
 <ul>
-<li>Multilevel regression models to account for both individual- and neighborhood-level variation<br>
+<li>Categorical variables summarized as counts and percentages<br>
 </li>
-<li>Health districts treated as clustered units to capture shared contextual effects<br>
+<li>Continuous variables summarized using median and interquartile range<br>
 </li>
-<li>Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting<br>
+<li>Group comparisons performed using Chi-square and Mann–Whitney U tests<br>
 </li>
-<li>Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)</li>
+<li>Survival outcomes estimated using Kaplan–Meier methods with log-rank tests for group comparisons<br>
+</li>
+<li>Longitudinal changes in catheterization intervals assessed using Kruskal–Wallis tests</li>
 </ul>
-<hr>
 </section>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="key-analytical-contributions" class="level3">
+<h3 class="anchored" data-anchor-id="key-analytical-contributions">Key Analytical Contributions</h3>
 <ul>
-<li>Improved HIV outcomes were associated with indicators of care engagement and access, including:
-<ul>
-<li>older age at diagnosis<br>
+<li>Quantified procedural burden and longitudinal treatment patterns for serial balloon angioplasty<br>
 </li>
-<li>recent STI history<br>
+<li>Evaluated survival differences across anatomical and clinical subgroups<br>
 </li>
-<li>availability of HIV sequence data</li>
-</ul></li>
-<li>Higher rates of viral suppression and care engagement were observed among:
-<ul>
-<li>individuals in genetic clusters<br>
+<li>Assessed temporal changes in intervention frequency and disease progression<br>
 </li>
-<li>individuals born outside the U.S.</li>
-</ul></li>
-<li>Geographic variation revealed districts with outcomes differing from expectations, including:
-<ul>
-<li>higher-than-expected late diagnosis in Coral Gables/Kendall<br>
-</li>
-<li>lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset</li>
-</ul></li>
+<li>Characterized stent usage and re-intervention patterns in a high-risk pediatric population</li>
 </ul>
-<hr>
 </section>
-<section id="analytical-decisions-challenges" class="level2">
-<h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
+<section id="key-findings" class="level3">
+<h3 class="anchored" data-anchor-id="key-findings">Key Findings</h3>
 <ul>
-<li><strong>Outlier definition:</strong> most districts fell within expected ranges → used residual ranking instead of strict thresholds<br>
+<li>278 balloon angioplasty procedures performed across 69 stenotic pulmonary veins<br>
 </li>
-<li><strong>Geographic unit selection:</strong> ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts</li>
+<li>Median of 5 catheterization procedures per patient<br>
+</li>
+<li>Survival rates at 1, 3, and 5 years were 78%, 70%, and 70%, respectively<br>
+</li>
+<li>Bilateral disease was significantly associated with mortality<br>
+</li>
+<li>No procedural deaths were observed<br>
+</li>
+<li>Interval between catheterizations increased over time, suggesting partial disease stabilization in survivors</li>
 </ul>
-<hr>
 </section>
-<section id="impact" class="level2">
-<h2 class="anchored" data-anchor-id="impact">Impact</h2>
-<ul>
-<li>Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors<br>
-</li>
-<li>Supported targeted, data-driven public health decision-making<br>
-</li>
-<li>Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance</li>
-</ul>
+<section id="impact" class="level3">
+<h3 class="anchored" data-anchor-id="impact">Impact</h3>
+<p>This analysis provided quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric PVS. The findings highlight both the substantial procedural burden and the potential for improved intermediate-term survival in this high-risk population.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

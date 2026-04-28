@@ -12,12 +12,13 @@ In addition to identifying risk and protective factors, this analysis focuses on
 
 ---
 
-## Data
+## Data & Study Design
 
-- **Population:** 2,262 people diagnosed with HIV (2020–2022)  
+- **Study design:** Retrospective, population-based multilevel ecological cohort study (2020–2022)  
+- **Population:** 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)  
 - **Level 1 (Individual):** demographics, transmission risk, clinical history, HIV sequence availability  
 - **Level 2 (Neighborhood):** health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care  
-- **Data sources:** eHARS, American Community Survey (ACS), and AIDSVu
+- **Data sources:** eHARS, American Community Survey (ACS), and AIDSVu  
 
 ---
 

@@ -1,0 +1,60 @@
+---
+title: "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease"
+author: "Hyeri You"
+format: html
+editor: visual
+---
+
+## Overview
+
+Coronary angiography combined with fractional flow reserve (FFR) assessment is widely used to guide decision-making in patients with suspected coronary artery disease (CAD), particularly in distinguishing obstructive from non-obstructive disease. While this approach informs revascularization strategy, its downstream impact on longitudinal medical management—particularly lipid-lowering therapy—remains less well understood.
+
+In this study, we examined temporal trends in LDL-C and lipid-lowering therapy following invasive angiography with FFR, comparing patients with obstructive versus non-obstructive CAD over a 12-month follow-up period. The goal was to understand whether diagnostic classification influences the intensity and durability of secondary prevention efforts in real-world clinical practice.
+
+---
+
+## Data & Study Design
+
+This retrospective cohort study included 721 patients who underwent coronary angiography with fractional flow reserve assessment at a single academic medical center between 2013 and 2020. Patients were categorized based on combined angiographic and FFR findings into obstructive or non-obstructive CAD.
+
+The study population reflected a clinically diverse cohort undergoing evaluation for both acute coronary syndrome and stable ischemic indications. Baseline demographic characteristics, comorbid cardiovascular risk factors, procedural findings, lipid values, and medication data were extracted from the electronic health record. Follow-up information was available at approximately 3, 6, and 12 months after the index angiographic assessment.
+
+---
+
+## Statistical Methods
+
+Baseline characteristics were summarized using means and standard deviations for continuous variables and frequencies and proportions for categorical variables. Group differences were assessed using t-tests or Mann–Whitney U tests for continuous variables and chi-square tests for categorical variables.
+
+Longitudinal LDL-C trends were evaluated across follow-up time points using nonparametric comparisons between groups. In addition, multivariable linear regression models were used to assess differences in LDL-C over time while adjusting for demographic and clinical covariates, with log transformation applied to lipid values to improve model fit.
+
+Lipid-lowering therapy utilization was analyzed descriptively across time points, and multivariable logistic regression was used to evaluate the association between CAD classification and major adverse cardiovascular events (MACE) over 12 months.
+
+---
+
+## Key Findings
+
+A total of 721 patients were included in the analysis, of whom 58% had obstructive CAD and 42% had non-obstructive CAD based on FFR and angiographic assessment. Baseline LDL-C levels were similar between groups, suggesting comparable lipid profiles prior to intervention.
+
+At 3 months following angiography, LDL-C decreased in both groups, indicating an initial intensification of lipid-lowering therapy after diagnostic evaluation. However, this early improvement was not sustained in the non-obstructive CAD group. By 6 months, LDL-C levels were significantly higher among patients with non-obstructive CAD compared to those with obstructive disease, a difference that persisted, though attenuated, at 12 months.
+
+Patterns of lipid-lowering therapy mirrored these findings. Although statin initiation increased in both groups at 3 months, patients with non-obstructive CAD consistently received less intensive therapy over time, with lower rates of high-intensity statin use across all follow-up points.
+
+In parallel, patients with obstructive CAD experienced higher rates of major adverse cardiovascular events over 12 months, reflecting their higher baseline disease burden. Nevertheless, both groups demonstrated non-trivial event rates, underscoring persistent residual cardiovascular risk across the spectrum of CAD severity.
+
+---
+
+## Analytical Challenges & Decisions
+
+Several methodological considerations shaped the analysis. The use of real-world electronic health record data introduced variability in follow-up timing and completeness of laboratory measurements, particularly at later time points. In addition, treatment patterns were influenced by clinical practice variation, limiting the ability to isolate causal effects of diagnostic classification.
+
+Another challenge involved distinguishing angiographically obstructive disease from physiologically significant disease, which required integration of both visual and FFR-based assessments. This dual classification added clinical nuance but also increased heterogeneity within the obstructive CAD group.
+
+Finally, missing follow-up lipid measurements and differences in patient retention over time required careful interpretation of longitudinal trends, particularly at 12 months.
+
+---
+
+## Impact
+
+This study highlights a clinically important disconnect between diagnostic assessment and longitudinal preventive care. While coronary angiography with FFR appears to prompt early intensification of lipid-lowering therapy in both obstructive and non-obstructive CAD, this effect diminishes over time in patients with non-obstructive disease.
+
+These findings suggest that patients with non-obstructive CAD may be at risk of undertreatment despite persistent residual atherosclerotic cardiovascular risk. More sustained attention to lipid management in this population may represent an important opportunity to improve long-term outcomes following invasive coronary evaluation.

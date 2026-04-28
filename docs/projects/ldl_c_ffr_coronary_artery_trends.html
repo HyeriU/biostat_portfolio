@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Hyeri You">
 
-<title>HIV Outlier Analysis (Miami-Dade, 2020–2022) – Hyeri | Senior Biostatistician</title>
+<title>LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-study-design" id="toc-data-study-design" class="nav-link" data-scroll-target="#data-study-design">Data &amp; Study Design</a></li>
   <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
+  <li><a href="#analytical-challenges-decisions" id="toc-analytical-challenges-decisions" class="nav-link" data-scroll-target="#analytical-challenges-decisions">Analytical Challenges &amp; Decisions</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
   </ul>
 </nav>
@@ -141,13 +142,19 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HIV Outlier Analysis (Miami-Dade, 2020–2022)</h1>
+<h1 class="title">LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hyeri You </p>
+          </div>
+  </div>
     
   
     
@@ -160,83 +167,42 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.</p>
-<p>Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
-<p>In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.</p>
+<p>Coronary angiography combined with fractional flow reserve (FFR) assessment is widely used to guide decision-making in patients with suspected coronary artery disease (CAD), particularly in distinguishing obstructive from non-obstructive disease. While this approach informs revascularization strategy, its downstream impact on longitudinal medical management—particularly lipid-lowering therapy—remains less well understood.</p>
+<p>In this study, we examined temporal trends in LDL-C and lipid-lowering therapy following invasive angiography with FFR, comparing patients with obstructive versus non-obstructive CAD over a 12-month follow-up period. The goal was to understand whether diagnostic classification influences the intensity and durability of secondary prevention efforts in real-world clinical practice.</p>
 <hr>
 </section>
 <section id="data-study-design" class="level2">
 <h2 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h2>
-<ul>
-<li><strong>Study design:</strong> Retrospective, population-based multilevel ecological cohort study (2020–2022)<br>
-</li>
-<li><strong>Population:</strong> 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)<br>
-</li>
-<li><strong>Level 1 (Individual):</strong> demographics, transmission risk, clinical history, HIV sequence availability<br>
-</li>
-<li><strong>Level 2 (Neighborhood):</strong> health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care<br>
-</li>
-<li><strong>Data sources:</strong> eHARS, American Community Survey (ACS), and AIDSVu</li>
-</ul>
+<p>This retrospective cohort study included 721 patients who underwent coronary angiography with fractional flow reserve assessment at a single academic medical center between 2013 and 2020. Patients were categorized based on combined angiographic and FFR findings into obstructive or non-obstructive CAD.</p>
+<p>The study population reflected a clinically diverse cohort undergoing evaluation for both acute coronary syndrome and stable ischemic indications. Baseline demographic characteristics, comorbid cardiovascular risk factors, procedural findings, lipid values, and medication data were extracted from the electronic health record. Follow-up information was available at approximately 3, 6, and 12 months after the index angiographic assessment.</p>
 <hr>
 </section>
 <section id="statistical-methods" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
-<ul>
-<li>Multilevel regression models to account for both individual- and neighborhood-level variation<br>
-</li>
-<li>Health districts treated as clustered units to capture shared contextual effects<br>
-</li>
-<li>Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting<br>
-</li>
-<li>Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)</li>
-</ul>
+<p>Baseline characteristics were summarized using means and standard deviations for continuous variables and frequencies and proportions for categorical variables. Group differences were assessed using t-tests or Mann–Whitney U tests for continuous variables and chi-square tests for categorical variables.</p>
+<p>Longitudinal LDL-C trends were evaluated across follow-up time points using nonparametric comparisons between groups. In addition, multivariable linear regression models were used to assess differences in LDL-C over time while adjusting for demographic and clinical covariates, with log transformation applied to lipid values to improve model fit.</p>
+<p>Lipid-lowering therapy utilization was analyzed descriptively across time points, and multivariable logistic regression was used to evaluate the association between CAD classification and major adverse cardiovascular events (MACE) over 12 months.</p>
 <hr>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<ul>
-<li>Improved HIV outcomes were associated with indicators of care engagement and access, including:
-<ul>
-<li>older age at diagnosis<br>
-</li>
-<li>recent STI history<br>
-</li>
-<li>availability of HIV sequence data</li>
-</ul></li>
-<li>Higher rates of viral suppression and care engagement were observed among:
-<ul>
-<li>individuals in genetic clusters<br>
-</li>
-<li>individuals born outside the U.S.</li>
-</ul></li>
-<li>Geographic variation revealed districts with outcomes differing from expectations, including:
-<ul>
-<li>higher-than-expected late diagnosis in Coral Gables/Kendall<br>
-</li>
-<li>lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset</li>
-</ul></li>
-</ul>
+<p>A total of 721 patients were included in the analysis, of whom 58% had obstructive CAD and 42% had non-obstructive CAD based on FFR and angiographic assessment. Baseline LDL-C levels were similar between groups, suggesting comparable lipid profiles prior to intervention.</p>
+<p>At 3 months following angiography, LDL-C decreased in both groups, indicating an initial intensification of lipid-lowering therapy after diagnostic evaluation. However, this early improvement was not sustained in the non-obstructive CAD group. By 6 months, LDL-C levels were significantly higher among patients with non-obstructive CAD compared to those with obstructive disease, a difference that persisted, though attenuated, at 12 months.</p>
+<p>Patterns of lipid-lowering therapy mirrored these findings. Although statin initiation increased in both groups at 3 months, patients with non-obstructive CAD consistently received less intensive therapy over time, with lower rates of high-intensity statin use across all follow-up points.</p>
+<p>In parallel, patients with obstructive CAD experienced higher rates of major adverse cardiovascular events over 12 months, reflecting their higher baseline disease burden. Nevertheless, both groups demonstrated non-trivial event rates, underscoring persistent residual cardiovascular risk across the spectrum of CAD severity.</p>
 <hr>
 </section>
-<section id="analytical-decisions-challenges" class="level2">
-<h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
-<ul>
-<li><strong>Outlier definition:</strong> most districts fell within expected ranges → used residual ranking instead of strict thresholds<br>
-</li>
-<li><strong>Geographic unit selection:</strong> ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts</li>
-</ul>
+<section id="analytical-challenges-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-challenges-decisions">Analytical Challenges &amp; Decisions</h2>
+<p>Several methodological considerations shaped the analysis. The use of real-world electronic health record data introduced variability in follow-up timing and completeness of laboratory measurements, particularly at later time points. In addition, treatment patterns were influenced by clinical practice variation, limiting the ability to isolate causal effects of diagnostic classification.</p>
+<p>Another challenge involved distinguishing angiographically obstructive disease from physiologically significant disease, which required integration of both visual and FFR-based assessments. This dual classification added clinical nuance but also increased heterogeneity within the obstructive CAD group.</p>
+<p>Finally, missing follow-up lipid measurements and differences in patient retention over time required careful interpretation of longitudinal trends, particularly at 12 months.</p>
 <hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
-<ul>
-<li>Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors<br>
-</li>
-<li>Supported targeted, data-driven public health decision-making<br>
-</li>
-<li>Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance</li>
-</ul>
+<p>This study highlights a clinically important disconnect between diagnostic assessment and longitudinal preventive care. While coronary angiography with FFR appears to prompt early intensification of lipid-lowering therapy in both obstructive and non-obstructive CAD, this effect diminishes over time in patients with non-obstructive disease.</p>
+<p>These findings suggest that patients with non-obstructive CAD may be at risk of undertreatment despite persistent residual atherosclerotic cardiovascular risk. More sustained attention to lipid management in this population may represent an important opportunity to improve long-term outcomes following invasive coronary evaluation.</p>
 
 
 </section>

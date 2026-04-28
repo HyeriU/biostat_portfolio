@@ -1,0 +1,88 @@
+---
+title: "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization"
+---
+
+## Overview
+
+Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.
+
+This study was motivated by a clinically important question: *does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization?* Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.
+
+My role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes.
+
+---
+
+## Data & Study Design
+
+We conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.
+
+After applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.
+
+Patients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:
+
+- ≥24 hours of oral diuretic observation  
+- <24 hours of oral diuretic observation  
+
+A key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.
+
+In addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions.
+
+---
+
+## Statistical Approach
+
+We first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.
+
+For the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.
+
+Multivariable models adjusted for clinically relevant confounders, including:
+
+- Age  
+- Sex  
+- Left ventricular ejection fraction  
+- Renal function (creatinine)  
+- Heart failure etiology  
+
+Sensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.
+
+Given the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference.
+
+---
+
+## Key Findings
+
+Contrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was **not associated with improved 30-day outcomes**. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.
+
+Secondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.
+
+Notably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested.
+
+---
+
+## Analytical Challenges & Decisions
+
+A major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.
+
+Key methodological considerations included:
+
+- **Confounding by indication:** Sicker patients were more likely to receive prolonged observation  
+- **Exposure misclassification risk:** Reliance on EHR timestamps required careful validation of medication timing  
+- **Heterogeneity in discharge practices:** Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes  
+- **Outcome dependence on system follow-up:** Only patients followed within the health system were included, limiting external outcome capture  
+
+These constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect.
+
+---
+
+## Impact
+
+This study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.
+
+From a methodological perspective, this project strengthened experience in:
+
+- Constructing exposure definitions from high-frequency EHR medication data  
+- Integrating clinical congestion metrics into observational study design  
+- Applying survival analysis methods in real-world hospital outcomes research  
+- Interpreting treatment effects in the presence of strong confounding by clinical severity  
+
+More broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure.
