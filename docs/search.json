@@ -814,23 +814,23 @@
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html",
     "href": "projects/hf_diuretic_transition_outcomes.html",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
     "section": "",
-    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
+    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
   },
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#overview",
     "href": "projects/hf_diuretic_transition_outcomes.html#overview",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
     "section": "",
-    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
+    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
   },
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
     "href": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
     "section": "Data & Study Design",
-    "text": "Data & Study Design\n\nStudy design: Simulation-based modeling study using agent-based transmission network framework (SD-ABM-FAV), calibrated to observed molecular HIV network data\n\nData source: Simulated HIV transmission and genetic network data\n\nStudy period: 2019–2021 (simulation), calibrated using pre-2018 observed data\n\nCalibration approach: Model parameters calibrated against empirical molecular network structure and observed transmission patterns\nAvailable data:\n\nPairwise genetic linkages based on sequence similarity\n\nTiming of sequence collection\n\nReconstructed transmission network (1,356 transmission pairs)"
+    "text": "Data & Study Design\nWe conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.\nAfter applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.\nPatients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:\n\n≥24 hours of oral diuretic observation\n\n&lt;24 hours of oral diuretic observation\n\nA key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.\nIn addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions."
   },
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#statistical-methods",
@@ -842,9 +842,9 @@
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#key-findings",
     "href": "projects/hf_diuretic_transition_outcomes.html#key-findings",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
     "section": "Key Findings",
-    "text": "Key Findings\n\nSimulated molecular networks closely reproduced observed patterns in:\n\nnumber of genetic linkages over time\n\ndistribution of cluster sizes\n\nMost clusters were small:\n\n~50% consisted of 2 individuals\n\nmaximum cluster size was 18\n\nCDC-defined priority clusters were rare in both observed and simulated data\nNo forward transmissions were identified from individuals in priority clusters\n→ indicating that detected clusters did not capture individuals driving transmission"
+    "text": "Key Findings\nContrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was not associated with improved 30-day outcomes. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.\nSecondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.\nNotably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested."
   },
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#analytical-decisions-challenges",
@@ -856,9 +856,9 @@
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#impact",
     "href": "projects/hf_diuretic_transition_outcomes.html#impact",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
     "section": "Impact",
-    "text": "Impact\n\nDemonstrates a framework for validating simulated molecular networks against real-world data\n\nHighlights limitations of CDC priority cluster definitions in identifying transmission risk\n\nSuggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread\n\nSupports more comprehensive approaches to HIV surveillance and intervention planning"
+    "text": "Impact\nThis study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.\nFrom a methodological perspective, this project strengthened experience in:\n\nConstructing exposure definitions from high-frequency EHR medication data\n\nIntegrating clinical congestion metrics into observational study design\n\nApplying survival analysis methods in real-world hospital outcomes research\n\nInterpreting treatment effects in the presence of strong confounding by clinical severity\n\nMore broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure."
   },
   {
     "objectID": "projects/hf_diuretic_transition_outcomes.html#original-plan-vs-actual-analysis",
@@ -866,5 +866,19 @@
     "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Original Plan vs Actual Analysis",
     "text": "Original Plan vs Actual Analysis\n\nOriginal Plan\n\nEvaluate potential impact of identifying and intervening on HIV transmission clusters\n\nSimulate CDC response and measure downstream intervention effects\n\nEstimate reduction in undiagnosed time and transmission-related outcomes\n\n\n\nActual Analysis\n\nFocus shifted to evaluating whether molecular clusters accurately capture transmission dynamics\n\nCompared observed vs simulated molecular networks\n\nAssessed CDC priority clusters in relation to actual transmission network\n\nEvaluated whether clustered individuals contributed to forward transmission\n\n\n\nKey Insight\nThis analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
+    "href": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Statistical Approach",
+    "text": "Statistical Approach\nWe first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.\nFor the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.\nMultivariable models adjusted for clinically relevant confounders, including:\n\nAge\n\nSex\n\nLeft ventricular ejection fraction\n\nRenal function (creatinine)\n\nHeart failure etiology\n\nSensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.\nGiven the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
+    "href": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Analytical Challenges & Decisions",
+    "text": "Analytical Challenges & Decisions\nA major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.\nKey methodological considerations included:\n\nConfounding by indication: Sicker patients were more likely to receive prolonged observation\n\nExposure misclassification risk: Reliance on EHR timestamps required careful validation of medication timing\n\nHeterogeneity in discharge practices: Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes\n\nOutcome dependence on system follow-up: Only patients followed within the health system were included, limiting external outcome capture\n\nThese constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect."
   }
 ]

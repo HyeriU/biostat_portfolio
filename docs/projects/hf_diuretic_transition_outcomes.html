@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HIV Molecular Network Analysis &amp; Priority Cluster Evaluation (San Diego) – Hyeri | Senior Biostatistician</title>
+<title>Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,16 +129,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data-study-design" id="toc-data-study-design" class="nav-link" data-scroll-target="#data-study-design">Data &amp; Study Design</a></li>
-  <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
+  <li><a href="#statistical-approach" id="toc-statistical-approach" class="nav-link" data-scroll-target="#statistical-approach">Statistical Approach</a></li>
   <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
+  <li><a href="#analytical-challenges-decisions" id="toc-analytical-challenges-decisions" class="nav-link" data-scroll-target="#analytical-challenges-decisions">Analytical Challenges &amp; Decisions</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
-  <li><a href="#original-plan-vs-actual-analysis" id="toc-original-plan-vs-actual-analysis" class="nav-link" data-scroll-target="#original-plan-vs-actual-analysis">Original Plan vs Actual Analysis</a>
-  <ul class="collapse">
-  <li><a href="#original-plan" id="toc-original-plan" class="nav-link" data-scroll-target="#original-plan">Original Plan</a></li>
-  <li><a href="#actual-analysis" id="toc-actual-analysis" class="nav-link" data-scroll-target="#actual-analysis">Actual Analysis</a></li>
-  <li><a href="#key-insight" id="toc-key-insight" class="nav-link" data-scroll-target="#key-insight">Key Insight</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -147,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">HIV Molecular Network Analysis &amp; Priority Cluster Evaluation (San Diego)</h1>
+<h1 class="title">Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization</h1>
 </div>
 
 
@@ -166,133 +160,84 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.</p>
-<p>Using simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission.</p>
+<p>Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.</p>
+<p>This study was motivated by a clinically important question: <em>does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization?</em> Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.</p>
+<p>My role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes.</p>
 <hr>
 </section>
 <section id="data-study-design" class="level2">
 <h2 class="anchored" data-anchor-id="data-study-design">Data &amp; Study Design</h2>
+<p>We conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.</p>
+<p>After applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.</p>
+<p>Patients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:</p>
 <ul>
-<li><p><strong>Study design:</strong> Simulation-based modeling study using agent-based transmission network framework (SD-ABM-FAV), calibrated to observed molecular HIV network data<br>
-</p></li>
-<li><p><strong>Data source:</strong> Simulated HIV transmission and genetic network data<br>
-</p></li>
-<li><p><strong>Study period:</strong> 2019–2021 (simulation), calibrated using pre-2018 observed data<br>
-</p></li>
-<li><p><strong>Calibration approach:</strong> Model parameters calibrated against empirical molecular network structure and observed transmission patterns</p></li>
-<li><p><strong>Available data:</strong></p>
-<ul>
-<li>Pairwise genetic linkages based on sequence similarity<br>
+<li>≥24 hours of oral diuretic observation<br>
 </li>
-<li>Timing of sequence collection<br>
-</li>
-<li>Reconstructed transmission network (1,356 transmission pairs)</li>
-</ul></li>
+<li>&lt;24 hours of oral diuretic observation</li>
 </ul>
+<p>A key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.</p>
+<p>In addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions.</p>
 <hr>
 </section>
-<section id="statistical-methods" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
+<section id="statistical-approach" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-approach">Statistical Approach</h2>
+<p>We first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.</p>
+<p>For the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.</p>
+<p>Multivariable models adjusted for clinically relevant confounders, including:</p>
 <ul>
-<li>Constructed molecular networks using genetic distance thresholds (baseline: 0.5%)<br>
+<li>Age<br>
 </li>
-<li>Performed <strong>threshold calibration (~0.00635)</strong> to align simulated linkages with observed data<br>
+<li>Sex<br>
 </li>
-<li>Compared observed vs simulated networks using:
-<ul>
-<li>number of genetic linkages<br>
+<li>Left ventricular ejection fraction<br>
 </li>
-<li>cluster (connected component) size distributions</li>
-</ul></li>
-<li>Identified <strong>CDC priority clusters</strong> using:
-<ul>
-<li>≥5 diagnoses within 12 months<br>
+<li>Renal function (creatinine)<br>
 </li>
-<li>within a 3-year rolling window</li>
-</ul></li>
-<li>Linked molecular clusters to the transmission network to evaluate:
-<ul>
-<li>whether clustered individuals contributed to forward transmission</li>
-</ul></li>
+<li>Heart failure etiology</li>
 </ul>
+<p>Sensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.</p>
+<p>Given the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference.</p>
 <hr>
 </section>
 <section id="key-findings" class="level2">
 <h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
-<ul>
-<li><p>Simulated molecular networks closely reproduced observed patterns in:</p>
-<ul>
-<li>number of genetic linkages over time<br>
-</li>
-<li>distribution of cluster sizes</li>
-</ul></li>
-<li><p>Most clusters were small:</p>
-<ul>
-<li>~50% consisted of 2 individuals<br>
-</li>
-<li>maximum cluster size was 18</li>
-</ul></li>
-<li><p>CDC-defined priority clusters were rare in both observed and simulated data</p></li>
-<li><p><strong>No forward transmissions were identified from individuals in priority clusters</strong><br>
-→ indicating that detected clusters did not capture individuals driving transmission</p></li>
-</ul>
+<p>Contrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was <strong>not associated with improved 30-day outcomes</strong>. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.</p>
+<p>Secondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.</p>
+<p>Notably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested.</p>
 <hr>
 </section>
-<section id="analytical-decisions-challenges" class="level2">
-<h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
+<section id="analytical-challenges-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="analytical-challenges-decisions">Analytical Challenges &amp; Decisions</h2>
+<p>A major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.</p>
+<p>Key methodological considerations included:</p>
 <ul>
-<li><strong>Threshold calibration:</strong> required aligning simulated and observed network structures<br>
+<li><strong>Confounding by indication:</strong> Sicker patients were more likely to receive prolonged observation<br>
 </li>
-<li><strong>Network validation:</strong> used multiple metrics (link counts and cluster size distributions)<br>
+<li><strong>Exposure misclassification risk:</strong> Reliance on EHR timestamps required careful validation of medication timing<br>
 </li>
-<li><strong>Cluster definition sensitivity:</strong> results depended on CDC criteria and time windows<br>
+<li><strong>Heterogeneity in discharge practices:</strong> Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes<br>
 </li>
-<li><strong>Post hoc limitation:</strong> transmission dynamics could not be altered by simulated interventions</li>
+<li><strong>Outcome dependence on system follow-up:</strong> Only patients followed within the health system were included, limiting external outcome capture</li>
 </ul>
+<p>These constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect.</p>
 <hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
+<p>This study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.</p>
+<p>From a methodological perspective, this project strengthened experience in:</p>
 <ul>
-<li>Demonstrates a framework for validating simulated molecular networks against real-world data<br>
+<li>Constructing exposure definitions from high-frequency EHR medication data<br>
 </li>
-<li>Highlights limitations of CDC priority cluster definitions in identifying transmission risk<br>
+<li>Integrating clinical congestion metrics into observational study design<br>
 </li>
-<li>Suggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread<br>
+<li>Applying survival analysis methods in real-world hospital outcomes research<br>
 </li>
-<li>Supports more comprehensive approaches to HIV surveillance and intervention planning</li>
+<li>Interpreting treatment effects in the presence of strong confounding by clinical severity</li>
 </ul>
-</section>
-<section id="original-plan-vs-actual-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="original-plan-vs-actual-analysis">Original Plan vs Actual Analysis</h2>
-<section id="original-plan" class="level3">
-<h3 class="anchored" data-anchor-id="original-plan">Original Plan</h3>
-<ul>
-<li>Evaluate potential impact of identifying and intervening on HIV transmission clusters<br>
-</li>
-<li>Simulate CDC response and measure downstream intervention effects<br>
-</li>
-<li>Estimate reduction in undiagnosed time and transmission-related outcomes</li>
-</ul>
-</section>
-<section id="actual-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="actual-analysis">Actual Analysis</h3>
-<ul>
-<li>Focus shifted to evaluating whether molecular clusters accurately capture transmission dynamics<br>
-</li>
-<li>Compared observed vs simulated molecular networks<br>
-</li>
-<li>Assessed CDC priority clusters in relation to actual transmission network<br>
-</li>
-<li>Evaluated whether clustered individuals contributed to forward transmission</li>
-</ul>
-</section>
-<section id="key-insight" class="level3">
-<h3 class="anchored" data-anchor-id="key-insight">Key Insight</h3>
-<p>This analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting.</p>
+<p>More broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
