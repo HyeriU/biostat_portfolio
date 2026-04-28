@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R01 Data Visualization – Hyeri | Senior Biostatistician</title>
+<title>HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021) – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
   </ul>
@@ -175,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R01 Data Visualization</h1>
+<h1 class="title">HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)</h1>
 </div>
 
 
@@ -194,91 +160,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.</p>
-<p>The main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified.</p>
+<p>This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <ul>
-<li>Outcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)</li>
-<li>Subgroup: age at diagnosis, race, Exposure Category, Sequence &amp; cluster vs.Sequence &amp; Uncluster vs.&nbsp;No Sequence</li>
-<li>Clustering unit: Zip-code</li>
+<li><strong>Population:</strong> People with HIV (PWH), Miami-Dade (2019–2021)<br>
+</li>
+<li><strong>Unit of analysis:</strong> ZIP Code</li>
 </ul>
+<p><strong>Outcomes:</strong> - Viral non-suppression<br>
+- In-care status<br>
+- Late diagnosis</p>
+<p><strong>Stratification:</strong> - Clustered vs unclustered vs non-sequenced groups<br>
+- Race, age, transmission risk, diagnosis stage</p>
 </section>
 <section id="statistical-methods" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
-<p>Analyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    FUN <span class="ot">=</span> <span class="cf">function</span>(zip, supp, incare, latediag){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">clustered_group =</span> <span class="fu">ifelse</span>(clustered , <span class="st">"clustered"</span>, <span class="st">"unclustered"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">clustered_group_factor =</span> <span class="fu">factor</span>(clustered_group, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"clustered"</span>, <span class="st">"unclustered"</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip_cd_3years =</span> <span class="fu">ifelse</span>(zip_cd_2021 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2021,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">ifelse</span>(zip_cd_2020 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2020,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                                             <span class="fu">ifelse</span>(zip_cd_2019 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2019, <span class="cn">NA</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                      )))<span class="sc">%&gt;%</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip_cd_2021 =</span> <span class="fu">as.numeric</span>(zip_cd_2021), <span class="at">zip_cd_3years =</span> <span class="fu">as.numeric</span>(zip_cd_3years))</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>( (<span class="st">`</span><span class="at">Vital Status</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Alive"</span>, <span class="cn">NA</span>) <span class="sc">|</span> death_year <span class="sc">&gt;=</span> <span class="dv">2021</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip =</span> <span class="fu">ifelse</span>(zip <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip, <span class="cn">NA</span>)) </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      perc_by_zip_denom <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">group_by</span>(<span class="sc">!!</span><span class="fu">sym</span>(zip)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">summarize</span>(<span class="at">DenomPLWH =</span> <span class="fu">n</span>())</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">group_by</span>(<span class="sc">!!</span><span class="fu">sym</span>(zip), clustered_group) <span class="sc">%&gt;%</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>       <span class="fu">filter</span>(clustered_group <span class="sc">==</span> <span class="st">"clustered"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">supp.incare =</span> <span class="fu">ifelse</span>( <span class="sc">!!</span><span class="fu">sym</span>(supp) <span class="sc">%in%</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="sc">!!</span><span class="fu">sym</span>(incare) <span class="sc">%in%</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>))<span class="sc">%&gt;%</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">summarize</span>(</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plots A, B, C, D</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">PLWH =</span> <span class="fu">n</span>(),</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plot B (Viral supression)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.supp =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(supp), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.unsupp =</span> PLWH <span class="sc">-</span> num.supp,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.supp =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(supp), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.unsupp =</span> <span class="dv">1</span><span class="sc">-</span>pop.supp,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plot C (in-care)</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.in_care =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(incare), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.not.in_care =</span> PLWH <span class="sc">-</span>num.in_care,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.in_care =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(incare), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.not.in_care =</span> <span class="dv">1</span><span class="sc">-</span>pop.in_care,</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>          <span class="co">#Plot B2 - Viral suppression among ppl who received medical care</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.supp.incare =</span> <span class="fu">sum</span>(supp.incare, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.unsupp.incare =</span> PLWH <span class="sc">-</span> num.supp.incare,</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.supp.incare =</span> <span class="fu">sum</span>(supp.incare, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> num.in_care,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.unsupp.incare =</span> <span class="dv">1</span><span class="sc">-</span>pop.supp.incare,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>          <span class="co">#Plot D (late diagnosis)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.late_diagnosis =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(latediag), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.late_diagnosis =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(latediag), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        )  <span class="sc">%&gt;%</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">left_join</span>(perc_by_zip_denom, <span class="at">by =</span> <span class="fu">c</span>(zip)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">pop.plwh =</span> PLWH<span class="sc">/</span>DenomPLWH) <span class="sc">%&gt;%</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">starts_with</span>(<span class="st">"pop"</span>), \(x) <span class="fu">round</span>(x, <span class="dv">2</span>)))</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      md_perc_zips <span class="ot">&lt;-</span> miami_shp_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        <span class="fu">left_join</span>(perc_by_zip, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"ZIP"</span> <span class="ot">=</span> zip))</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p>Descriptive analyses were conducted to compare HIV outcomes across clustering groups. ZIP Code–level proportions were calculated and stratified by demographic and clinical characteristics.</p>
+<p>Due to sparsity in some ZIP Codes, geographic aggregation at the district level was implemented to improve statistical stability and model convergence. Interactive visualizations, including choropleth maps and temporal trend plots, were developed using R and Shiny to explore spatial and temporal patterns in HIV outcomes.</p>
 </section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>The proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups.</p>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p>Individuals in the sequenced and clustered group had consistently lower proportions of late diagnosis, non-suppression, and not being in care compared to unclustered and non-sequenced groups.</p>
+<p>These findings suggest that individuals captured in molecular surveillance and clustering analyses may be more engaged in HIV care and more likely to achieve viral suppression.</p>
 </section>
 <section id="analytical-decisions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
 <ul>
-<li><strong>Geographic unit</strong>: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence.</li>
+<li><strong>Geographic unit:</strong> ZIP Code–level analyses were unstable due to sparse counts; aggregation to the district level improved statistical stability and interpretability.<br>
+</li>
+<li>This decision highlights the importance of balancing geographic granularity with reliable estimation in small-area analyses.</li>
 </ul>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
-<ul>
-<li>These findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus.</li>
-</ul>
+<p>Findings from this analysis can inform targeted public health interventions by identifying geographic areas and populations with lower engagement in care.</p>
+<p>The integration of molecular clustering and spatial analysis provides a framework for prioritizing outreach efforts and resource allocation in HIV prevention and treatment programs.</p>
 
 
 </section>

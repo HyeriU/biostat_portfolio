@@ -1,41 +1,61 @@
 ---
-title: "Outlier Analysis"
+title: "HIV Outlier Analysis (Miami-Dade, 2020–2022)"
 ---
 
 ## Overview
 
-In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.
+This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.
 
-Beyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed.
+Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.  
+
+In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.
+
+---
 
 ## Data
-The study included 2,262 people living with HIV diagnosed between 2020 and 2022. Individual-level data captured demographic characteristics, HIV transmission risk, clinical history, and availability of HIV genetic sequence data. To reflect the broader social and structural context, neighborhood-level measures—such as poverty, education, employment, racial/ethnic composition, and access to HIV testing and care—were incorporated at the health-district level.
+
+- **Population:** 2,262 people diagnosed with HIV (2020–2022)  
+- **Level 1 (Individual):** demographics, transmission risk, clinical history, HIV sequence availability  
+- **Level 2 (Neighborhood):** health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care  
+- **Data sources:** eHARS, American Community Survey (ACS), and AIDSVu
+
+---
 
 ## Statistical Methods
-I used regression models that account for both individual- and neighborhood-level variation to evaluate factors associated with each HIV outcome. Health districts were treated as clustered units to capture shared community characteristics.
 
-Predictors were first evaluated in univariable models and then selected into multivariable models using penalized regression techniques, allowing for stable model estimation while reducing overfitting.
+- Multilevel regression models to account for both individual- and neighborhood-level variation  
+- Health districts treated as clustered units to capture shared contextual effects  
+- Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting  
+- Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)  
 
-To identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds.
+---
 
-```{r, echo=FALSE}
+## Key Findings
 
+- Improved HIV outcomes were associated with indicators of care engagement and access, including:
+  - older age at diagnosis  
+  - recent STI history  
+  - availability of HIV sequence data  
 
+- Higher rates of viral suppression and care engagement were observed among:
+  - individuals in genetic clusters  
+  - individuals born outside the U.S.  
 
-```
-## Interpretation
+- Geographic variation revealed districts with outcomes differing from expectations, including:
+  - higher-than-expected late diagnosis in Coral Gables/Kendall  
+  - lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset  
 
-More favorable HIV outcomes were associated with indicators of care engagement and access to services, including older age at diagnosis, recent STI history, and availability of genetic sequence data. Higher rates of viral suppression and care engagement were also observed among individuals in genetic clusters and those born outside the U.S.
-
-Geographic comparisons identified areas with outcomes that differed from expectations, including higher-than-expected late diagnosis rates in Coral Gables/Kendall and lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset.
+---
 
 ## Analytical Decisions & Challenges
 
-Missing sequence data: HIV sequence availability was incomplete and required careful consideration during modeling.
+- **Outlier definition:** most districts fell within expected ranges → used residual ranking instead of strict thresholds  
+- **Geographic unit selection:** ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts  
 
-Geographic stability: Formal outlier detection was limited because most districts fell within expected ranges. Instead, districts were ranked by residual magnitude to identify areas with relatively higher or lower outcomes than predicted.
-
-Geographic unit: ZIP Code–level analyses were unstable due to sparse data; aggregation to the health-district level improved model reliability.
+---
 
 ## Impact
-This analysis demonstrates how integrating clinical, molecular, and neighborhood-level data can identify geographic patterns in HIV outcomes beyond individual risk factors alone. The findings support data-informed prioritization of HIV prevention and care efforts and provide a framework for identifying communities that may benefit from targeted public health interventions.
+
+- Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors  
+- Supported targeted, data-driven public health decision-making  
+- Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance  

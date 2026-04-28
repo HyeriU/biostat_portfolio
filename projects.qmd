@@ -4,22 +4,15 @@ title: "Selected Projects"
 
 ## Research & Applied Projects
 
-- **RO1 Data Visualization**
-  Provide the Zip Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential Zip Code and were diagnosed from 2019 to 2021. 
+- **Miami-Dade HIV Epidemiology Dashboard (Zip Code-Level Analysis)**  
+  Developed an integrated dataset combining HIV surveillance, electronic health records, and U.S. Census ACS data to characterize HIV outcomes at the zip code level in Miami-Dade County (2017–2021). Compared HIV outcomes across clustered & sequence, unclustered & sequence, and no-sequence groups, including late diagnosis, viral suppression, and engagement in care. Linked outcomes with neighborhood-level socioeconomic characteristics for spatial and temporal analysis.  
   [View project →](projects/R01_visualization.qmd)
-  
-- **Outlier Analysis**  
-  Penalized Lasso regression
+
+- **Predictors of HIV Outcomes and Geographic Outliers Using Multilevel Penalized Regression**  
+  Identified predictors of late-stage HIV diagnosis, viral suppression, and care engagement using GLMMs with health district–level random effects and LASSO-penalized variable selection. Geographic outliers were detected using an IQR-based comparison of observed vs. predicted outcomes.  
   [View project →](projects/outlier_analysis.qmd)
 
-- **The Benefit of Molecular Epidemiology in San Diego**  
-  Lasso regression
+- **Impact of Molecular Epidemiology on HIV Transmission Patterns in San Diego**  
+  Evaluated the effectiveness of CDC-defined HIV molecular clusters in identifying ongoing transmission using simulated and observed genetic network data. Conducted longitudinal comparisons of molecular networks and linked cluster membership to transmission data to assess whether clusters capture individuals contributing to HIV spread. Results highlight limitations of relying on molecular clustering as a proxy for transmission dynamics.  
   [View project →](projects/sesame_project.qmd)
 
-- **Data Imputation for Exposure Category**  
-  Lasso regression
-  [View project →](projects/data_imputation.qmd)
-
-- **Create Analytic File**  
-  Lasso regression
-  [View project →](projects/analytic_file.qmd)

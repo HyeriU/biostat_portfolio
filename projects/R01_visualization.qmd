@@ -1,102 +1,44 @@
 ---
-title: "R01 Data Visualization"
+title: "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)"
 ---
 
 ## Overview
 
-R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021. 
-
-The main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. 
-> All data shown are simulated or de-identified.
+This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified.
 
 ## Data
 
--   Outcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)
--   Subgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence 
--   Clustering unit: Zip-code
+- **Population:** People with HIV (PWH), Miami-Dade (2019–2021)  
+- **Unit of analysis:** ZIP Code  
+
+**Outcomes:**
+- Viral non-suppression  
+- In-care status  
+- Late diagnosis  
+
+**Stratification:**
+- Clustered vs unclustered vs non-sequenced groups  
+- Race, age, transmission risk, diagnosis stage  
 
 ## Statistical Methods
-Analyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.
 
-```{r, echo=FALSE}
+Descriptive analyses were conducted to compare HIV outcomes across clustering groups. ZIP Code–level proportions were calculated and stratified by demographic and clinical characteristics.
 
-set.seed(2024)
-n <- 1000
-dat <- data.frame(
-late_dx = rbinom(n, 1, 0.30),
-age_dx = rnorm(n, 40, 9),
-race = factor(sample(c("White", "Black", "Hispanic", "Other"),
-n, replace = TRUE)),
-poverty = runif(n, 0.05, 0.45),
-district = factor(sample(paste0("D", 1:12), n, replace = TRUE))
-)
-```
+Due to sparsity in some ZIP Codes, geographic aggregation at the district level was implemented to improve statistical stability and model convergence. Interactive visualizations, including choropleth maps and temporal trend plots, were developed using R and Shiny to explore spatial and temporal patterns in HIV outcomes.
 
-```{r}
-    FUN = function(zip, supp, incare, latediag){
-      perc_by_zip <- perc_by_zip %>%
-        mutate(clustered_group = ifelse(clustered , "clustered", "unclustered")) %>%
-        mutate(clustered_group_factor = factor(clustered_group, levels = c("clustered", "unclustered"), ordered = TRUE))
-      
-      perc_by_zip <- perc_by_zip %>%
-        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,
-                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,
-                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)
-                                      )))%>%
-        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))
-      
-      perc_by_zip <- perc_by_zip %>%
-        filter( (`Vital Status` %in% c("Alive", NA) | death_year >= 2021)) %>%
-        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) 
-      
-      perc_by_zip_denom <- perc_by_zip %>%
-        group_by(!!sym(zip)) %>%
-        summarize(DenomPLWH = n())
-      
-      perc_by_zip <- perc_by_zip %>%
-        group_by(!!sym(zip), clustered_group) %>%
-       filter(clustered_group == "clustered") %>%
-        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%>%
-        summarize(
-          # Plots A, B, C, D
-          PLWH = n(),
-          # Plot B (Viral supression)
-          num.supp = sum(!!sym(supp), na.rm = TRUE),
-          num.unsupp = PLWH - num.supp,
-          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,
-          pop.unsupp = 1-pop.supp,
-          # Plot C (in-care)
-          num.in_care = sum(!!sym(incare), na.rm = TRUE),
-          num.not.in_care = PLWH -num.in_care,
-          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,
-          pop.not.in_care = 1-pop.in_care,
-          #Plot B2 - Viral suppression among ppl who received medical care
-          num.supp.incare = sum(supp.incare, na.rm = TRUE),
-          num.unsupp.incare = PLWH - num.supp.incare,
-          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,
-          pop.unsupp.incare = 1-pop.supp.incare,
-          #Plot D (late diagnosis)
-          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),
-          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH
-        )  %>%
-        left_join(perc_by_zip_denom, by = c(zip)) %>%
-        mutate(pop.plwh = PLWH/DenomPLWH) %>%
-        mutate(across(starts_with("pop"), \(x) round(x, 2)))
-      
-      md_perc_zips <- miami_shp_zip %>%
-        left_join(perc_by_zip, by = c("ZIP" = zip))
-    }
-```
+## Key Findings
 
-## Interpretation
+Individuals in the sequenced and clustered group had consistently lower proportions of late diagnosis, non-suppression, and not being in care compared to unclustered and non-sequenced groups.
 
-The proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups.
+These findings suggest that individuals captured in molecular surveillance and clustering analyses may be more engaged in HIV care and more likely to achieve viral suppression.
 
 ## Analytical Decisions & Challenges
 
-- **Geographic unit**: Zip-code–level models were unstable due to sparse counts;
-  district-level aggregation improved model convergence.
+- **Geographic unit:** ZIP Code–level analyses were unstable due to sparse counts; aggregation to the district level improved statistical stability and interpretability.  
+- This decision highlights the importance of balancing geographic granularity with reliable estimation in small-area analyses.
 
 ## Impact
 
-- These findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus.
+Findings from this analysis can inform targeted public health interventions by identifying geographic areas and populations with lower engagement in care.
+
+The integration of molecular clustering and spatial analysis provides a framework for prioritizing outreach efforts and resource allocation in HIV prevention and treatment programs.

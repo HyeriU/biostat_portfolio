@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R01 Data Visualization – Hyeri | Senior Biostatistician</title>
+<title>HIV Molecular Network Analysis &amp; Priority Cluster Evaluation (San Diego) – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -162,11 +128,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#data-context" id="toc-data-context" class="nav-link" data-scroll-target="#data-context">Data &amp; Context</a></li>
   <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
+  <li><a href="#original-plan-vs-actual-analysis" id="toc-original-plan-vs-actual-analysis" class="nav-link" data-scroll-target="#original-plan-vs-actual-analysis">Original Plan vs Actual Analysis</a>
+  <ul class="collapse">
+  <li><a href="#original-plan" id="toc-original-plan" class="nav-link" data-scroll-target="#original-plan">Original Plan</a></li>
+  <li><a href="#actual-analysis" id="toc-actual-analysis" class="nav-link" data-scroll-target="#actual-analysis">Actual Analysis</a></li>
+  <li><a href="#key-insight" id="toc-key-insight" class="nav-link" data-scroll-target="#key-insight">Key Insight</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R01 Data Visualization</h1>
+<h1 class="title">HIV Molecular Network Analysis &amp; Priority Cluster Evaluation (San Diego)</h1>
 </div>
 
 
@@ -194,93 +166,131 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.</p>
-<p>The main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified.</p>
+<p>This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.</p>
+<p>Using simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission.</p>
+<hr>
 </section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
+<section id="data-context" class="level2">
+<h2 class="anchored" data-anchor-id="data-context">Data &amp; Context</h2>
 <ul>
-<li>Outcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)</li>
-<li>Subgroup: age at diagnosis, race, Exposure Category, Sequence &amp; cluster vs.Sequence &amp; Uncluster vs.&nbsp;No Sequence</li>
-<li>Clustering unit: Zip-code</li>
+<li><p><strong>Data source:</strong> Simulated HIV transmission and genetic network data (SD-ABM-FAV framework)<br>
+</p></li>
+<li><p><strong>Study period:</strong> 2019–2021<br>
+</p></li>
+<li><p><strong>Calibration:</strong> Simulation aligned to observed molecular network data (baseline up to 2018)</p></li>
+<li><p><strong>Available data:</strong></p>
+<ul>
+<li>Pairwise genetic linkages (based on sequence similarity)<br>
+</li>
+<li>Timing of sequence collection<br>
+</li>
+<li>Transmission network (1,356 transmission pairs)</li>
+</ul></li>
 </ul>
+<hr>
 </section>
 <section id="statistical-methods" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
-<p>Analyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    FUN <span class="ot">=</span> <span class="cf">function</span>(zip, supp, incare, latediag){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">clustered_group =</span> <span class="fu">ifelse</span>(clustered , <span class="st">"clustered"</span>, <span class="st">"unclustered"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">clustered_group_factor =</span> <span class="fu">factor</span>(clustered_group, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"clustered"</span>, <span class="st">"unclustered"</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip_cd_3years =</span> <span class="fu">ifelse</span>(zip_cd_2021 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2021,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                      <span class="fu">ifelse</span>(zip_cd_2020 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2020,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                                             <span class="fu">ifelse</span>(zip_cd_2019 <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip_cd_2019, <span class="cn">NA</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                      )))<span class="sc">%&gt;%</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip_cd_2021 =</span> <span class="fu">as.numeric</span>(zip_cd_2021), <span class="at">zip_cd_3years =</span> <span class="fu">as.numeric</span>(zip_cd_3years))</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>( (<span class="st">`</span><span class="at">Vital Status</span><span class="st">`</span> <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Alive"</span>, <span class="cn">NA</span>) <span class="sc">|</span> death_year <span class="sc">&gt;=</span> <span class="dv">2021</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">zip =</span> <span class="fu">ifelse</span>(zip <span class="sc">%in%</span> miami_shp_zip<span class="sc">$</span>ZIP, zip, <span class="cn">NA</span>)) </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      perc_by_zip_denom <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">group_by</span>(<span class="sc">!!</span><span class="fu">sym</span>(zip)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">summarize</span>(<span class="at">DenomPLWH =</span> <span class="fu">n</span>())</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      perc_by_zip <span class="ot">&lt;-</span> perc_by_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">group_by</span>(<span class="sc">!!</span><span class="fu">sym</span>(zip), clustered_group) <span class="sc">%&gt;%</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>       <span class="fu">filter</span>(clustered_group <span class="sc">==</span> <span class="st">"clustered"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">supp.incare =</span> <span class="fu">ifelse</span>( <span class="sc">!!</span><span class="fu">sym</span>(supp) <span class="sc">%in%</span> <span class="dv">1</span> <span class="sc">&amp;</span> <span class="sc">!!</span><span class="fu">sym</span>(incare) <span class="sc">%in%</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>))<span class="sc">%&gt;%</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">summarize</span>(</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plots A, B, C, D</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>          <span class="at">PLWH =</span> <span class="fu">n</span>(),</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plot B (Viral supression)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.supp =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(supp), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.unsupp =</span> PLWH <span class="sc">-</span> num.supp,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.supp =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(supp), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.unsupp =</span> <span class="dv">1</span><span class="sc">-</span>pop.supp,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>          <span class="co"># Plot C (in-care)</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.in_care =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(incare), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.not.in_care =</span> PLWH <span class="sc">-</span>num.in_care,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.in_care =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(incare), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.not.in_care =</span> <span class="dv">1</span><span class="sc">-</span>pop.in_care,</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>          <span class="co">#Plot B2 - Viral suppression among ppl who received medical care</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.supp.incare =</span> <span class="fu">sum</span>(supp.incare, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.unsupp.incare =</span> PLWH <span class="sc">-</span> num.supp.incare,</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.supp.incare =</span> <span class="fu">sum</span>(supp.incare, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> num.in_care,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.unsupp.incare =</span> <span class="dv">1</span><span class="sc">-</span>pop.supp.incare,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>          <span class="co">#Plot D (late diagnosis)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>          <span class="at">num.late_diagnosis =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(latediag), <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>          <span class="at">pop.late_diagnosis =</span> <span class="fu">sum</span>(<span class="sc">!!</span><span class="fu">sym</span>(latediag), <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> PLWH</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        )  <span class="sc">%&gt;%</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="fu">left_join</span>(perc_by_zip_denom, <span class="at">by =</span> <span class="fu">c</span>(zip)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="at">pop.plwh =</span> PLWH<span class="sc">/</span>DenomPLWH) <span class="sc">%&gt;%</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">starts_with</span>(<span class="st">"pop"</span>), \(x) <span class="fu">round</span>(x, <span class="dv">2</span>)))</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      md_perc_zips <span class="ot">&lt;-</span> miami_shp_zip <span class="sc">%&gt;%</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        <span class="fu">left_join</span>(perc_by_zip, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"ZIP"</span> <span class="ot">=</span> zip))</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<ul>
+<li>Constructed molecular networks using genetic distance thresholds (baseline: 0.5%)<br>
+</li>
+<li>Performed <strong>threshold calibration (~0.00635)</strong> to align simulated linkages with observed data<br>
+</li>
+<li>Compared observed vs simulated networks using:
+<ul>
+<li>number of genetic linkages<br>
+</li>
+<li>cluster (connected component) size distributions</li>
+</ul></li>
+<li>Identified <strong>CDC priority clusters</strong> using:
+<ul>
+<li>≥5 diagnoses within 12 months<br>
+</li>
+<li>within a 3-year rolling window</li>
+</ul></li>
+<li>Linked molecular clusters to the transmission network to evaluate:
+<ul>
+<li>whether clustered individuals contributed to forward transmission</li>
+</ul></li>
+</ul>
+<hr>
 </section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>The proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups.</p>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li><p>Simulated molecular networks closely reproduced observed patterns in:</p>
+<ul>
+<li>number of genetic linkages over time<br>
+</li>
+<li>distribution of cluster sizes</li>
+</ul></li>
+<li><p>Most clusters were small:</p>
+<ul>
+<li>~50% consisted of 2 individuals<br>
+</li>
+<li>maximum cluster size was 18</li>
+</ul></li>
+<li><p>CDC-defined priority clusters were rare in both observed and simulated data</p></li>
+<li><p><strong>No forward transmissions were identified from individuals in priority clusters</strong><br>
+→ indicating that detected clusters did not capture individuals driving transmission</p></li>
+</ul>
+<hr>
 </section>
 <section id="analytical-decisions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
 <ul>
-<li><strong>Geographic unit</strong>: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence.</li>
+<li><strong>Threshold calibration:</strong> required aligning simulated and observed network structures<br>
+</li>
+<li><strong>Network validation:</strong> used multiple metrics (link counts and cluster size distributions)<br>
+</li>
+<li><strong>Cluster definition sensitivity:</strong> results depended on CDC criteria and time windows<br>
+</li>
+<li><strong>Post hoc limitation:</strong> transmission dynamics could not be altered by simulated interventions</li>
 </ul>
+<hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
 <ul>
-<li>These findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus.</li>
+<li>Demonstrates a framework for validating simulated molecular networks against real-world data<br>
+</li>
+<li>Highlights limitations of CDC priority cluster definitions in identifying transmission risk<br>
+</li>
+<li>Suggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread<br>
+</li>
+<li>Supports more comprehensive approaches to HIV surveillance and intervention planning</li>
 </ul>
+</section>
+<section id="original-plan-vs-actual-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="original-plan-vs-actual-analysis">Original Plan vs Actual Analysis</h2>
+<section id="original-plan" class="level3">
+<h3 class="anchored" data-anchor-id="original-plan">Original Plan</h3>
+<ul>
+<li>Evaluate potential impact of identifying and intervening on HIV transmission clusters<br>
+</li>
+<li>Simulate CDC response and measure downstream intervention effects<br>
+</li>
+<li>Estimate reduction in undiagnosed time and transmission-related outcomes</li>
+</ul>
+</section>
+<section id="actual-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="actual-analysis">Actual Analysis</h3>
+<ul>
+<li>Focus shifted to evaluating whether molecular clusters accurately capture transmission dynamics<br>
+</li>
+<li>Compared observed vs simulated molecular networks<br>
+</li>
+<li>Assessed CDC priority clusters in relation to actual transmission network<br>
+</li>
+<li>Evaluated whether clustered individuals contributed to forward transmission</li>
+</ul>
+</section>
+<section id="key-insight" class="level3">
+<h3 class="anchored" data-anchor-id="key-insight">Key Insight</h3>
+<p>This analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -11,14 +11,14 @@
     "href": "projects.html",
     "title": "Selected Projects",
     "section": "",
-    "text": "RO1 Data Visualization Provide the Zip Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential Zip Code and were diagnosed from 2019 to 2021. View project →\nOutlier Analysis\nPenalized Lasso regression View project →\nThe Benefit of Molecular Epidemiology in San Diego\nLasso regression View project →\nData Imputation for Exposure Category\nLasso regression View project →\nCreate Analytic File\nLasso regression View project →"
+    "text": "Miami-Dade HIV Epidemiology Dashboard (Zip Code-Level Analysis)\nDeveloped an integrated dataset combining HIV surveillance, electronic health records, and U.S. Census ACS data to characterize HIV outcomes at the zip code level in Miami-Dade County (2017–2021). Compared HIV outcomes across clustered & sequence, unclustered & sequence, and no-sequence groups, including late diagnosis, viral suppression, and engagement in care. Linked outcomes with neighborhood-level socioeconomic characteristics for spatial and temporal analysis.\nView project →\nPredictors of HIV Outcomes and Geographic Outliers Using Multilevel Penalized Regression\nIdentified predictors of late-stage HIV diagnosis, viral suppression, and care engagement using GLMMs with health district–level random effects and LASSO-penalized variable selection. Geographic outliers were detected using an IQR-based comparison of observed vs. predicted outcomes.\nView project →\nImpact of Molecular Epidemiology on HIV Transmission Patterns in San Diego\nEvaluated the effectiveness of CDC-defined HIV molecular clusters in identifying ongoing transmission using simulated and observed genetic network data. Conducted longitudinal comparisons of molecular networks and linked cluster membership to transmission data to assess whether clusters capture individuals contributing to HIV spread. Results highlight limitations of relying on molecular clustering as a proxy for transmission dynamics.\nView project →"
   },
   {
     "objectID": "projects.html#research-applied-projects",
     "href": "projects.html#research-applied-projects",
     "title": "Selected Projects",
     "section": "",
-    "text": "RO1 Data Visualization Provide the Zip Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential Zip Code and were diagnosed from 2019 to 2021. View project →\nOutlier Analysis\nPenalized Lasso regression View project →\nThe Benefit of Molecular Epidemiology in San Diego\nLasso regression View project →\nData Imputation for Exposure Category\nLasso regression View project →\nCreate Analytic File\nLasso regression View project →"
+    "text": "Miami-Dade HIV Epidemiology Dashboard (Zip Code-Level Analysis)\nDeveloped an integrated dataset combining HIV surveillance, electronic health records, and U.S. Census ACS data to characterize HIV outcomes at the zip code level in Miami-Dade County (2017–2021). Compared HIV outcomes across clustered & sequence, unclustered & sequence, and no-sequence groups, including late diagnosis, viral suppression, and engagement in care. Linked outcomes with neighborhood-level socioeconomic characteristics for spatial and temporal analysis.\nView project →\nPredictors of HIV Outcomes and Geographic Outliers Using Multilevel Penalized Regression\nIdentified predictors of late-stage HIV diagnosis, viral suppression, and care engagement using GLMMs with health district–level random effects and LASSO-penalized variable selection. Geographic outliers were detected using an IQR-based comparison of observed vs. predicted outcomes.\nView project →\nImpact of Molecular Epidemiology on HIV Transmission Patterns in San Diego\nEvaluated the effectiveness of CDC-defined HIV molecular clusters in identifying ongoing transmission using simulated and observed genetic network data. Conducted longitudinal comparisons of molecular networks and linked cluster membership to transmission data to assess whether clusters capture individuals contributing to HIV spread. Results highlight limitations of relying on molecular clustering as a proxy for transmission dynamics.\nView project →"
   },
   {
     "objectID": "projects/analytic_file.html",
@@ -121,30 +121,30 @@
   {
     "objectID": "projects/outlier_analysis.html",
     "href": "projects/outlier_analysis.html",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "",
-    "text": "In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nBeyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed."
+    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
   },
   {
     "objectID": "projects/outlier_analysis.html#overview",
     "href": "projects/outlier_analysis.html#overview",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "",
-    "text": "In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nBeyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed."
+    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
   },
   {
     "objectID": "projects/outlier_analysis.html#data",
     "href": "projects/outlier_analysis.html#data",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "Data",
-    "text": "Data\nThe study included 2,262 people living with HIV diagnosed between 2020 and 2022. Individual-level data captured demographic characteristics, HIV transmission risk, clinical history, and availability of HIV genetic sequence data. To reflect the broader social and structural context, neighborhood-level measures—such as poverty, education, employment, racial/ethnic composition, and access to HIV testing and care—were incorporated at the health-district level."
+    "text": "Data\n\nPopulation: 2,262 people diagnosed with HIV (2020–2022)\n\nLevel 1 (Individual): demographics, transmission risk, clinical history, HIV sequence availability\n\nLevel 2 (Neighborhood): health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care\n\nData sources: eHARS, American Community Survey (ACS), and AIDSVu"
   },
   {
     "objectID": "projects/outlier_analysis.html#statistical-methods",
     "href": "projects/outlier_analysis.html#statistical-methods",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "Statistical Methods",
-    "text": "Statistical Methods\nI used regression models that account for both individual- and neighborhood-level variation to evaluate factors associated with each HIV outcome. Health districts were treated as clustered units to capture shared community characteristics.\nPredictors were first evaluated in univariable models and then selected into multivariable models using penalized regression techniques, allowing for stable model estimation while reducing overfitting.\nTo identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds."
+    "text": "Statistical Methods\n\nMultilevel regression models to account for both individual- and neighborhood-level variation\n\nHealth districts treated as clustered units to capture shared contextual effects\n\nUnivariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting\n\nOutlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)"
   },
   {
     "objectID": "projects/outlier_analysis.html#interpretation",
@@ -156,44 +156,44 @@
   {
     "objectID": "projects/outlier_analysis.html#analytical-decisions-challenges",
     "href": "projects/outlier_analysis.html#analytical-decisions-challenges",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\nMissing sequence data: HIV sequence availability was incomplete and required careful consideration during modeling.\nGeographic stability: Formal outlier detection was limited because most districts fell within expected ranges. Instead, districts were ranked by residual magnitude to identify areas with relatively higher or lower outcomes than predicted.\nGeographic unit: ZIP Code–level analyses were unstable due to sparse data; aggregation to the health-district level improved model reliability."
+    "text": "Analytical Decisions & Challenges\n\nOutlier definition: most districts fell within expected ranges → used residual ranking instead of strict thresholds\n\nGeographic unit selection: ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts"
   },
   {
     "objectID": "projects/outlier_analysis.html#impact",
     "href": "projects/outlier_analysis.html#impact",
-    "title": "Outlier Analysis",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
     "section": "Impact",
-    "text": "Impact\nThis analysis demonstrates how integrating clinical, molecular, and neighborhood-level data can identify geographic patterns in HIV outcomes beyond individual risk factors alone. The findings support data-informed prioritization of HIV prevention and care efforts and provide a framework for identifying communities that may benefit from targeted public health interventions."
+    "text": "Impact\n\nIdentified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors\n\nSupported targeted, data-driven public health decision-making\n\nDemonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance"
   },
   {
     "objectID": "projects/R01_visualization.html",
     "href": "projects/R01_visualization.html",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
   },
   {
     "objectID": "projects/R01_visualization.html#overview",
     "href": "projects/R01_visualization.html#overview",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
   },
   {
     "objectID": "projects/R01_visualization.html#data",
     "href": "projects/R01_visualization.html#data",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Data",
-    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
+    "text": "Data\n\nPopulation: People with HIV (PWH), Miami-Dade (2019–2021)\n\nUnit of analysis: ZIP Code\n\nOutcomes: - Viral non-suppression\n- In-care status\n- Late diagnosis\nStratification: - Clustered vs unclustered vs non-sequenced groups\n- Race, age, transmission risk, diagnosis stage"
   },
   {
     "objectID": "projects/R01_visualization.html#statistical-methods",
     "href": "projects/R01_visualization.html#statistical-methods",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Statistical Methods",
-    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+    "text": "Statistical Methods\nDescriptive analyses were conducted to compare HIV outcomes across clustering groups. ZIP Code–level proportions were calculated and stratified by demographic and clinical characteristics.\nDue to sparsity in some ZIP Codes, geographic aggregation at the district level was implemented to improve statistical stability and model convergence. Interactive visualizations, including choropleth maps and temporal trend plots, were developed using R and Shiny to explore spatial and temporal patterns in HIV outcomes."
   },
   {
     "objectID": "projects/R01_visualization.html#interpretation",
@@ -205,16 +205,16 @@
   {
     "objectID": "projects/R01_visualization.html#analytical-decisions-challenges",
     "href": "projects/R01_visualization.html#analytical-decisions-challenges",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: ZIP Code–level analyses were unstable due to sparse counts; aggregation to the district level improved statistical stability and interpretability.\n\nThis decision highlights the importance of balancing geographic granularity with reliable estimation in small-area analyses."
   },
   {
     "objectID": "projects/R01_visualization.html#impact",
     "href": "projects/R01_visualization.html#impact",
-    "title": "R01 Data Visualization",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Impact",
-    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
+    "text": "Impact\nFindings from this analysis can inform targeted public health interventions by identifying geographic areas and populations with lower engagement in care.\nThe integration of molecular clustering and spatial analysis provides a framework for prioritizing outreach efforts and resource allocation in HIV prevention and treatment programs."
   },
   {
     "objectID": "projects/hiv_multilevel.html",
@@ -275,16 +275,16 @@
   {
     "objectID": "projects/sesame_project.html",
     "href": "projects/sesame_project.html",
-    "title": "R01 Data Visualization",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
   },
   {
     "objectID": "projects/sesame_project.html#overview",
     "href": "projects/sesame_project.html#overview",
-    "title": "R01 Data Visualization",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
+    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
   },
   {
     "objectID": "projects/sesame_project.html#data",
@@ -296,9 +296,9 @@
   {
     "objectID": "projects/sesame_project.html#statistical-methods",
     "href": "projects/sesame_project.html#statistical-methods",
-    "title": "R01 Data Visualization",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Statistical Methods",
-    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
+    "text": "Statistical Methods\n\nConstructed molecular networks using genetic distance thresholds (baseline: 0.5%)\n\nPerformed threshold calibration (~0.00635) to align simulated linkages with observed data\n\nCompared observed vs simulated networks using:\n\nnumber of genetic linkages\n\ncluster (connected component) size distributions\n\nIdentified CDC priority clusters using:\n\n≥5 diagnoses within 12 months\n\nwithin a 3-year rolling window\n\nLinked molecular clusters to the transmission network to evaluate:\n\nwhether clustered individuals contributed to forward transmission"
   },
   {
     "objectID": "projects/sesame_project.html#interpretation",
@@ -310,16 +310,16 @@
   {
     "objectID": "projects/sesame_project.html#analytical-decisions-challenges",
     "href": "projects/sesame_project.html#analytical-decisions-challenges",
-    "title": "R01 Data Visualization",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
+    "text": "Analytical Decisions & Challenges\n\nThreshold calibration: required aligning simulated and observed network structures\n\nNetwork validation: used multiple metrics (link counts and cluster size distributions)\n\nCluster definition sensitivity: results depended on CDC criteria and time windows\n\nPost hoc limitation: transmission dynamics could not be altered by simulated interventions"
   },
   {
     "objectID": "projects/sesame_project.html#impact",
     "href": "projects/sesame_project.html#impact",
-    "title": "R01 Data Visualization",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Impact",
-    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
+    "text": "Impact\n\nDemonstrates a framework for validating simulated molecular networks against real-world data\n\nHighlights limitations of CDC priority cluster definitions in identifying transmission risk\n\nSuggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread\n\nSupports more comprehensive approaches to HIV surveillance and intervention planning"
   },
   {
     "objectID": "index.html",
@@ -355,5 +355,47 @@
     "title": "Home",
     "section": "Tools",
     "text": "Tools\nR, SAS, Python, Quarto, Git, R Shiny, Markdown"
+  },
+  {
+    "objectID": "projects/R01_visualization.html#key-findings",
+    "href": "projects/R01_visualization.html#key-findings",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "Key Findings",
+    "text": "Key Findings\nIndividuals in the sequenced and clustered group had consistently lower proportions of late diagnosis, non-suppression, and not being in care compared to unclustered and non-sequenced groups.\nThese findings suggest that individuals captured in molecular surveillance and clustering analyses may be more engaged in HIV care and more likely to achieve viral suppression."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#key-findings",
+    "href": "projects/outlier_analysis.html#key-findings",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nImproved HIV outcomes were associated with indicators of care engagement and access, including:\n\nolder age at diagnosis\n\nrecent STI history\n\navailability of HIV sequence data\n\nHigher rates of viral suppression and care engagement were observed among:\n\nindividuals in genetic clusters\n\nindividuals born outside the U.S.\n\nGeographic variation revealed districts with outcomes differing from expectations, including:\n\nhigher-than-expected late diagnosis in Coral Gables/Kendall\n\nlower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset"
+  },
+  {
+    "objectID": "projects/sesame_project.html#data-simulation-context",
+    "href": "projects/sesame_project.html#data-simulation-context",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "section": "Data & Simulation Context",
+    "text": "Data & Simulation Context\n\nSimulation framework: Agent-based model (SD-ABM-FAV) integrated with FAVITES\n\nPopulation: Simulated at-risk individuals and people with HIV (PWH) in San Diego\n\nKey features of simulation:\n\nHIV transmission dynamics calibrated to the local epidemic\n\nTime to diagnosis by transmission risk group\n\nRealistic sequencing processes:\n\nat diagnosis\n\nupon re-engagement in care\n\nat viral rebound\n\n\nViral phylogeny generated from transmission events\n\nDerived data for analysis:\n\nPairwise genetic linkages based on sequence similarity thresholds\n\nLongitudinal sequence timing for each individual"
+  },
+  {
+    "objectID": "projects/sesame_project.html#key-findings",
+    "href": "projects/sesame_project.html#key-findings",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nSimulated molecular networks closely reproduced observed patterns in:\n\nnumber of genetic linkages over time\n\ndistribution of cluster sizes\n\nMost clusters were small:\n\n~50% consisted of 2 individuals\n\nmaximum cluster size was 18\n\nCDC-defined priority clusters were rare in both observed and simulated data\nNo forward transmissions were identified from individuals in priority clusters\n→ indicating that detected clusters did not capture individuals driving transmission"
+  },
+  {
+    "objectID": "projects/sesame_project.html#data-context",
+    "href": "projects/sesame_project.html#data-context",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "section": "Data & Context",
+    "text": "Data & Context\n\nData source: Simulated HIV transmission and genetic network data (SD-ABM-FAV framework)\n\nStudy period: 2019–2021\n\nCalibration: Simulation aligned to observed molecular network data (baseline up to 2018)\nAvailable data:\n\nPairwise genetic linkages (based on sequence similarity)\n\nTiming of sequence collection\n\nTransmission network (1,356 transmission pairs)"
+  },
+  {
+    "objectID": "projects/sesame_project.html#original-plan-vs-actual-analysis",
+    "href": "projects/sesame_project.html#original-plan-vs-actual-analysis",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
+    "section": "Original Plan vs Actual Analysis",
+    "text": "Original Plan vs Actual Analysis\n\nOriginal Plan\n\nEvaluate potential impact of identifying and intervening on HIV transmission clusters\n\nSimulate CDC response and measure downstream intervention effects\n\nEstimate reduction in undiagnosed time and transmission-related outcomes\n\n\n\nActual Analysis\n\nFocus shifted to evaluating whether molecular clusters accurately capture transmission dynamics\n\nCompared observed vs simulated molecular networks\n\nAssessed CDC priority clusters in relation to actual transmission network\n\nEvaluated whether clustered individuals contributed to forward transmission\n\n\n\nKey Insight\nThis analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting."
   }
 ]

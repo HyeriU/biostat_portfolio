@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Outlier Analysis – Hyeri | Senior Biostatistician</title>
+<title>HIV Outlier Analysis (Miami-Dade, 2020–2022) – Hyeri | Senior Biostatistician</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#statistical-methods" id="toc-statistical-methods" class="nav-link" data-scroll-target="#statistical-methods">Statistical Methods</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
   <li><a href="#analytical-decisions-challenges" id="toc-analytical-decisions-challenges" class="nav-link" data-scroll-target="#analytical-decisions-challenges">Analytical Decisions &amp; Challenges</a></li>
   <li><a href="#impact" id="toc-impact" class="nav-link" data-scroll-target="#impact">Impact</a></li>
   </ul>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Outlier Analysis</h1>
+<h1 class="title">HIV Outlier Analysis (Miami-Dade, 2020–2022)</h1>
 </div>
 
 
@@ -160,33 +160,81 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>In this project, I examined how individual characteristics and neighborhood-level social determinants of health influence progress along the HIV care continuum in Miami-Dade County. Using data from people diagnosed with HIV between 2020 and 2022, I focused on three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
-<p>Beyond identifying risk and protective factors, the analysis aimed to highlight geographic areas where observed HIV outcomes were better or worse than expected given underlying individual and community characteristics. These geographic “outliers” provide insight into where HIV prevention and care efforts may be particularly effective, as well as where additional support may be needed.</p>
+<p>This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.</p>
+<p>Using data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.</p>
+<p>In addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed.</p>
+<hr>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The study included 2,262 people living with HIV diagnosed between 2020 and 2022. Individual-level data captured demographic characteristics, HIV transmission risk, clinical history, and availability of HIV genetic sequence data. To reflect the broader social and structural context, neighborhood-level measures—such as poverty, education, employment, racial/ethnic composition, and access to HIV testing and care—were incorporated at the health-district level.</p>
+<ul>
+<li><strong>Population:</strong> 2,262 people diagnosed with HIV (2020–2022)<br>
+</li>
+<li><strong>Level 1 (Individual):</strong> demographics, transmission risk, clinical history, HIV sequence availability<br>
+</li>
+<li><strong>Level 2 (Neighborhood):</strong> health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care<br>
+</li>
+<li><strong>Data sources:</strong> eHARS, American Community Survey (ACS), and AIDSVu</li>
+</ul>
+<hr>
 </section>
 <section id="statistical-methods" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-methods">Statistical Methods</h2>
-<p>I used regression models that account for both individual- and neighborhood-level variation to evaluate factors associated with each HIV outcome. Health districts were treated as clustered units to capture shared community characteristics.</p>
-<p>Predictors were first evaluated in univariable models and then selected into multivariable models using penalized regression techniques, allowing for stable model estimation while reducing overfitting.</p>
-<p>To identify geographic outliers, I compared observed outcome rates within each health district to model-predicted values. Districts with higher or lower observed rates than expected were identified based on residual differences, rather than formal outlier thresholds.</p>
+<ul>
+<li>Multilevel regression models to account for both individual- and neighborhood-level variation<br>
+</li>
+<li>Health districts treated as clustered units to capture shared contextual effects<br>
+</li>
+<li>Univariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting<br>
+</li>
+<li>Outlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)</li>
+</ul>
+<hr>
 </section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>More favorable HIV outcomes were associated with indicators of care engagement and access to services, including older age at diagnosis, recent STI history, and availability of genetic sequence data. Higher rates of viral suppression and care engagement were also observed among individuals in genetic clusters and those born outside the U.S.</p>
-<p>Geographic comparisons identified areas with outcomes that differed from expectations, including higher-than-expected late diagnosis rates in Coral Gables/Kendall and lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset.</p>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<ul>
+<li>Improved HIV outcomes were associated with indicators of care engagement and access, including:
+<ul>
+<li>older age at diagnosis<br>
+</li>
+<li>recent STI history<br>
+</li>
+<li>availability of HIV sequence data</li>
+</ul></li>
+<li>Higher rates of viral suppression and care engagement were observed among:
+<ul>
+<li>individuals in genetic clusters<br>
+</li>
+<li>individuals born outside the U.S.</li>
+</ul></li>
+<li>Geographic variation revealed districts with outcomes differing from expectations, including:
+<ul>
+<li>higher-than-expected late diagnosis in Coral Gables/Kendall<br>
+</li>
+<li>lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset</li>
+</ul></li>
+</ul>
+<hr>
 </section>
 <section id="analytical-decisions-challenges" class="level2">
 <h2 class="anchored" data-anchor-id="analytical-decisions-challenges">Analytical Decisions &amp; Challenges</h2>
-<p>Missing sequence data: HIV sequence availability was incomplete and required careful consideration during modeling.</p>
-<p>Geographic stability: Formal outlier detection was limited because most districts fell within expected ranges. Instead, districts were ranked by residual magnitude to identify areas with relatively higher or lower outcomes than predicted.</p>
-<p>Geographic unit: ZIP Code–level analyses were unstable due to sparse data; aggregation to the health-district level improved model reliability.</p>
+<ul>
+<li><strong>Outlier definition:</strong> most districts fell within expected ranges → used residual ranking instead of strict thresholds<br>
+</li>
+<li><strong>Geographic unit selection:</strong> ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts</li>
+</ul>
+<hr>
 </section>
 <section id="impact" class="level2">
 <h2 class="anchored" data-anchor-id="impact">Impact</h2>
-<p>This analysis demonstrates how integrating clinical, molecular, and neighborhood-level data can identify geographic patterns in HIV outcomes beyond individual risk factors alone. The findings support data-informed prioritization of HIV prevention and care efforts and provide a framework for identifying communities that may benefit from targeted public health interventions.</p>
+<ul>
+<li>Identified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors<br>
+</li>
+<li>Supported targeted, data-driven public health decision-making<br>
+</li>
+<li>Demonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance</li>
+</ul>
 
 
 </section>
