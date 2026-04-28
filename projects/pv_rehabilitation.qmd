@@ -1,6 +1,5 @@
 ---
 title: "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis"
-author: "Hyeri"
 format: html
 editor: visual
 ---
@@ -11,7 +10,7 @@ Pulmonary vein stenosis (PVS) is a rare and severe congenital condition characte
 
 In this study, we evaluated longitudinal outcomes of serial balloon angioplasty as a palliative treatment strategy in children diagnosed with PVS. The primary focus was to understand how clinical characteristics, anatomical subtype, and cumulative procedural burden were associated with survival and disease progression over time.
 
----
+------------------------------------------------------------------------
 
 ## Data & Study Design
 
@@ -19,7 +18,7 @@ This retrospective cohort study included 23 pediatric patients diagnosed with pu
 
 The study population was clinically heterogeneous, including patients with both TAPVC and non-TAPVC anatomy, as well as those with univentricular and biventricular circulatory physiology. This heterogeneity reflected the complexity of real-world clinical management of pediatric PVS in a tertiary referral setting.
 
----
+------------------------------------------------------------------------
 
 ## Statistical Methods
 
@@ -27,7 +26,7 @@ Given the relatively small sample size and the heterogeneity of clinical present
 
 Survival outcomes were estimated using Kaplan–Meier methods, and differences between anatomical and physiological subgroups were assessed using log-rank tests. In addition, longitudinal changes in catheterization intervals were evaluated using Kruskal–Wallis tests to better understand how intervention frequency evolved over time.
 
----
+------------------------------------------------------------------------
 
 ## Key Findings
 
@@ -37,7 +36,7 @@ Survival analysis demonstrated 1-, 3-, and 5-year survival rates of 78%, 70%, an
 
 Patients with bilateral pulmonary vein involvement experienced significantly higher mortality compared to those with unilateral disease, indicating an important prognostic distinction based on anatomical severity. Notably, no procedural deaths were observed, supporting the safety of serial balloon angioplasty in this high-risk population. Over time, the interval between catheterization procedures increased among survivors, suggesting possible partial stabilization of disease in selected patients.
 
----
+------------------------------------------------------------------------
 
 ## Analytical Challenges & Decisions
 
@@ -45,7 +44,7 @@ Several methodological considerations influenced the analytic approach in this s
 
 The repeated nature of interventions introduced additional complexity, as outcomes needed to be interpreted in a longitudinal framework rather than as independent events. Finally, the relatively sparse number of events constrained the use of more granular modeling techniques for survival and progression analyses.
 
----
+------------------------------------------------------------------------
 
 ## Impact
 
