@@ -21,398 +21,6 @@
     "text": "Miami-Dade HIV Epidemiology Dashboard (Zip Code-Level Analysis)\nThis project integrates HIV surveillance data, electronic health records, and U.S. Census ACS data to examine spatial and temporal variation in HIV outcomes across ZIP codes in Miami-Dade County (2017–2021).\nI analyzed differences in late diagnosis, viral suppression, and care engagement across clustered and non-clustered molecular sequence groups, incorporating neighborhood-level socioeconomic characteristics to better characterize geographic disparities in HIV outcomes.\nView project →\n\n\n\nPredictors of HIV Outcomes and Geographic Outliers Using Multilevel Penalized Regression\nThis project identifies individual- and neighborhood-level predictors of HIV care continuum outcomes using multilevel generalized linear mixed models with health district–level random effects.\nLASSO-penalized regression was applied for variable selection to improve model stability and interpretability. Geographic outliers were defined based on discrepancies between observed and model-predicted outcomes using residual-based approaches.\nView project →\n\n\n\nImpact of Molecular Epidemiology on HIV Transmission Patterns in San Diego\nThis study evaluates the utility of CDC-defined molecular clusters in identifying ongoing HIV transmission using simulated and observed genetic network data.\nI conducted longitudinal comparisons of molecular transmission networks and linked cluster membership with epidemiologic outcomes to assess whether genetic clustering reliably reflects true transmission dynamics. Findings highlight important limitations of molecular clustering as a standalone proxy for transmission risk.\nView project →\n\n\n\nPulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis\nThis project analyzes outcomes of serial balloon angioplasty in pediatric pulmonary vein stenosis using retrospective catheterization data.\nSurvival and longitudinal intervention patterns were evaluated across clinical subgroups using Kaplan–Meier methods and comparative statistical analyses. The study characterized procedural burden and disease progression in a high-risk congenital cardiac population.\nView project →\n\n\n\nTrends in LDL-C Following Coronary Angiography and Fractional Flow Reserve Assessment in Obstructive vs Non-Obstructive Coronary Artery Disease\nThis study examines longitudinal LDL-C trends following coronary angiography with fractional flow reserve (FFR) assessment in patients with obstructive versus non-obstructive coronary artery disease.\nLipid trajectories were compared across clinical subgroups defined by FFR findings to evaluate differences in post-procedural cardiovascular risk management and treatment patterns.\nView project →\n\n\n\nPatient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)\nThis multicenter study examines exercise behaviors, preferences, and barriers among children with nonalcoholic fatty liver disease (NAFLD) across six U.S. academic centers.\nMost participants reported low levels of structured physical activity but expressed strong interest in increasing exercise, particularly walking and bicycling. Key barriers included time constraints and academic demands, while improving health was the primary motivation for engaging in physical activity.\nView project →\n\n\n\nAssessing Treatment Risks in Parkinson Disease Psychosis: A Real-World Comparative Analysis\nThis study evaluates whether antipsychotic treatment patterns in Parkinson disease psychosis (PDP) are associated with differences in mortality and clinical outcomes using real-world electronic health record data.\nPatients were categorized into untreated, pimavanserin, quetiapine, and combination therapy groups, and mortality was compared using multivariable regression adjusting for age, sex, disease severity, and dopaminergic medication exposure.\nAdditional analyses examined whether differences in clinical characteristics, healthcare utilization, and non-motor symptom burden could explain observed outcome differences across treatment groups.\nView project →\n\n\n\nTiming of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization\nThis retrospective study evaluated whether maintaining patients on oral diuretics for at least 24 hours prior to discharge after heart failure hospitalization improves 30-day clinical outcomes.\nAmong 285 hospitalized patients, outcomes were compared between those observed ≥24 hours on oral diuretics and those discharged earlier. Despite longer hospital stays and greater in-hospital diuresis in the ≥24-hour group, there was no reduction in 30-day mortality or rehospitalization.\nOverall, the findings suggest that a mandatory 24-hour observation period on oral diuretics prior to discharge does not improve short-term outcomes and may not be necessary for all patients hospitalized with heart failure.\nView project →"
   },
   {
-    "objectID": "projects/analytic_file.html",
-    "href": "projects/analytic_file.html",
-    "title": "R01 Data Visualization",
-    "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/analytic_file.html#overview",
-    "href": "projects/analytic_file.html#overview",
-    "title": "R01 Data Visualization",
-    "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/analytic_file.html#data",
-    "href": "projects/analytic_file.html#data",
-    "title": "R01 Data Visualization",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
-  },
-  {
-    "objectID": "projects/analytic_file.html#statistical-methods",
-    "href": "projects/analytic_file.html#statistical-methods",
-    "title": "R01 Data Visualization",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
-  },
-  {
-    "objectID": "projects/analytic_file.html#interpretation",
-    "href": "projects/analytic_file.html#interpretation",
-    "title": "R01 Data Visualization",
-    "section": "Interpretation",
-    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
-  },
-  {
-    "objectID": "projects/analytic_file.html#analytical-decisions-challenges",
-    "href": "projects/analytic_file.html#analytical-decisions-challenges",
-    "title": "R01 Data Visualization",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
-  },
-  {
-    "objectID": "projects/analytic_file.html#impact",
-    "href": "projects/analytic_file.html#impact",
-    "title": "R01 Data Visualization",
-    "section": "Impact",
-    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
-  },
-  {
-    "objectID": "projects/data_imputation.html",
-    "href": "projects/data_imputation.html",
-    "title": "R01 Data Visualization",
-    "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/data_imputation.html#overview",
-    "href": "projects/data_imputation.html#overview",
-    "title": "R01 Data Visualization",
-    "section": "",
-    "text": "R01 visualization will provide the ZIP Code-level HIV/AIDS-related statistics among people with HIV (PWH) who have a current Miami-Dade residential ZIP Code and were diagnosed from 2019 to 2021.\nThe main focused outcomes are the proportion of viral non-suppression among PWH who are or are not receiving medical care for HIV. We will additionally infer a genetic network using a genetic distance of 0.5% (a proxy for recent linkage) using HIV all sequences from persons newly diagnosed from 2019 to 2021. Our primary goals are to identify clinical variables (care status, diagnosis stage, and proportion with viral suppression) that is associated with prospective cluster growth. Outcomes will be compared to PWH who do not cluster. The plots will have filters to adjust the genetic distance (0.5%, 1%, and 1.5%), time frame of sampling (the calendar year of 2021 and accumulated years across 2019 – 2021), race, and transmission risk. A comprehensive demographics breakdown will be provided for each group of conditions. &gt; All data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/data_imputation.html#data",
-    "href": "projects/data_imputation.html#data",
-    "title": "R01 Data Visualization",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
-  },
-  {
-    "objectID": "projects/data_imputation.html#statistical-methods",
-    "href": "projects/data_imputation.html#statistical-methods",
-    "title": "R01 Data Visualization",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nAnalyses are descriptive and visualization-based. ZIP Code–level counts and proportions are summarized and displayed using interactive maps to highlight geographic patterns in HIV outcomes and clustering. Interactive line graphs are used to visualize temporal trends in outcomes stratified by HIV sequence and clustering status. All analyses are conducted in R and RShiny using reproducible workflows.\n\n    FUN = function(zip, supp, incare, latediag){\n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(clustered_group = ifelse(clustered , \"clustered\", \"unclustered\")) %&gt;%\n        mutate(clustered_group_factor = factor(clustered_group, levels = c(\"clustered\", \"unclustered\"), ordered = TRUE))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        mutate(zip_cd_3years = ifelse(zip_cd_2021 %in% miami_shp_zip$ZIP, zip_cd_2021,\n                                      ifelse(zip_cd_2020 %in% miami_shp_zip$ZIP, zip_cd_2020,\n                                             ifelse(zip_cd_2019 %in% miami_shp_zip$ZIP, zip_cd_2019, NA)\n                                      )))%&gt;%\n        mutate(zip_cd_2021 = as.numeric(zip_cd_2021), zip_cd_3years = as.numeric(zip_cd_3years))\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        filter( (`Vital Status` %in% c(\"Alive\", NA) | death_year &gt;= 2021)) %&gt;%\n        mutate(zip = ifelse(zip %in% miami_shp_zip$ZIP, zip, NA)) \n      \n      perc_by_zip_denom &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip)) %&gt;%\n        summarize(DenomPLWH = n())\n      \n      perc_by_zip &lt;- perc_by_zip %&gt;%\n        group_by(!!sym(zip), clustered_group) %&gt;%\n       filter(clustered_group == \"clustered\") %&gt;%\n        mutate(supp.incare = ifelse( !!sym(supp) %in% 1 & !!sym(incare) %in% 1, 1, 0))%&gt;%\n        summarize(\n          # Plots A, B, C, D\n          PLWH = n(),\n          # Plot B (Viral supression)\n          num.supp = sum(!!sym(supp), na.rm = TRUE),\n          num.unsupp = PLWH - num.supp,\n          pop.supp = sum(!!sym(supp), na.rm = TRUE) / PLWH,\n          pop.unsupp = 1-pop.supp,\n          # Plot C (in-care)\n          num.in_care = sum(!!sym(incare), na.rm = TRUE),\n          num.not.in_care = PLWH -num.in_care,\n          pop.in_care = sum(!!sym(incare), na.rm = TRUE) / PLWH,\n          pop.not.in_care = 1-pop.in_care,\n          #Plot B2 - Viral suppression among ppl who received medical care\n          num.supp.incare = sum(supp.incare, na.rm = TRUE),\n          num.unsupp.incare = PLWH - num.supp.incare,\n          pop.supp.incare = sum(supp.incare, na.rm = TRUE) / num.in_care,\n          pop.unsupp.incare = 1-pop.supp.incare,\n          #Plot D (late diagnosis)\n          num.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE),\n          pop.late_diagnosis = sum(!!sym(latediag), na.rm = TRUE) / PLWH\n        )  %&gt;%\n        left_join(perc_by_zip_denom, by = c(zip)) %&gt;%\n        mutate(pop.plwh = PLWH/DenomPLWH) %&gt;%\n        mutate(across(starts_with(\"pop\"), \\(x) round(x, 2)))\n      \n      md_perc_zips &lt;- miami_shp_zip %&gt;%\n        left_join(perc_by_zip, by = c(\"ZIP\" = zip))\n    }"
-  },
-  {
-    "objectID": "projects/data_imputation.html#interpretation",
-    "href": "projects/data_imputation.html#interpretation",
-    "title": "R01 Data Visualization",
-    "section": "Interpretation",
-    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
-  },
-  {
-    "objectID": "projects/data_imputation.html#analytical-decisions-challenges",
-    "href": "projects/data_imputation.html#analytical-decisions-challenges",
-    "title": "R01 Data Visualization",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence."
-  },
-  {
-    "objectID": "projects/data_imputation.html#impact",
-    "href": "projects/data_imputation.html#impact",
-    "title": "R01 Data Visualization",
-    "section": "Impact",
-    "text": "Impact\n\nThese findings suggest that individuals in sequenced and clustered groups are more likely to be engaged in HIV care and achieve viral suppression. The results also help identify geographic characteristics and communities where HIV treatment and prevention efforts may be more effective or require additional focus."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html",
-    "href": "projects/outlier_analysis.html",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "",
-    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#overview",
-    "href": "projects/outlier_analysis.html#overview",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "",
-    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#data",
-    "href": "projects/outlier_analysis.html#data",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Data",
-    "text": "Data\n\nPopulation: 2,262 people diagnosed with HIV (2020–2022)\n\nLevel 1 (Individual): demographics, transmission risk, clinical history, HIV sequence availability\n\nLevel 2 (Neighborhood): health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care\n\nData sources: eHARS, American Community Survey (ACS), and AIDSVu"
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#statistical-methods",
-    "href": "projects/outlier_analysis.html#statistical-methods",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\n\nMultilevel regression models to account for both individual- and neighborhood-level variation\n\nHealth districts treated as clustered units to capture shared contextual effects\n\nUnivariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting\n\nOutlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)"
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#interpretation",
-    "href": "projects/outlier_analysis.html#interpretation",
-    "title": "Outlier Analysis",
-    "section": "Interpretation",
-    "text": "Interpretation\nMore favorable HIV outcomes were associated with indicators of care engagement and access to services, including older age at diagnosis, recent STI history, and availability of genetic sequence data. Higher rates of viral suppression and care engagement were also observed among individuals in genetic clusters and those born outside the U.S.\nGeographic comparisons identified areas with outcomes that differed from expectations, including higher-than-expected late diagnosis rates in Coral Gables/Kendall and lower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#analytical-decisions-challenges",
-    "href": "projects/outlier_analysis.html#analytical-decisions-challenges",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nOutlier definition: most districts fell within expected ranges → used residual ranking instead of strict thresholds\n\nGeographic unit selection: ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts"
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#impact",
-    "href": "projects/outlier_analysis.html#impact",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Impact",
-    "text": "Impact\n\nIdentified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors\n\nSupported targeted, data-driven public health decision-making\n\nDemonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance"
-  },
-  {
-    "objectID": "projects/R01_visualization.html",
-    "href": "projects/R01_visualization.html",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "",
-    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/R01_visualization.html#overview",
-    "href": "projects/R01_visualization.html#overview",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "",
-    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/R01_visualization.html#data",
-    "href": "projects/R01_visualization.html#data",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "Data",
-    "text": "Data\n\nPopulation: People with HIV (PWH), Miami-Dade (2019–2021)\n\nUnit of analysis: ZIP Code\n\nOutcomes: - Viral non-suppression\n- In-care status\n- Late diagnosis\nStratification: - Clustered vs unclustered vs non-sequenced groups\n- Race, age, transmission risk, diagnosis stage"
-  },
-  {
-    "objectID": "projects/R01_visualization.html#statistical-methods",
-    "href": "projects/R01_visualization.html#statistical-methods",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nDescriptive analyses were conducted to compare HIV outcomes across clustering groups. ZIP Code–level proportions were calculated and stratified by demographic and clinical characteristics.\nDue to sparsity in some ZIP Codes, geographic aggregation at the district level was implemented to improve statistical stability and model convergence. Interactive visualizations, including choropleth maps and temporal trend plots, were developed using R and Shiny to explore spatial and temporal patterns in HIV outcomes."
-  },
-  {
-    "objectID": "projects/R01_visualization.html#interpretation",
-    "href": "projects/R01_visualization.html#interpretation",
-    "title": "R01 Data Visualization",
-    "section": "Interpretation",
-    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
-  },
-  {
-    "objectID": "projects/R01_visualization.html#analytical-decisions-challenges",
-    "href": "projects/R01_visualization.html#analytical-decisions-challenges",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: ZIP Code–level analyses were unstable due to sparse counts; aggregation to the district level improved statistical stability and interpretability.\n\nThis decision highlights the importance of balancing geographic granularity with reliable estimation in small-area analyses."
-  },
-  {
-    "objectID": "projects/R01_visualization.html#impact",
-    "href": "projects/R01_visualization.html#impact",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "Impact",
-    "text": "Impact\nFindings from this analysis can inform targeted public health interventions by identifying geographic areas and populations with lower engagement in care.\nThe integration of molecular clustering and spatial analysis provides a framework for prioritizing outreach efforts and resource allocation in HIV prevention and treatment programs."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html",
-    "href": "projects/hiv_multilevel.html",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "",
-    "text": "This project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.\n\nAll data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#overview",
-    "href": "projects/hiv_multilevel.html#overview",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "",
-    "text": "This project examines neighborhood-level socioeconomic predictors of late HIV diagnosis. I served as the lead biostatistician, responsible for analytic strategy, modeling decisions, and interpretation.\n\nAll data shown are simulated or de-identified."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#data",
-    "href": "projects/hiv_multilevel.html#data",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Late diagnosis (binary)\nCovariates: age at diagnosis, race, neighborhood poverty\nClustering unit: health district"
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#statistical-methods",
-    "href": "projects/hiv_multilevel.html#statistical-methods",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nA multilevel logistic regression model was used to account for clustering of individuals within health districts.\nModeling choices were guided by: - Public health interpretability - Stability under sparse geographic data - Alignment with study objectives\n\nlibrary(lme4)\n\nfit &lt;- glmer(\n  late_dx ~ age_dx + race + poverty + (1 | district),\n  data = dat,\n  family = binomial\n)"
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#interpretation",
-    "href": "projects/hiv_multilevel.html#interpretation",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Interpretation",
-    "text": "Interpretation\nHigher neighborhood poverty was associated with increased odds of late HIV diagnosis after adjusting for individual-level factors.\nRacial disparities persisted, suggesting that neighborhood context alone does not fully explain observed differences."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#analytical-decisions-challenges",
-    "href": "projects/hiv_multilevel.html#analytical-decisions-challenges",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence.\nMissing data: Multiple imputation was used instead of complete-case analysis to reduce bias.\nModel complexity: Penalized models were explored but not selected due to interpretability concerns for stakeholders."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#impact",
-    "href": "projects/hiv_multilevel.html#impact",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Impact",
-    "text": "Impact\n\nFindings informed geographically targeted HIV testing strategies.\nResults were presented to public health leadership.\nSupported a peer-reviewed manuscript submission."
-  },
-  {
-    "objectID": "projects/hiv_multilevel.html#reproducibility",
-    "href": "projects/hiv_multilevel.html#reproducibility",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Reproducibility",
-    "text": "Reproducibility\nAnalyses were conducted in R using Quarto for reproducible reporting and version control via Git."
-  },
-  {
-    "objectID": "projects/sesame_project.html",
-    "href": "projects/sesame_project.html",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "",
-    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
-  },
-  {
-    "objectID": "projects/sesame_project.html#overview",
-    "href": "projects/sesame_project.html#overview",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "",
-    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
-  },
-  {
-    "objectID": "projects/sesame_project.html#data",
-    "href": "projects/sesame_project.html#data",
-    "title": "R01 Data Visualization",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
-  },
-  {
-    "objectID": "projects/sesame_project.html#statistical-methods",
-    "href": "projects/sesame_project.html#statistical-methods",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\n\nConstructed molecular networks using genetic distance thresholds (baseline: 0.5%)\n\nPerformed threshold calibration (~0.00635) to align simulated linkages with observed data\n\nCompared observed vs simulated networks using:\n\nnumber of genetic linkages\n\ncluster (connected component) size distributions\n\nIdentified CDC priority clusters using:\n\n≥5 diagnoses within 12 months\n\nwithin a 3-year rolling window\n\nLinked molecular clusters to the transmission network to evaluate:\n\nwhether clustered individuals contributed to forward transmission"
-  },
-  {
-    "objectID": "projects/sesame_project.html#interpretation",
-    "href": "projects/sesame_project.html#interpretation",
-    "title": "R01 Data Visualization",
-    "section": "Interpretation",
-    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
-  },
-  {
-    "objectID": "projects/sesame_project.html#analytical-decisions-challenges",
-    "href": "projects/sesame_project.html#analytical-decisions-challenges",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nThreshold calibration: required aligning simulated and observed network structures\n\nNetwork validation: used multiple metrics (link counts and cluster size distributions)\n\nCluster definition sensitivity: results depended on CDC criteria and time windows\n\nPost hoc limitation: transmission dynamics could not be altered by simulated interventions"
-  },
-  {
-    "objectID": "projects/sesame_project.html#impact",
-    "href": "projects/sesame_project.html#impact",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Impact",
-    "text": "Impact\n\nDemonstrates a framework for validating simulated molecular networks against real-world data\n\nHighlights limitations of CDC priority cluster definitions in identifying transmission risk\n\nSuggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread\n\nSupports more comprehensive approaches to HIV surveillance and intervention planning"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "I am a biostatistician with over five years of experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analytic workflows to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research, program evaluation, and evidence-based practice."
-  },
-  {
-    "objectID": "index.html#senior-biostatistician",
-    "href": "index.html#senior-biostatistician",
-    "title": "Home",
-    "section": "",
-    "text": "I am a biostatistician with over five years of experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analytic workflows to support reliable scientific conclusions.\nI work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research, program evaluation, and evidence-based practice."
-  },
-  {
-    "objectID": "index.html#research-background",
-    "href": "index.html#research-background",
-    "title": "Home",
-    "section": "Research Background",
-    "text": "Research Background\nHIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (including diabetes)"
-  },
-  {
-    "objectID": "index.html#areas-of-expertise",
-    "href": "index.html#areas-of-expertise",
-    "title": "Home",
-    "section": "Areas of Expertise",
-    "text": "Areas of Expertise\nApplied biostatistics across clinical and public health research, including study design, longitudinal and survival analysis, and causal inference methods.\n\nRegression modeling (GLM, GLMM)\nLongitudinal data analysis\nSurvival analysis\nCausal inference using inverse probability of treatment weighting (IPTW)\nStudy design and power/sample size calculations\nPenalized regression (LASSO)\nMultiple imputation\nNeighborhood- and multilevel data analysis"
-  },
-  {
-    "objectID": "index.html#tools",
-    "href": "index.html#tools",
-    "title": "Home",
-    "section": "Tools",
-    "text": "Tools\nR, SAS, Python, Quarto, Git, R Shiny, Markdown"
-  },
-  {
-    "objectID": "projects/R01_visualization.html#key-findings",
-    "href": "projects/R01_visualization.html#key-findings",
-    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
-    "section": "Key Findings",
-    "text": "Key Findings\nIndividuals in the sequenced and clustered group had consistently lower proportions of late diagnosis, non-suppression, and not being in care compared to unclustered and non-sequenced groups.\nThese findings suggest that individuals captured in molecular surveillance and clustering analyses may be more engaged in HIV care and more likely to achieve viral suppression."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#key-findings",
-    "href": "projects/outlier_analysis.html#key-findings",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Key Findings",
-    "text": "Key Findings\n\nImproved HIV outcomes were associated with indicators of care engagement and access, including:\n\nolder age at diagnosis\n\nrecent STI history\n\navailability of HIV sequence data\n\nHigher rates of viral suppression and care engagement were observed among:\n\nindividuals in genetic clusters\n\nindividuals born outside the U.S.\n\nGeographic variation revealed districts with outcomes differing from expectations, including:\n\nhigher-than-expected late diagnosis in Coral Gables/Kendall\n\nlower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset"
-  },
-  {
-    "objectID": "projects/sesame_project.html#data-simulation-context",
-    "href": "projects/sesame_project.html#data-simulation-context",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Data & Simulation Context",
-    "text": "Data & Simulation Context\n\nSimulation framework: Agent-based model (SD-ABM-FAV) integrated with FAVITES\n\nPopulation: Simulated at-risk individuals and people with HIV (PWH) in San Diego\n\nKey features of simulation:\n\nHIV transmission dynamics calibrated to the local epidemic\n\nTime to diagnosis by transmission risk group\n\nRealistic sequencing processes:\n\nat diagnosis\n\nupon re-engagement in care\n\nat viral rebound\n\n\nViral phylogeny generated from transmission events\n\nDerived data for analysis:\n\nPairwise genetic linkages based on sequence similarity thresholds\n\nLongitudinal sequence timing for each individual"
-  },
-  {
-    "objectID": "projects/sesame_project.html#key-findings",
-    "href": "projects/sesame_project.html#key-findings",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Key Findings",
-    "text": "Key Findings\n\nSimulated molecular networks closely reproduced observed patterns in:\n\nnumber of genetic linkages over time\n\ndistribution of cluster sizes\n\nMost clusters were small:\n\n~50% consisted of 2 individuals\n\nmaximum cluster size was 18\n\nCDC-defined priority clusters were rare in both observed and simulated data\nNo forward transmissions were identified from individuals in priority clusters\n→ indicating that detected clusters did not capture individuals driving transmission"
-  },
-  {
-    "objectID": "projects/sesame_project.html#data-context",
-    "href": "projects/sesame_project.html#data-context",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Data & Context",
-    "text": "Data & Context\n\nData source: Simulated HIV transmission and genetic network data (SD-ABM-FAV framework)\n\nStudy period: 2019–2021\n\nCalibration: Simulation aligned to observed molecular network data (baseline up to 2018)\nAvailable data:\n\nPairwise genetic linkages (based on sequence similarity)\n\nTiming of sequence collection\n\nTransmission network (1,356 transmission pairs)"
-  },
-  {
-    "objectID": "projects/sesame_project.html#original-plan-vs-actual-analysis",
-    "href": "projects/sesame_project.html#original-plan-vs-actual-analysis",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Original Plan vs Actual Analysis",
-    "text": "Original Plan vs Actual Analysis\n\nOriginal Plan\n\nEvaluate potential impact of identifying and intervening on HIV transmission clusters\n\nSimulate CDC response and measure downstream intervention effects\n\nEstimate reduction in undiagnosed time and transmission-related outcomes\n\n\n\nActual Analysis\n\nFocus shifted to evaluating whether molecular clusters accurately capture transmission dynamics\n\nCompared observed vs simulated molecular networks\n\nAssessed CDC priority clusters in relation to actual transmission network\n\nEvaluated whether clustered individuals contributed to forward transmission\n\n\n\nKey Insight\nThis analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting."
-  },
-  {
-    "objectID": "projects/Pulmonary_vein_rehabilitation.html",
-    "href": "projects/Pulmonary_vein_rehabilitation.html",
-    "title": "Hyeri | Senior Biostatistician",
-    "section": "",
-    "text": "Aljohani OA, Mackie D, Frazer J, You H, et al. (2021), Progress in Pediatric Cardiology\n\n\nThis study evaluated outcomes of serial balloon angioplasty as a management strategy for pediatric pulmonary vein stenosis (PVS), a progressive and high-mortality congenital condition. The analysis used retrospective data from a single tertiary center (2008–2017) including 23 pediatric patients.\n\n\n\n\nRetrospective cohort study of children (&lt;18 years) with PVS\n\nClinical, procedural, and longitudinal catheterization data extracted from institutional records\n\nOutcomes assessed across multiple anatomical subgroups (e.g., TAPVC vs. non-TAPVC, univentricular vs. biventricular circulation)\n\n\n\n\n\nCategorical variables summarized as counts and percentages\n\nContinuous variables summarized using median and interquartile range\n\nGroup comparisons performed using Chi-square and Mann–Whitney U tests\n\nSurvival outcomes estimated using Kaplan–Meier methods with log-rank tests for group comparisons\n\nLongitudinal changes in catheterization intervals assessed using Kruskal–Wallis tests\n\n\n\n\n\nQuantified procedural burden and longitudinal treatment patterns for serial balloon angioplasty\n\nEvaluated survival differences across anatomical and clinical subgroups\n\nAssessed temporal changes in intervention frequency and disease progression\n\nCharacterized stent usage and re-intervention patterns in a high-risk pediatric population\n\n\n\n\n\n278 balloon angioplasty procedures performed across 69 stenotic pulmonary veins\n\nMedian of 5 catheterization procedures per patient\n\nSurvival rates at 1, 3, and 5 years were 78%, 70%, and 70%, respectively\n\nBilateral disease was significantly associated with mortality\n\nNo procedural deaths were observed\n\nInterval between catheterizations increased over time, suggesting partial disease stabilization in survivors\n\n\n\n\nThis analysis provided quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric PVS. The findings highlight both the substantial procedural burden and the potential for improved intermediate-term survival in this high-risk population."
-  },
-  {
-    "objectID": "projects/Pulmonary_vein_rehabilitation.html#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis",
-    "href": "projects/Pulmonary_vein_rehabilitation.html#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis",
-    "title": "Hyeri | Senior Biostatistician",
-    "section": "",
-    "text": "Aljohani OA, Mackie D, Frazer J, You H, et al. (2021), Progress in Pediatric Cardiology\n\n\nThis study evaluated outcomes of serial balloon angioplasty as a management strategy for pediatric pulmonary vein stenosis (PVS), a progressive and high-mortality congenital condition. The analysis used retrospective data from a single tertiary center (2008–2017) including 23 pediatric patients.\n\n\n\n\nRetrospective cohort study of children (&lt;18 years) with PVS\n\nClinical, procedural, and longitudinal catheterization data extracted from institutional records\n\nOutcomes assessed across multiple anatomical subgroups (e.g., TAPVC vs. non-TAPVC, univentricular vs. biventricular circulation)\n\n\n\n\n\nCategorical variables summarized as counts and percentages\n\nContinuous variables summarized using median and interquartile range\n\nGroup comparisons performed using Chi-square and Mann–Whitney U tests\n\nSurvival outcomes estimated using Kaplan–Meier methods with log-rank tests for group comparisons\n\nLongitudinal changes in catheterization intervals assessed using Kruskal–Wallis tests\n\n\n\n\n\nQuantified procedural burden and longitudinal treatment patterns for serial balloon angioplasty\n\nEvaluated survival differences across anatomical and clinical subgroups\n\nAssessed temporal changes in intervention frequency and disease progression\n\nCharacterized stent usage and re-intervention patterns in a high-risk pediatric population\n\n\n\n\n\n278 balloon angioplasty procedures performed across 69 stenotic pulmonary veins\n\nMedian of 5 catheterization procedures per patient\n\nSurvival rates at 1, 3, and 5 years were 78%, 70%, and 70%, respectively\n\nBilateral disease was significantly associated with mortality\n\nNo procedural deaths were observed\n\nInterval between catheterizations increased over time, suggesting partial disease stabilization in survivors\n\n\n\n\nThis analysis provided quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric PVS. The findings highlight both the substantial procedural burden and the potential for improved intermediate-term survival in this high-risk population."
-  },
-  {
     "objectID": "projects/nafld_exercise_survey.html",
     "href": "projects/nafld_exercise_survey.html",
     "title": "Patient Perspective on Exercise in Pediatric NAFLD",
@@ -427,6 +35,20 @@
     "text": "This study grew out of a simple but important clinical question: although exercise is a cornerstone of treatment for pediatric nonalcoholic fatty liver disease (NAFLD), what does physical activity actually look like from the patient’s perspective, and what prevents children from being more active in their daily lives?\nTo address this, we conducted a multicenter survey study to better understand how children with NAFLD engage in exercise, what types of activities they prefer, and what barriers they experience. The broader goal was to generate patient-centered evidence that could inform the design of more realistic and sustainable physical activity interventions."
   },
   {
+    "objectID": "projects/nafld_exercise_survey.html#data-study-design",
+    "href": "projects/nafld_exercise_survey.html#data-study-design",
+    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
+    "section": "Data & Study Design",
+    "text": "Data & Study Design\nWe analyzed cross-sectional survey data collected from 408 children aged 8–18 years with clinically diagnosed NAFLD across six academic pediatric gastroenterology centers in the United States. Diagnosis was confirmed using liver histology, imaging, and/or laboratory criteria depending on site-specific clinical practice.\nData were collected between October 2019 and August 2021, with a temporary pause during the COVID-19 pandemic, which also influenced patterns of physical activity during the study period.\nAt each site, children completed structured questionnaires during clinic visits. The survey captured multiple dimensions of physical activity, including school-based exercise (physical education and recess), extracurricular activity, preferred types of exercise, perceived barriers, and motivations. Parents completed a short complementary survey assessing their willingness and ability to support their child’s physical activity."
+  },
+  {
+    "objectID": "projects/nafld_exercise_survey.html#statistical-methods",
+    "href": "projects/nafld_exercise_survey.html#statistical-methods",
+    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nThe analysis was primarily descriptive, aimed at characterizing patterns of behavior and perception in this population. We used chi-square tests to examine differences in categorical variables such as sex and age group, and two-sample t-tests for continuous variables such as exercise frequency.\nAll analyses were conducted in R (v4.0.2), and statistical significance was defined as a p-value less than 0.05. Given the exploratory nature of the study, emphasis was placed on patterns and consistency across domains rather than formal hypothesis testing."
+  },
+  {
     "objectID": "projects/nafld_exercise_survey.html#key-findings",
     "href": "projects/nafld_exercise_survey.html#key-findings",
     "title": "Patient Perspective on Exercise in Pediatric NAFLD",
@@ -434,39 +56,18 @@
     "text": "Key Findings\nA central finding from this study was that children with NAFLD are generally motivated to be more physically active, but their current activity levels are fragmented and highly dependent on environmental structure.\nWhile just over half of children participated in physical education at school, and nearly 60% engaged in some form of extracurricular activity, a meaningful proportion reported very limited or no physical activity at all. At the same time, more than 80% of participants expressed a desire to exercise more than they currently do.\nWhen asked about preferences, children consistently gravitated toward simple and accessible activities. Walking was the most commonly preferred activity, followed by bicycling and running. These preferences were notable because they reflect forms of exercise that require minimal resources and can be integrated into daily routines.\nMotivations for exercise were largely health-driven. Many children reported exercising to improve overall health, manage weight, or specifically improve liver health, often reflecting awareness of their underlying diagnosis."
   },
   {
-    "objectID": "projects/nafld_exercise_survey.html#clinical-implications",
-    "href": "projects/nafld_exercise_survey.html#clinical-implications",
-    "title": "Patient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)",
-    "section": "Clinical Implications",
-    "text": "Clinical Implications\nThese findings suggest that lifestyle interventions for pediatric NAFLD should:\n\nBe patient-centered, incorporating preferred activities such as walking and cycling\n\nAddress practical barriers, especially time constraints\n\nEngage families and parents, who showed strong willingness to support exercise\n\nFocus on feasible, routine-based activity integration rather than structured high-intensity programs alone"
+    "objectID": "projects/nafld_exercise_survey.html#analytical-decisions-challenges",
+    "href": "projects/nafld_exercise_survey.html#analytical-decisions-challenges",
+    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\nOne of the key analytical considerations in this study was how to meaningfully define and categorize physical activity across multiple overlapping domains, including school-based exercise, recess activity, and extracurricular participation. Because children often engaged in more than one type of activity, we had to carefully structure variables to avoid double counting and to accurately reflect total activity patterns.\nAnother challenge was the reliance on self-reported data, which may be subject to recall bias and social desirability bias, particularly in pediatric populations. Additionally, the study was conducted during a period partially affected by the COVID-19 pandemic, which likely influenced both access to and reporting of physical activity.\nDespite these limitations, the consistency of findings across multiple centers strengthened confidence in the overall patterns observed."
   },
   {
-    "objectID": "projects/nafld_exercise_survey.html#methods-summary",
-    "href": "projects/nafld_exercise_survey.html#methods-summary",
-    "title": "Patient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)",
-    "section": "Methods Summary",
-    "text": "Methods Summary\n\nMulticenter cross-sectional survey (6 U.S. academic institutions)\n\nParticipants: children aged 8–18 with NAFLD\n\nSurvey instruments combined validated tools:\n\nPediatric Activity Questionnaire (PAQ-C/A)\nExercise Preference Inventory\nExercise Barrier Questionnaire\n\n\nStatistical analysis: chi-square tests and t-tests"
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#takeaway",
-    "href": "projects/nafld_exercise_survey.html#takeaway",
-    "title": "Patient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)",
-    "section": "Takeaway",
-    "text": "Takeaway\nChildren with NAFLD are motivated to increase physical activity but face structural and time-related barriers. Interventions should align with patient preferences and integrate exercise into daily routines to improve adherence and clinical outcomes."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html",
-    "href": "projects/pv_rehabilitation.html",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "",
-    "text": "Pulmonary vein stenosis (PVS) is a rare and severe congenital condition characterized by progressive obstruction of pulmonary venous return, often leading to significant morbidity and mortality in pediatric patients. Management of this condition is particularly challenging due to its progressive nature and the frequent need for repeated interventions.\nIn this study, we evaluated longitudinal outcomes of serial balloon angioplasty as a palliative treatment strategy in children diagnosed with PVS. The primary focus was to understand how clinical characteristics, anatomical subtype, and cumulative procedural burden were associated with survival and disease progression over time."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis",
-    "href": "projects/pv_rehabilitation.html#pulmonary-vein-rehabilitation-in-pediatric-pulmonary-vein-stenosis",
-    "title": "Hyeri | Senior Biostatistician",
-    "section": "",
-    "text": "Aljohani OA, Mackie D, Frazer J, You H, et al. (2021), Progress in Pediatric Cardiology\n\n\nThis study evaluated outcomes of serial balloon angioplasty as a management strategy for pediatric pulmonary vein stenosis (PVS), a progressive and high-mortality congenital condition. The analysis used retrospective data from a single tertiary center (2008–2017) including 23 pediatric patients.\n\n\n\n\nRetrospective cohort study of children (&lt;18 years) with PVS\n\nClinical, procedural, and longitudinal catheterization data extracted from institutional records\n\nOutcomes assessed across multiple anatomical subgroups (e.g., TAPVC vs. non-TAPVC, univentricular vs. biventricular circulation)\n\n\n\n\n\nCategorical variables summarized as counts and percentages\n\nContinuous variables summarized using median and interquartile range\n\nGroup comparisons performed using Chi-square and Mann–Whitney U tests\n\nSurvival outcomes estimated using Kaplan–Meier methods with log-rank tests for group comparisons\n\nLongitudinal changes in catheterization intervals assessed using Kruskal–Wallis tests\n\n\n\n\n\nQuantified procedural burden and longitudinal treatment patterns for serial balloon angioplasty\n\nEvaluated survival differences across anatomical and clinical subgroups\n\nAssessed temporal changes in intervention frequency and disease progression\n\nCharacterized stent usage and re-intervention patterns in a high-risk pediatric population\n\n\n\n\n\n278 balloon angioplasty procedures performed across 69 stenotic pulmonary veins\n\nMedian of 5 catheterization procedures per patient\n\nSurvival rates at 1, 3, and 5 years were 78%, 70%, and 70%, respectively\n\nBilateral disease was significantly associated with mortality\n\nNo procedural deaths were observed\n\nInterval between catheterizations increased over time, suggesting partial disease stabilization in survivors\n\n\n\n\nThis analysis provided quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric PVS. The findings highlight both the substantial procedural burden and the potential for improved intermediate-term survival in this high-risk population."
+    "objectID": "projects/nafld_exercise_survey.html#impact",
+    "href": "projects/nafld_exercise_survey.html#impact",
+    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
+    "section": "Impact",
+    "text": "Impact\nThis study highlights a critical gap between motivation and opportunity. Children with NAFLD are not generally unmotivated to exercise—in fact, most expressed a clear desire to be more active—but their ability to do so is constrained by time, school demands, and environmental structure.\nFrom a clinical perspective, these findings suggest that effective interventions may need to move beyond simply recommending “more exercise” and instead focus on integrating movement into daily life in realistic ways. Walking and bicycling, for example, emerged as highly preferred activities and may represent practical targets for intervention design.\nMore broadly, the study underscores the importance of incorporating patient perspective into lifestyle intervention research, particularly in pediatric chronic disease settings where feasibility and adherence are closely tied to real-world constraints."
   },
   {
     "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html",
@@ -483,11 +84,11 @@
     "text": "Coronary angiography combined with fractional flow reserve (FFR) assessment is widely used to guide decision-making in patients with suspected coronary artery disease (CAD), particularly in distinguishing obstructive from non-obstructive disease. While this approach informs revascularization strategy, its downstream impact on longitudinal medical management—particularly lipid-lowering therapy—remains less well understood.\nIn this study, we examined temporal trends in LDL-C and lipid-lowering therapy following invasive angiography with FFR, comparing patients with obstructive versus non-obstructive CAD over a 12-month follow-up period. The goal was to understand whether diagnostic classification influences the intensity and durability of secondary prevention efforts in real-world clinical practice."
   },
   {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#data",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#data",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Late diagnosis (binary)\nCovariates: age at diagnosis, race, neighborhood poverty\nClustering unit: health district"
+    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#data-study-design",
+    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#data-study-design",
+    "title": "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease",
+    "section": "Data & Study Design",
+    "text": "Data & Study Design\nThis retrospective cohort study included 721 patients who underwent coronary angiography with fractional flow reserve assessment at a single academic medical center between 2013 and 2020. Patients were categorized based on combined angiographic and FFR findings into obstructive or non-obstructive CAD.\nThe study population reflected a clinically diverse cohort undergoing evaluation for both acute coronary syndrome and stable ischemic indications. Baseline demographic characteristics, comorbid cardiovascular risk factors, procedural findings, lipid values, and medication data were extracted from the electronic health record. Follow-up information was available at approximately 3, 6, and 12 months after the index angiographic assessment."
   },
   {
     "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#statistical-methods",
@@ -495,132 +96,6 @@
     "title": "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease",
     "section": "Statistical Methods",
     "text": "Statistical Methods\nBaseline characteristics were summarized using means and standard deviations for continuous variables and frequencies and proportions for categorical variables. Group differences were assessed using t-tests or Mann–Whitney U tests for continuous variables and chi-square tests for categorical variables.\nLongitudinal LDL-C trends were evaluated across follow-up time points using nonparametric comparisons between groups. In addition, multivariable linear regression models were used to assess differences in LDL-C over time while adjusting for demographic and clinical covariates, with log transformation applied to lipid values to improve model fit.\nLipid-lowering therapy utilization was analyzed descriptively across time points, and multivariable logistic regression was used to evaluate the association between CAD classification and major adverse cardiovascular events (MACE) over 12 months."
-  },
-  {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#interpretation",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#interpretation",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Interpretation",
-    "text": "Interpretation\nHigher neighborhood poverty was associated with increased odds of late HIV diagnosis after adjusting for individual-level factors.\nRacial disparities persisted, suggesting that neighborhood context alone does not fully explain observed differences."
-  },
-  {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#analytical-decisions-challenges",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#analytical-decisions-challenges",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\n\nGeographic unit: Zip-code–level models were unstable due to sparse counts; district-level aggregation improved model convergence.\nMissing data: Multiple imputation was used instead of complete-case analysis to reduce bias.\nModel complexity: Penalized models were explored but not selected due to interpretability concerns for stakeholders."
-  },
-  {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#impact",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#impact",
-    "title": "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease",
-    "section": "Impact",
-    "text": "Impact\nThis study highlights a clinically important disconnect between diagnostic assessment and longitudinal preventive care. While coronary angiography with FFR appears to prompt early intensification of lipid-lowering therapy in both obstructive and non-obstructive CAD, this effect diminishes over time in patients with non-obstructive disease.\nThese findings suggest that patients with non-obstructive CAD may be at risk of undertreatment despite persistent residual atherosclerotic cardiovascular risk. More sustained attention to lipid management in this population may represent an important opportunity to improve long-term outcomes following invasive coronary evaluation."
-  },
-  {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#reproducibility",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#reproducibility",
-    "title": "Neighborhood-Level Predictors of Late HIV Diagnosis",
-    "section": "Reproducibility",
-    "text": "Reproducibility\nAnalyses were conducted in R using Quarto for reproducible reporting and version control via Git."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html",
-    "href": "projects/Risk_Parkinson.html",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "",
-    "text": "Parkinson disease psychosis (PDP) is a common and clinically significant non-motor complication of Parkinson disease, often associated with increased morbidity, healthcare utilization, and mortality. Despite its prevalence, treatment options remain limited, primarily including pimavanserin, quetiapine, and clozapine, each with distinct safety profiles and clinical constraints.\nIn this study, we conducted a retrospective observational analysis to evaluate whether antipsychotic treatment patterns in PDP were associated with differences in mortality and clinical outcomes. The work was motivated by conflicting evidence regarding antipsychotic safety in Parkinson disease and regulatory concerns, including FDA black box warnings on mortality risk in elderly populations.\nMy role in this project focused on the biostatistical design, data extraction logic, variable construction, and statistical modeling strategy, working closely with the neurology and clinical teams."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#overview",
-    "href": "projects/Risk_Parkinson.html#overview",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "",
-    "text": "Parkinson disease psychosis (PDP) is a common and clinically significant non-motor complication of Parkinson disease, often associated with increased morbidity, healthcare utilization, and mortality. Despite its prevalence, treatment options remain limited, primarily including pimavanserin, quetiapine, and clozapine, each with distinct safety profiles and clinical constraints.\nIn this study, we conducted a retrospective observational analysis to evaluate whether antipsychotic treatment patterns in PDP were associated with differences in mortality and clinical outcomes. The work was motivated by conflicting evidence regarding antipsychotic safety in Parkinson disease and regulatory concerns, including FDA black box warnings on mortality risk in elderly populations.\nMy role in this project focused on the biostatistical design, data extraction logic, variable construction, and statistical modeling strategy, working closely with the neurology and clinical teams."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#data",
-    "href": "projects/Risk_Parkinson.html#data",
-    "title": "R01 Data Visualization",
-    "section": "Data",
-    "text": "Data\n\nOutcome: Proportion of viral non-suppression among PWH who are or are not recieving medical care for HIV in clusters. proportion of not in-care among PLWH in clusters, proportion of Late diagnosis among PWH in clusters. (binary)\nSubgroup: age at diagnosis, race, Exposure Category, Sequence & cluster vs.Sequence & Uncluster vs. No Sequence\nClustering unit: Zip-code"
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#statistical-methods",
-    "href": "projects/Risk_Parkinson.html#statistical-methods",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nWe implemented a combination of:\n\nDescriptive comparisons using t-tests and chi-square tests\nMultiple comparison correction using Bonferroni adjustment\nLogistic regression for mortality outcomes\nMultivariable adjustment for key confounders:\n\nAge\nSex\nLevodopa equivalent daily dose (LEDD)\nDementia diagnosis\n\n\nA major analytical challenge was the absence of consistent longitudinal exposure timing, which limited survival analysis approaches. Instead, we focused on adjusted logistic regression models to estimate mortality differences across treatment groups.\nWe also conducted subgroup analyses in patients receiving quetiapine monotherapy to explore dose-response relationships across multiple clinical outcomes, including hospitalization and QTc interval."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#interpretation",
-    "href": "projects/Risk_Parkinson.html#interpretation",
-    "title": "R01 Data Visualization",
-    "section": "Interpretation",
-    "text": "Interpretation\nThe proportions of late HIV diagnosis, not being in care, and viral non-suppression were lower among individuals in the sequenced and clustered group compared with other groups."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#analytical-decisions-challenges",
-    "href": "projects/Risk_Parkinson.html#analytical-decisions-challenges",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\nSeveral methodological constraints shaped the analysis:\n\nExposure misclassification risk: medication use was inferred from EHR documentation and chart review rather than real-time adherence tracking.\nSurvival analysis limitation: absence of reliable treatment start dates prevented Cox proportional hazards modeling.\nResidual confounding: disease severity, psychosis severity, and prescribing rationale were incompletely captured.\nIncomplete longitudinal data: hospitalizations and mortality may have been underestimated if occurring outside the health system.\n\nTo address these limitations, we prioritized conservative modeling strategies and extensive covariate adjustment, while clearly framing the analysis as exploratory rather than causal."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#impact",
-    "href": "projects/Risk_Parkinson.html#impact",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "Impact",
-    "text": "Impact\nThis study contributed to an evolving clinical understanding of antipsychotic safety in Parkinson disease psychosis. The findings were published in PLOS ONE and have been cited in ongoing discussions regarding:\n\nComparative safety of pimavanserin vs. quetiapine\nReal-world use of antipsychotics in neurodegenerative disease\nMethodological limitations of EHR-based pharmacoepidemiology\n\nFrom a methodological perspective, this work strengthened my experience in:\n\nStructuring clinically heterogeneous EHR datasets\nDesigning exposure definitions under incomplete temporal data\nTranslating clinical questions into statistically robust, interpretable models\nCollaborating across neurology, psychiatry, and biostatistics teams"
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#data",
-    "href": "projects/nafld_exercise_survey.html#data",
-    "title": "Patient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)",
-    "section": "Data",
-    "text": "Data\n\nPopulation: 408 children with NAFLD (ages 8–18)\nStudy design: Multicenter cross-sectional survey (6 U.S. academic pediatric centers)\nIndividual-level data:\n\nPhysical activity (PE, recess, extracurricular exercise)\nExercise preferences and motivations\nSelf-reported barriers to activity\n\nParental data:\n\nSupport for child exercise\nFinancial and logistical willingness to support physical activity\n\nClinical context: NAFLD diagnosis confirmed via imaging, histology, or laboratory testing"
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#statistical-methods",
-    "href": "projects/nafld_exercise_survey.html#statistical-methods",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nThe analysis was primarily descriptive, aimed at characterizing patterns of behavior and perception in this population. We used chi-square tests to examine differences in categorical variables such as sex and age group, and two-sample t-tests for continuous variables such as exercise frequency.\nAll analyses were conducted in R (v4.0.2), and statistical significance was defined as a p-value less than 0.05. Given the exploratory nature of the study, emphasis was placed on patterns and consistency across domains rather than formal hypothesis testing."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#analytical-insights",
-    "href": "projects/nafld_exercise_survey.html#analytical-insights",
-    "title": "Patient Perspectives on Exercise in Pediatric NAFLD (Multicenter Survey)",
-    "section": "Analytical Insights",
-    "text": "Analytical Insights\n\nStrong mismatch between high motivation and limited actual physical activity\nSchool-based PE alone was insufficient to meet recommended activity levels for many children\nPreferences were strongly activity-specific (walking and bicycling consistently ranked highest)\nParental support was high, suggesting a key leverage point for intervention design"
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#impact",
-    "href": "projects/nafld_exercise_survey.html#impact",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Impact",
-    "text": "Impact\nThis study highlights a critical gap between motivation and opportunity. Children with NAFLD are not generally unmotivated to exercise—in fact, most expressed a clear desire to be more active—but their ability to do so is constrained by time, school demands, and environmental structure.\nFrom a clinical perspective, these findings suggest that effective interventions may need to move beyond simply recommending “more exercise” and instead focus on integrating movement into daily life in realistic ways. Walking and bicycling, for example, emerged as highly preferred activities and may represent practical targets for intervention design.\nMore broadly, the study underscores the importance of incorporating patient perspective into lifestyle intervention research, particularly in pediatric chronic disease settings where feasibility and adherence are closely tied to real-world constraints."
-  },
-  {
-    "objectID": "projects/outlier_analysis.html#data-study-design",
-    "href": "projects/outlier_analysis.html#data-study-design",
-    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\n\nStudy design: Retrospective, population-based multilevel ecological cohort study (2020–2022)\n\nPopulation: 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)\n\nLevel 1 (Individual): demographics, transmission risk, clinical history, HIV sequence availability\n\nLevel 2 (Neighborhood): health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care\n\nData sources: eHARS, American Community Survey (ACS), and AIDSVu"
-  },
-  {
-    "objectID": "projects/sesame_project.html#data-study-design",
-    "href": "projects/sesame_project.html#data-study-design",
-    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\n\nStudy design: Simulation-based modeling study using agent-based transmission network framework (SD-ABM-FAV), calibrated to observed molecular HIV network data\n\nData source: Simulated HIV transmission and genetic network data\n\nStudy period: 2019–2021 (simulation), calibrated using pre-2018 observed data\n\nCalibration approach: Model parameters calibrated against empirical molecular network structure and observed transmission patterns\nAvailable data:\n\nPairwise genetic linkages based on sequence similarity\n\nTiming of sequence collection\n\nReconstructed transmission network (1,356 transmission pairs)"
-  },
-  {
-    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#data-study-design",
-    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#data-study-design",
-    "title": "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\nThis retrospective cohort study included 721 patients who underwent coronary angiography with fractional flow reserve assessment at a single academic medical center between 2013 and 2020. Patients were categorized based on combined angiographic and FFR findings into obstructive or non-obstructive CAD.\nThe study population reflected a clinically diverse cohort undergoing evaluation for both acute coronary syndrome and stable ischemic indications. Baseline demographic characteristics, comorbid cardiovascular risk factors, procedural findings, lipid values, and medication data were extracted from the electronic health record. Follow-up information was available at approximately 3, 6, and 12 months after the index angiographic assessment."
   },
   {
     "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#key-findings",
@@ -637,46 +112,25 @@
     "text": "Analytical Challenges & Decisions\nSeveral methodological considerations shaped the analysis. The use of real-world electronic health record data introduced variability in follow-up timing and completeness of laboratory measurements, particularly at later time points. In addition, treatment patterns were influenced by clinical practice variation, limiting the ability to isolate causal effects of diagnostic classification.\nAnother challenge involved distinguishing angiographically obstructive disease from physiologically significant disease, which required integration of both visual and FFR-based assessments. This dual classification added clinical nuance but also increased heterogeneity within the obstructive CAD group.\nFinally, missing follow-up lipid measurements and differences in patient retention over time required careful interpretation of longitudinal trends, particularly at 12 months."
   },
   {
-    "objectID": "projects/pv_rehabilitation.html#overview",
-    "href": "projects/pv_rehabilitation.html#overview",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "",
-    "text": "Pulmonary vein stenosis (PVS) is a rare and severe congenital condition characterized by progressive obstruction of pulmonary venous return, often leading to significant morbidity and mortality in pediatric patients. Management of this condition is particularly challenging due to its progressive nature and the frequent need for repeated interventions.\nIn this study, we evaluated longitudinal outcomes of serial balloon angioplasty as a palliative treatment strategy in children diagnosed with PVS. The primary focus was to understand how clinical characteristics, anatomical subtype, and cumulative procedural burden were associated with survival and disease progression over time."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#data-study-design",
-    "href": "projects/pv_rehabilitation.html#data-study-design",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\nThis retrospective cohort study included 23 pediatric patients diagnosed with pulmonary vein stenosis between 2008 and 2017 at a single tertiary care center. Clinical, procedural, and longitudinal follow-up data were extracted from institutional medical records and catheterization reports.\nThe study population was clinically heterogeneous, including patients with both TAPVC and non-TAPVC anatomy, as well as those with univentricular and biventricular circulatory physiology. This heterogeneity reflected the complexity of real-world clinical management of pediatric PVS in a tertiary referral setting."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#statistical-methods",
-    "href": "projects/pv_rehabilitation.html#statistical-methods",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "Statistical Methods",
-    "text": "Statistical Methods\nGiven the relatively small sample size and the heterogeneity of clinical presentations, the analysis relied on descriptive and nonparametric statistical approaches. Clinical and procedural characteristics were compared across subgroups using Chi-square tests for categorical variables and Mann–Whitney U tests for continuous variables.\nSurvival outcomes were estimated using Kaplan–Meier methods, and differences between anatomical and physiological subgroups were assessed using log-rank tests. In addition, longitudinal changes in catheterization intervals were evaluated using Kruskal–Wallis tests to better understand how intervention frequency evolved over time."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#key-findings",
-    "href": "projects/pv_rehabilitation.html#key-findings",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "Key Findings",
-    "text": "Key Findings\nA total of 278 balloon angioplasty procedures were performed across 69 stenotic pulmonary veins during the study period, highlighting the substantial procedural burden associated with the management of this condition. Patients underwent a median of five catheterization procedures throughout follow-up.\nSurvival analysis demonstrated 1-, 3-, and 5-year survival rates of 78%, 70%, and 70%, respectively, suggesting relatively stable intermediate-term survival among patients who remained alive during follow-up.\nPatients with bilateral pulmonary vein involvement experienced significantly higher mortality compared to those with unilateral disease, indicating an important prognostic distinction based on anatomical severity. Notably, no procedural deaths were observed, supporting the safety of serial balloon angioplasty in this high-risk population. Over time, the interval between catheterization procedures increased among survivors, suggesting possible partial stabilization of disease in selected patients."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#analytical-challenges-decisions",
-    "href": "projects/pv_rehabilitation.html#analytical-challenges-decisions",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
-    "section": "Analytical Challenges & Decisions",
-    "text": "Analytical Challenges & Decisions\nSeveral methodological considerations influenced the analytic approach in this study. The small sample size limited the feasibility of multivariable modeling and necessitated a reliance on stratified and nonparametric methods. In addition, the heterogeneity of anatomical subtypes required subgroup-based analyses rather than pooled estimates in order to preserve clinical interpretability.\nThe repeated nature of interventions introduced additional complexity, as outcomes needed to be interpreted in a longitudinal framework rather than as independent events. Finally, the relatively sparse number of events constrained the use of more granular modeling techniques for survival and progression analyses."
-  },
-  {
-    "objectID": "projects/pv_rehabilitation.html#impact",
-    "href": "projects/pv_rehabilitation.html#impact",
-    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "objectID": "projects/ldl_c_ffr_coronary_artery_trends.html#impact",
+    "href": "projects/ldl_c_ffr_coronary_artery_trends.html#impact",
+    "title": "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease",
     "section": "Impact",
-    "text": "Impact\nThis study provides quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric pulmonary vein stenosis. Beyond survival outcomes, the analysis highlights the substantial and ongoing procedural burden experienced by affected patients, emphasizing the chronic and intervention-dependent nature of the disease.\nMore broadly, these findings contribute to a deeper understanding of disease progression in pediatric PVS and underscore the importance of anatomical subtype in shaping clinical outcomes and treatment trajectories. The results further support continued refinement of long-term management strategies for this high-risk population."
+    "text": "Impact\nThis study highlights a clinically important disconnect between diagnostic assessment and longitudinal preventive care. While coronary angiography with FFR appears to prompt early intensification of lipid-lowering therapy in both obstructive and non-obstructive CAD, this effect diminishes over time in patients with non-obstructive disease.\nThese findings suggest that patients with non-obstructive CAD may be at risk of undertreatment despite persistent residual atherosclerotic cardiovascular risk. More sustained attention to lipid management in this population may represent an important opportunity to improve long-term outcomes following invasive coronary evaluation."
+  },
+  {
+    "objectID": "projects/R01_visualization.html",
+    "href": "projects/R01_visualization.html",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "",
+    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#overview",
+    "href": "projects/R01_visualization.html#overview",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "",
+    "text": "This project evaluates whether HIV transmission clustering is associated with differences in care engagement and clinical outcomes across geographic areas in Miami-Dade County. It integrates HIV clinical outcomes with viral genetic clustering to examine disparities across clustered, unclustered, and non-sequenced groups, with a focus on care engagement, viral suppression, and late diagnosis. All data are simulated or de-identified."
   },
   {
     "objectID": "projects/R01_visualization.html#data-study-design",
@@ -686,81 +140,130 @@
     "text": "Data & Study Design\n\nStudy design: Descriptive, cross-sectional analysis of HIV surveillance data (2019–2021)\n\nPopulation: People with HIV (PWH) diagnosed in Miami-Dade County (2019–2021)\n\nUnit of analysis: ZIP Code–level aggregation\n\nOutcomes: - Viral non-suppression\n- In-care status\n- Late diagnosis\nStratification: - Clustered vs unclustered vs non-sequenced groups\n- Race, age, transmission risk, diagnosis stage"
   },
   {
-    "objectID": "projects/nafld_exercise_survey.html#study-design-and-population",
-    "href": "projects/nafld_exercise_survey.html#study-design-and-population",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Study Design and Population",
-    "text": "Study Design and Population\nWe analyzed cross-sectional survey data from 408 children aged 8–18 years diagnosed with NAFLD across six academic pediatric gastroenterology centers in the United States.\nNAFLD diagnosis was established through liver histology, imaging, and/or laboratory criteria. Data were collected between October 2019 and August 2021, with a temporary interruption during the COVID-19 pandemic.\nParticipants completed structured questionnaires assessing: - Current physical activity patterns (PE, recess, extracurricular exercise) - Exercise preferences and settings - Motivational factors - Perceived barriers - Parental support and resource availability"
+    "objectID": "projects/R01_visualization.html#statistical-methods",
+    "href": "projects/R01_visualization.html#statistical-methods",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nDescriptive analyses were conducted to compare HIV outcomes across clustering groups. ZIP Code–level proportions were calculated and stratified by demographic and clinical characteristics.\nDue to sparsity in some ZIP Codes, geographic aggregation at the district level was implemented to improve statistical stability and model convergence. Interactive visualizations, including choropleth maps and temporal trend plots, were developed using R and Shiny to explore spatial and temporal patterns in HIV outcomes."
   },
   {
-    "objectID": "projects/nafld_exercise_survey.html#current-physical-activity-patterns",
-    "href": "projects/nafld_exercise_survey.html#current-physical-activity-patterns",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Current Physical Activity Patterns",
-    "text": "Current Physical Activity Patterns\nOverall, most children reported some level of physical activity, but engagement was highly variable.\n\n52.5% participated in physical education (PE) at school\n\n59.5% engaged in extracurricular physical activity\n\n40.5% reported no physical activity outside school\n\n11.5% reported no physical activity at all\n\nAmong those who were active, walking, running, basketball, and bicycling were the most common activities. Notably, only a minority of children participated consistently across PE, recess, and extracurricular exercise, highlighting fragmented opportunities for physical activity."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#exercise-preferences",
-    "href": "projects/nafld_exercise_survey.html#exercise-preferences",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Exercise Preferences",
-    "text": "Exercise Preferences\nDespite variability in current activity levels, 81% of participants expressed a desire to increase their physical activity, indicating strong intrinsic motivation.\nThe most preferred activities were: - Walking (50%) - Bicycling (36%) - Running (29%)\nMost children preferred: - Exercising at home or in nearby community settings - Activity after school or in the evening - Exercising alone or with family rather than structured programs\nThese findings suggest that low-barrier, flexible activities may align best with patient preferences."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#motivations-and-barriers",
-    "href": "projects/nafld_exercise_survey.html#motivations-and-barriers",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Motivations and Barriers",
-    "text": "Motivations and Barriers\n\nMotivations\nChildren were primarily motivated by health-related goals, including: - Improving overall health (56%) - Weight loss (48%) - Physician recommendation (38%) - Liver-specific health improvement (36%)\n\n\nBarriers\nMore than half of participants reported barriers to exercise. The most common included: - Too much homework (18%) - Lack of time (16%) - Low interest in exercise (16%) - Limited access to resources or facilities (13%)\nThese findings highlight that structural and environmental constraints may be more limiting than lack of motivation."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#role-of-family-support",
-    "href": "projects/nafld_exercise_survey.html#role-of-family-support",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Role of Family Support",
-    "text": "Role of Family Support\nParental involvement emerged as an important enabling factor: - ~33% of parents reported regular exercise themselves\n- Parents who exercised were more likely to have children engaging in physical activity\n- ~80% of parents were willing to provide financial and logistical support for exercise\nThis suggests that family-level engagement may meaningfully influence children’s activity patterns."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#conclusion",
-    "href": "projects/nafld_exercise_survey.html#conclusion",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Conclusion",
-    "text": "Conclusion\nChildren with NAFLD demonstrate high willingness to increase physical activity but face practical barriers, particularly related to time constraints and environmental structure.\nWalking and bicycling—simple, accessible activities—emerged as the most preferred forms of exercise, suggesting strong potential for scalable interventions.\nOverall, these findings support the need for patient-centered, family-supported, and low-barrier physical activity interventions, particularly those integrated into daily routines or school environments."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#data-study-design",
-    "href": "projects/nafld_exercise_survey.html#data-study-design",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\nWe analyzed cross-sectional survey data collected from 408 children aged 8–18 years with clinically diagnosed NAFLD across six academic pediatric gastroenterology centers in the United States. Diagnosis was confirmed using liver histology, imaging, and/or laboratory criteria depending on site-specific clinical practice.\nData were collected between October 2019 and August 2021, with a temporary pause during the COVID-19 pandemic, which also influenced patterns of physical activity during the study period.\nAt each site, children completed structured questionnaires during clinic visits. The survey captured multiple dimensions of physical activity, including school-based exercise (physical education and recess), extracurricular activity, preferred types of exercise, perceived barriers, and motivations. Parents completed a short complementary survey assessing their willingness and ability to support their child’s physical activity."
-  },
-  {
-    "objectID": "projects/nafld_exercise_survey.html#analytical-decisions-challenges",
-    "href": "projects/nafld_exercise_survey.html#analytical-decisions-challenges",
-    "title": "Patient Perspective on Exercise in Pediatric NAFLD",
-    "section": "Analytical Decisions & Challenges",
-    "text": "Analytical Decisions & Challenges\nOne of the key analytical considerations in this study was how to meaningfully define and categorize physical activity across multiple overlapping domains, including school-based exercise, recess activity, and extracurricular participation. Because children often engaged in more than one type of activity, we had to carefully structure variables to avoid double counting and to accurately reflect total activity patterns.\nAnother challenge was the reliance on self-reported data, which may be subject to recall bias and social desirability bias, particularly in pediatric populations. Additionally, the study was conducted during a period partially affected by the COVID-19 pandemic, which likely influenced both access to and reporting of physical activity.\nDespite these limitations, the consistency of findings across multiple centers strengthened confidence in the overall patterns observed."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#data-study-design",
-    "href": "projects/Risk_Parkinson.html#data-study-design",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "Data & Study Design",
-    "text": "Data & Study Design\nWe utilized electronic health record data from the UC San Diego Health System, identifying 2,994 individuals with clinically diagnosed Parkinson disease between 2016 and 2019. Among these, 352 patients met criteria for psychosis based on diagnostic codes and/or antipsychotic prescriptions, with further refinement through manual chart review.\nTo improve cohort validity, we applied several exclusion criteria:\n\nPrimary psychiatric diagnoses (e.g., schizophrenia, bipolar disorder with psychotic features)\nAtypical or drug-induced parkinsonism\nInpatient-only or non-indicated antipsychotic exposure\n\nThe final analytic cohort included 315 PDP patients, categorized into four groups:\n\nUntreated\nPimavanserin\nQuetiapine\nCombination therapy (pimavanserin + quetiapine)\n\nA key design decision was treating antipsychotic exposure as a time-fixed binary exposure during the study period, due to limitations in reliably capturing exact initiation and discontinuation dates from the EHR system."
-  },
-  {
-    "objectID": "projects/Risk_Parkinson.html#key-findings",
-    "href": "projects/Risk_Parkinson.html#key-findings",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
+    "objectID": "projects/R01_visualization.html#key-findings",
+    "href": "projects/R01_visualization.html#key-findings",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Key Findings",
-    "text": "Key Findings\nThe primary finding was a statistically significant association between pimavanserin use and reduced mortality compared to untreated patients.\n\nPimavanserin vs. untreated:\nAdjusted OR = 0.17 (95% CI: 0.03–0.68)\nNo significant mortality differences were observed for:\n\nQuetiapine\nCombination therapy\n\n\nSecondary outcomes showed mixed patterns:\n\nPimavanserin users had lower hospitalization rates\nNo consistent differences in medication exposure or laboratory profiles explained mortality differences\nMotor severity and cognitive impairment were worse in some treated groups, but did not fully account for outcomes"
+    "text": "Key Findings\nIndividuals in the sequenced and clustered group had consistently lower proportions of late diagnosis, non-suppression, and not being in care compared to unclustered and non-sequenced groups.\nThese findings suggest that individuals captured in molecular surveillance and clustering analyses may be more engaged in HIV care and more likely to achieve viral suppression."
   },
   {
-    "objectID": "projects/Risk_Parkinson.html#publication",
-    "href": "projects/Risk_Parkinson.html#publication",
-    "title": "Assessing Treatment Risks in Parkinson Disease Psychosis",
-    "section": "Publication",
-    "text": "Publication\nLongardner K, Wright BA, Alakkas A, You H, Xu R, Liu L, Nahab FB.\nAssessing the risks of treatment in Parkinson disease psychosis: An in-depth analysis.\nPLOS ONE (2023)"
+    "objectID": "projects/R01_visualization.html#analytical-decisions-challenges",
+    "href": "projects/R01_visualization.html#analytical-decisions-challenges",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nGeographic unit: ZIP Code–level analyses were unstable due to sparse counts; aggregation to the district level improved statistical stability and interpretability.\n\nThis decision highlights the importance of balancing geographic granularity with reliable estimation in small-area analyses."
+  },
+  {
+    "objectID": "projects/R01_visualization.html#impact",
+    "href": "projects/R01_visualization.html#impact",
+    "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
+    "section": "Impact",
+    "text": "Impact\nFindings from this analysis can inform targeted public health interventions by identifying geographic areas and populations with lower engagement in care.\nThe integration of molecular clustering and spatial analysis provides a framework for prioritizing outreach efforts and resource allocation in HIV prevention and treatment programs."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html",
+    "href": "projects/hf_diuretic_transition_outcomes.html",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "",
+    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#overview",
+    "href": "projects/hf_diuretic_transition_outcomes.html#overview",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "",
+    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
+    "href": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Data & Study Design",
+    "text": "Data & Study Design\nWe conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.\nAfter applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.\nPatients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:\n\n≥24 hours of oral diuretic observation\n\n&lt;24 hours of oral diuretic observation\n\nA key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.\nIn addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
+    "href": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Statistical Approach",
+    "text": "Statistical Approach\nWe first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.\nFor the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.\nMultivariable models adjusted for clinically relevant confounders, including:\n\nAge\n\nSex\n\nLeft ventricular ejection fraction\n\nRenal function (creatinine)\n\nHeart failure etiology\n\nSensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.\nGiven the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#key-findings",
+    "href": "projects/hf_diuretic_transition_outcomes.html#key-findings",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Key Findings",
+    "text": "Key Findings\nContrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was not associated with improved 30-day outcomes. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.\nSecondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.\nNotably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
+    "href": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Analytical Challenges & Decisions",
+    "text": "Analytical Challenges & Decisions\nA major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.\nKey methodological considerations included:\n\nConfounding by indication: Sicker patients were more likely to receive prolonged observation\n\nExposure misclassification risk: Reliance on EHR timestamps required careful validation of medication timing\n\nHeterogeneity in discharge practices: Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes\n\nOutcome dependence on system follow-up: Only patients followed within the health system were included, limiting external outcome capture\n\nThese constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect."
+  },
+  {
+    "objectID": "projects/hf_diuretic_transition_outcomes.html#impact",
+    "href": "projects/hf_diuretic_transition_outcomes.html#impact",
+    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "section": "Impact",
+    "text": "Impact\nThis study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.\nFrom a methodological perspective, this project strengthened experience in:\n\nConstructing exposure definitions from high-frequency EHR medication data\n\nIntegrating clinical congestion metrics into observational study design\n\nApplying survival analysis methods in real-world hospital outcomes research\n\nInterpreting treatment effects in the presence of strong confounding by clinical severity\n\nMore broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html",
+    "href": "projects/outlier_analysis.html",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "",
+    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#overview",
+    "href": "projects/outlier_analysis.html#overview",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "",
+    "text": "This project examines how individual characteristics and neighborhood-level social determinants of health influence progression along the HIV care continuum in Miami-Dade County.\nUsing data from people diagnosed with HIV between 2020 and 2022, I analyzed three key outcomes: late-stage diagnosis, engagement in HIV care, and viral suppression.\nIn addition to identifying risk and protective factors, this analysis focuses on detecting geographic areas where observed HIV outcomes differ from model-based expectations. These “outlier” areas highlight communities where HIV care and prevention efforts may be particularly effective—or where additional support may be needed."
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#data-study-design",
+    "href": "projects/outlier_analysis.html#data-study-design",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Data & Study Design",
+    "text": "Data & Study Design\n\nStudy design: Retrospective, population-based multilevel ecological cohort study (2020–2022)\n\nPopulation: 2,262 people diagnosed with HIV in Miami-Dade County (2020–2022)\n\nLevel 1 (Individual): demographics, transmission risk, clinical history, HIV sequence availability\n\nLevel 2 (Neighborhood): health district–level indicators including poverty, education, employment, racial/ethnic composition, and access to HIV testing and care\n\nData sources: eHARS, American Community Survey (ACS), and AIDSVu"
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#statistical-methods",
+    "href": "projects/outlier_analysis.html#statistical-methods",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\n\nMultilevel regression models to account for both individual- and neighborhood-level variation\n\nHealth districts treated as clustered units to capture shared contextual effects\n\nUnivariable screening followed by multivariable model selection using penalized regression to improve stability and reduce overfitting\n\nOutlier identification based on differences between observed and model-predicted outcome rates (residual-based comparison)"
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#key-findings",
+    "href": "projects/outlier_analysis.html#key-findings",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nImproved HIV outcomes were associated with indicators of care engagement and access, including:\n\nolder age at diagnosis\n\nrecent STI history\n\navailability of HIV sequence data\n\nHigher rates of viral suppression and care engagement were observed among:\n\nindividuals in genetic clusters\n\nindividuals born outside the U.S.\n\nGeographic variation revealed districts with outcomes differing from expectations, including:\n\nhigher-than-expected late diagnosis in Coral Gables/Kendall\n\nlower-than-expected viral suppression in Aventura/Miami Beach and Doral/Miami Springs/Sunset"
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#analytical-decisions-challenges",
+    "href": "projects/outlier_analysis.html#analytical-decisions-challenges",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Analytical Decisions & Challenges",
+    "text": "Analytical Decisions & Challenges\n\nOutlier definition: most districts fell within expected ranges → used residual ranking instead of strict thresholds\n\nGeographic unit selection: ZIP Code–level analyses were unstable due to sparse data → aggregated to health districts"
+  },
+  {
+    "objectID": "projects/outlier_analysis.html#impact",
+    "href": "projects/outlier_analysis.html#impact",
+    "title": "HIV Outlier Analysis (Miami-Dade, 2020–2022)",
+    "section": "Impact",
+    "text": "Impact\n\nIdentified communities with better or worse HIV outcomes than expected after adjusting for individual and structural factors\n\nSupported targeted, data-driven public health decision-making\n\nDemonstrated integration of multilevel modeling, molecular data, and spatial context in HIV surveillance"
   },
   {
     "objectID": "projects/pdp_antipsychotic_mortality_analysis.html",
@@ -812,73 +315,150 @@
     "text": "Impact\nThis project contributed to clinical understanding of antipsychotic safety in Parkinson disease psychosis, supporting the possibility that pimavanserin may be associated with a more favorable mortality profile compared to untreated patients.\nMethodologically, it strengthened experience in:\n\nCohort construction from EHR data\n\nChart review–validated exposure definition\n\nHandling confounding in observational pharmacoepidemiology\n\nInterpreting treatment effects under real-world constraints\n\nOverall, the project reinforced the importance of aligning statistical methods with data limitations rather than imposing idealized assumptions on complex clinical datasets."
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html",
-    "href": "projects/hf_diuretic_transition_outcomes.html",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/sesame_project.html",
+    "href": "projects/sesame_project.html",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "",
-    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
+    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#overview",
-    "href": "projects/hf_diuretic_transition_outcomes.html#overview",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/sesame_project.html#overview",
+    "href": "projects/sesame_project.html#overview",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "",
-    "text": "Patients hospitalized for acute decompensated heart failure (HF) are at high risk for early post-discharge adverse outcomes, including readmission and mortality. In clinical practice, many institutions transition patients from intravenous (IV) to oral diuretics for at least 24 hours prior to discharge, based on the assumption that this period of observation improves post-discharge stability and outcomes. However, this strategy has not been well validated in real-world data.\nThis study was motivated by a clinically important question: does maintaining patients on oral diuretics for ≥24 hours before discharge actually improve short-term outcomes after HF hospitalization? Despite being widely adopted in clinical workflows, the evidence supporting this practice remains limited and mixed.\nMy role in this project focused on structuring a retrospective heart failure cohort from electronic health records, defining exposure to oral diuretic transition timing, and supporting the statistical framework to evaluate 30-day post-discharge outcomes."
+    "text": "This project evaluates how well CDC-defined HIV molecular clusters identify ongoing transmission.\nUsing simulated HIV transmission and genetic network data calibrated to the San Diego epidemic (2019–2021), I analyzed how molecular clusters are detected over time and assessed whether these clusters capture individuals contributing to transmission."
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
-    "href": "projects/hf_diuretic_transition_outcomes.html#data-study-design",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/sesame_project.html#data-study-design",
+    "href": "projects/sesame_project.html#data-study-design",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Data & Study Design",
-    "text": "Data & Study Design\nWe conducted a retrospective cohort study using electronic health record data from the University of California, San Diego Health System between 2016 and 2017. The initial cohort included adult patients hospitalized with a primary diagnosis of heart failure who received IV diuretics during admission and were discharged on oral diuretic therapy.\nAfter applying inclusion and exclusion criteria (including follow-up availability within the health system and exclusion of end-stage renal disease, advanced device therapy, or transplant history), the final analytic cohort consisted of 285 patients.\nPatients were classified into two groups based on the duration of oral diuretic exposure prior to discharge:\n\n≥24 hours of oral diuretic observation\n\n&lt;24 hours of oral diuretic observation\n\nA key methodological challenge was that the exposure (timing of transition) was derived from EHR timestamps, requiring careful harmonization of medication administration records and discharge timing to construct a reliable analytic variable.\nIn addition, we captured detailed clinical variables including congestion metrics (weight change, net diuresis), renal function, neurohormonal therapy adjustments, and discharge planning processes to better contextualize treatment decisions."
+    "text": "Data & Study Design\n\nStudy design: Simulation-based modeling study using agent-based transmission network framework (SD-ABM-FAV), calibrated to observed molecular HIV network data\n\nData source: Simulated HIV transmission and genetic network data\n\nStudy period: 2019–2021 (simulation), calibrated using pre-2018 observed data\n\nCalibration approach: Model parameters calibrated against empirical molecular network structure and observed transmission patterns\nAvailable data:\n\nPairwise genetic linkages based on sequence similarity\n\nTiming of sequence collection\n\nReconstructed transmission network (1,356 transmission pairs)"
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#statistical-methods",
-    "href": "projects/hf_diuretic_transition_outcomes.html#statistical-methods",
+    "objectID": "projects/sesame_project.html#statistical-methods",
+    "href": "projects/sesame_project.html#statistical-methods",
     "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Statistical Methods",
     "text": "Statistical Methods\n\nConstructed molecular networks using genetic distance thresholds (baseline: 0.5%)\n\nPerformed threshold calibration (~0.00635) to align simulated linkages with observed data\n\nCompared observed vs simulated networks using:\n\nnumber of genetic linkages\n\ncluster (connected component) size distributions\n\nIdentified CDC priority clusters using:\n\n≥5 diagnoses within 12 months\n\nwithin a 3-year rolling window\n\nLinked molecular clusters to the transmission network to evaluate:\n\nwhether clustered individuals contributed to forward transmission"
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#key-findings",
-    "href": "projects/hf_diuretic_transition_outcomes.html#key-findings",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/sesame_project.html#key-findings",
+    "href": "projects/sesame_project.html#key-findings",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Key Findings",
-    "text": "Key Findings\nContrary to the initial hypothesis, maintaining patients on oral diuretics for ≥24 hours prior to discharge was not associated with improved 30-day outcomes. The composite outcome of readmission and mortality did not differ significantly between groups, and in some analyses, patients discharged after shorter observation periods demonstrated numerically lower event rates.\nSecondary outcomes, including heart failure readmission, emergency department visits, and all-cause hospitalization, showed similar patterns with no evidence of benefit from prolonged in-hospital oral diuretic observation.\nNotably, patients observed for ≥24 hours tended to have longer hospital stays and greater in-hospital diuresis, suggesting that clinicians may have selectively applied longer observation periods to patients perceived as more clinically complex or congested."
+    "text": "Key Findings\n\nSimulated molecular networks closely reproduced observed patterns in:\n\nnumber of genetic linkages over time\n\ndistribution of cluster sizes\n\nMost clusters were small:\n\n~50% consisted of 2 individuals\n\nmaximum cluster size was 18\n\nCDC-defined priority clusters were rare in both observed and simulated data\nNo forward transmissions were identified from individuals in priority clusters\n→ indicating that detected clusters did not capture individuals driving transmission"
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#analytical-decisions-challenges",
-    "href": "projects/hf_diuretic_transition_outcomes.html#analytical-decisions-challenges",
+    "objectID": "projects/sesame_project.html#analytical-decisions-challenges",
+    "href": "projects/sesame_project.html#analytical-decisions-challenges",
     "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Analytical Decisions & Challenges",
     "text": "Analytical Decisions & Challenges\n\nThreshold calibration: required aligning simulated and observed network structures\n\nNetwork validation: used multiple metrics (link counts and cluster size distributions)\n\nCluster definition sensitivity: results depended on CDC criteria and time windows\n\nPost hoc limitation: transmission dynamics could not be altered by simulated interventions"
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#impact",
-    "href": "projects/hf_diuretic_transition_outcomes.html#impact",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/sesame_project.html#impact",
+    "href": "projects/sesame_project.html#impact",
+    "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Impact",
-    "text": "Impact\nThis study contributed to ongoing clinical discussions regarding standard discharge practices in heart failure management. The findings challenge the assumption that a fixed ≥24-hour oral diuretic observation period improves short-term outcomes, suggesting that this practice may not be necessary for all patients.\nFrom a methodological perspective, this project strengthened experience in:\n\nConstructing exposure definitions from high-frequency EHR medication data\n\nIntegrating clinical congestion metrics into observational study design\n\nApplying survival analysis methods in real-world hospital outcomes research\n\nInterpreting treatment effects in the presence of strong confounding by clinical severity\n\nMore broadly, it reinforced the importance of aligning hospital practice patterns with evidence rather than convention, particularly in high-utilization conditions such as heart failure."
+    "text": "Impact\n\nDemonstrates a framework for validating simulated molecular networks against real-world data\n\nHighlights limitations of CDC priority cluster definitions in identifying transmission risk\n\nSuggests that molecular clustering alone may not adequately capture individuals contributing to HIV spread\n\nSupports more comprehensive approaches to HIV surveillance and intervention planning"
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#original-plan-vs-actual-analysis",
-    "href": "projects/hf_diuretic_transition_outcomes.html#original-plan-vs-actual-analysis",
+    "objectID": "projects/sesame_project.html#original-plan-vs-actual-analysis",
+    "href": "projects/sesame_project.html#original-plan-vs-actual-analysis",
     "title": "HIV Molecular Network Analysis & Priority Cluster Evaluation (San Diego)",
     "section": "Original Plan vs Actual Analysis",
     "text": "Original Plan vs Actual Analysis\n\nOriginal Plan\n\nEvaluate potential impact of identifying and intervening on HIV transmission clusters\n\nSimulate CDC response and measure downstream intervention effects\n\nEstimate reduction in undiagnosed time and transmission-related outcomes\n\n\n\nActual Analysis\n\nFocus shifted to evaluating whether molecular clusters accurately capture transmission dynamics\n\nCompared observed vs simulated molecular networks\n\nAssessed CDC priority clusters in relation to actual transmission network\n\nEvaluated whether clustered individuals contributed to forward transmission\n\n\n\nKey Insight\nThis analysis suggests that molecular cluster detection alone may not reliably identify individuals driving HIV transmission, highlighting limitations in using cluster-based metrics as direct proxies for intervention targeting."
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
-    "href": "projects/hf_diuretic_transition_outcomes.html#statistical-approach",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
-    "section": "Statistical Approach",
-    "text": "Statistical Approach\nWe first conducted descriptive analyses to compare baseline and hospitalization characteristics between exposure groups. Continuous variables were assessed using t-tests, and categorical variables using Fisher’s exact tests.\nFor the primary outcome, we used time-to-event analysis with Kaplan–Meier estimation and Cox proportional hazards regression to evaluate the association between ≥24-hour oral diuretic observation and the composite outcome of 30-day all-cause readmission and mortality.\nMultivariable models adjusted for clinically relevant confounders, including:\n\nAge\n\nSex\n\nLeft ventricular ejection fraction\n\nRenal function (creatinine)\n\nHeart failure etiology\n\nSensitivity analyses were performed using alternative exposure thresholds (16–22 hours) to assess whether the 24-hour cutoff influenced observed associations.\nGiven the observational nature of the study, the analytical strategy emphasized confounding adjustment and robustness testing rather than causal inference."
+    "objectID": "projects/pv_rehabilitation.html",
+    "href": "projects/pv_rehabilitation.html",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "",
+    "text": "Pulmonary vein stenosis (PVS) is a rare and severe congenital condition characterized by progressive obstruction of pulmonary venous return, often leading to significant morbidity and mortality in pediatric patients. Management of this condition is particularly challenging due to its progressive nature and the frequent need for repeated interventions.\nIn this study, we evaluated longitudinal outcomes of serial balloon angioplasty as a palliative treatment strategy in children diagnosed with PVS. The primary focus was to understand how clinical characteristics, anatomical subtype, and cumulative procedural burden were associated with survival and disease progression over time."
   },
   {
-    "objectID": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
-    "href": "projects/hf_diuretic_transition_outcomes.html#analytical-challenges-decisions",
-    "title": "Timing of Oral Diuretic Transition and Post-Discharge Outcomes in Heart Failure Hospitalization",
+    "objectID": "projects/pv_rehabilitation.html#overview",
+    "href": "projects/pv_rehabilitation.html#overview",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "",
+    "text": "Pulmonary vein stenosis (PVS) is a rare and severe congenital condition characterized by progressive obstruction of pulmonary venous return, often leading to significant morbidity and mortality in pediatric patients. Management of this condition is particularly challenging due to its progressive nature and the frequent need for repeated interventions.\nIn this study, we evaluated longitudinal outcomes of serial balloon angioplasty as a palliative treatment strategy in children diagnosed with PVS. The primary focus was to understand how clinical characteristics, anatomical subtype, and cumulative procedural burden were associated with survival and disease progression over time."
+  },
+  {
+    "objectID": "projects/pv_rehabilitation.html#data-study-design",
+    "href": "projects/pv_rehabilitation.html#data-study-design",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "Data & Study Design",
+    "text": "Data & Study Design\nThis retrospective cohort study included 23 pediatric patients diagnosed with pulmonary vein stenosis between 2008 and 2017 at a single tertiary care center. Clinical, procedural, and longitudinal follow-up data were extracted from institutional medical records and catheterization reports.\nThe study population was clinically heterogeneous, including patients with both TAPVC and non-TAPVC anatomy, as well as those with univentricular and biventricular circulatory physiology. This heterogeneity reflected the complexity of real-world clinical management of pediatric PVS in a tertiary referral setting."
+  },
+  {
+    "objectID": "projects/pv_rehabilitation.html#statistical-methods",
+    "href": "projects/pv_rehabilitation.html#statistical-methods",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "Statistical Methods",
+    "text": "Statistical Methods\nGiven the relatively small sample size and the heterogeneity of clinical presentations, the analysis relied on descriptive and nonparametric statistical approaches. Clinical and procedural characteristics were compared across subgroups using Chi-square tests for categorical variables and Mann–Whitney U tests for continuous variables.\nSurvival outcomes were estimated using Kaplan–Meier methods, and differences between anatomical and physiological subgroups were assessed using log-rank tests. In addition, longitudinal changes in catheterization intervals were evaluated using Kruskal–Wallis tests to better understand how intervention frequency evolved over time."
+  },
+  {
+    "objectID": "projects/pv_rehabilitation.html#key-findings",
+    "href": "projects/pv_rehabilitation.html#key-findings",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "Key Findings",
+    "text": "Key Findings\nA total of 278 balloon angioplasty procedures were performed across 69 stenotic pulmonary veins during the study period, highlighting the substantial procedural burden associated with the management of this condition. Patients underwent a median of five catheterization procedures throughout follow-up.\nSurvival analysis demonstrated 1-, 3-, and 5-year survival rates of 78%, 70%, and 70%, respectively, suggesting relatively stable intermediate-term survival among patients who remained alive during follow-up.\nPatients with bilateral pulmonary vein involvement experienced significantly higher mortality compared to those with unilateral disease, indicating an important prognostic distinction based on anatomical severity. Notably, no procedural deaths were observed, supporting the safety of serial balloon angioplasty in this high-risk population. Over time, the interval between catheterization procedures increased among survivors, suggesting possible partial stabilization of disease in selected patients."
+  },
+  {
+    "objectID": "projects/pv_rehabilitation.html#analytical-challenges-decisions",
+    "href": "projects/pv_rehabilitation.html#analytical-challenges-decisions",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
     "section": "Analytical Challenges & Decisions",
-    "text": "Analytical Challenges & Decisions\nA major challenge in this project was disentangling clinical decision-making from treatment exposure. The duration of oral diuretic observation was not randomly assigned and likely reflected clinician judgment regarding illness severity and congestion status.\nKey methodological considerations included:\n\nConfounding by indication: Sicker patients were more likely to receive prolonged observation\n\nExposure misclassification risk: Reliance on EHR timestamps required careful validation of medication timing\n\nHeterogeneity in discharge practices: Variation in neurohormonal therapy adjustments and discharge planning may have influenced outcomes\n\nOutcome dependence on system follow-up: Only patients followed within the health system were included, limiting external outcome capture\n\nThese constraints guided the interpretation of findings as a real-world comparative effectiveness analysis rather than a causal estimate of treatment effect."
+    "text": "Analytical Challenges & Decisions\nSeveral methodological considerations influenced the analytic approach in this study. The small sample size limited the feasibility of multivariable modeling and necessitated a reliance on stratified and nonparametric methods. In addition, the heterogeneity of anatomical subtypes required subgroup-based analyses rather than pooled estimates in order to preserve clinical interpretability.\nThe repeated nature of interventions introduced additional complexity, as outcomes needed to be interpreted in a longitudinal framework rather than as independent events. Finally, the relatively sparse number of events constrained the use of more granular modeling techniques for survival and progression analyses."
+  },
+  {
+    "objectID": "projects/pv_rehabilitation.html#impact",
+    "href": "projects/pv_rehabilitation.html#impact",
+    "title": "Pulmonary Vein Rehabilitation in Pediatric Pulmonary Vein Stenosis",
+    "section": "Impact",
+    "text": "Impact\nThis study provides quantitative evidence supporting serial balloon angioplasty as a viable palliative strategy for pediatric pulmonary vein stenosis. Beyond survival outcomes, the analysis highlights the substantial and ongoing procedural burden experienced by affected patients, emphasizing the chronic and intervention-dependent nature of the disease.\nMore broadly, these findings contribute to a deeper understanding of disease progression in pediatric PVS and underscore the importance of anatomical subtype in shaping clinical outcomes and treatment trajectories. The results further support continued refinement of long-term management strategies for this high-risk population."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I am a biostatistician with over five years of experience working with real-world clinical and public health data. My work focuses on translating complex observational and electronic health record data into actionable insights that support healthcare decision-making, program evaluation, and population health research.\nI collaborate closely with clinicians, epidemiologists, and public health researchers to ensure that study design and statistical analyses are aligned with real-world clinical questions and operational needs."
+  },
+  {
+    "objectID": "index.html#senior-biostatistician",
+    "href": "index.html#senior-biostatistician",
+    "title": "Home",
+    "section": "",
+    "text": "I am a biostatistician with over five years of experience working with real-world clinical and public health data. My work focuses on translating complex observational and electronic health record data into actionable insights that support healthcare decision-making, program evaluation, and population health research.\nI collaborate closely with clinicians, epidemiologists, and public health researchers to ensure that study design and statistical analyses are aligned with real-world clinical questions and operational needs."
+  },
+  {
+    "objectID": "index.html#research-background",
+    "href": "index.html#research-background",
+    "title": "Home",
+    "section": "Research Background",
+    "text": "Research Background\nHIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (including diabetes) View selected projects →"
+  },
+  {
+    "objectID": "index.html#areas-of-expertise",
+    "href": "index.html#areas-of-expertise",
+    "title": "Home",
+    "section": "Areas of Expertise",
+    "text": "Areas of Expertise\nApplied biostatistics for clinical and public health research with emphasis on real-world data and decision-oriented analysis.\n\nStudy design for observational and electronic health record data\n\nRegression modeling (GLM, GLMM)\n\nLongitudinal data analysis\n\nSurvival analysis\n\nCausal inference (IPTW, propensity score methods)\n\nComparative effectiveness research\n\nPenalized regression (LASSO)\n\nMultiple imputation\n\nMultilevel and neighborhood-level analysis"
+  },
+  {
+    "objectID": "index.html#tools",
+    "href": "index.html#tools",
+    "title": "Home",
+    "section": "Tools",
+    "text": "Tools\nR · SAS · Python · Quarto · Git · R Shiny · Markdown"
+  },
+  {
+    "objectID": "index.html#research-focus",
+    "href": "index.html#research-focus",
+    "title": "Home",
+    "section": "Research Focus",
+    "text": "Research Focus\nMy work spans HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders, with a focus on applying observational and longitudinal data to understand outcomes, disparities, and healthcare delivery patterns in real-world settings.\nI am particularly interested in studies that connect data analysis to clinical practice, health systems, and population-level decision-making.\n👉 View selected projects →"
   }
 ]

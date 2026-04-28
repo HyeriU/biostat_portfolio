@@ -4,25 +4,38 @@ title: "Home"
 
 ## Senior Biostatistician
 
-I am a biostatistician with over five years of experience supporting clinical, epidemiologic, and public health research. I focus on clear study design, rigorous statistical modeling, and reproducible analytic workflows to support reliable scientific conclusions.
+I am a biostatistician with over five years of experience working with real-world clinical and public health data. My work focuses on translating complex observational and electronic health record data into actionable insights that support healthcare decision-making, program evaluation, and population health research.
 
-I work closely with clinicians and public health researchers to translate complex data into interpretable results that inform research, program evaluation, and evidence-based practice.
+I collaborate closely with clinicians, epidemiologists, and public health researchers to ensure that study design and statistical analyses are aligned with real-world clinical questions and operational needs.
 
-## Research Background
-HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders (including diabetes)
+---
+
+## Research Focus
+
+My work spans **HIV and infectious diseases, cardiovascular disease, neurology, and metabolic disorders**, with a focus on applying observational and longitudinal data to understand outcomes, disparities, and healthcare delivery patterns in real-world settings.
+
+I am particularly interested in studies that connect data analysis to **clinical practice, health systems, and population-level decision-making**.
+
+👉 [View selected projects →](projects.html)
+
+---
 
 ## Areas of Expertise
 
-Applied biostatistics across clinical and public health research, including study design, longitudinal and survival analysis, and causal inference methods.
+Applied biostatistics for clinical and public health research with emphasis on real-world data and decision-oriented analysis.
 
-- Regression modeling (GLM, GLMM)
-- Longitudinal data analysis
-- Survival analysis
-- Causal inference using inverse probability of treatment weighting (IPTW)
-- Study design and power/sample size calculations
-- Penalized regression (LASSO)
-- Multiple imputation
-- Neighborhood- and multilevel data analysis
+- Study design for observational and electronic health record data  
+- Regression modeling (GLM, GLMM)  
+- Longitudinal data analysis  
+- Survival analysis  
+- Causal inference (IPTW, propensity score methods)  
+- Comparative effectiveness research  
+- Penalized regression (LASSO)  
+- Multiple imputation  
+- Multilevel and neighborhood-level analysis  
+
+---
 
 ## Tools
-R, SAS, Python, Quarto, Git, R Shiny, Markdown
+
+R · SAS · Python · Quarto · Git · R Shiny · Markdown

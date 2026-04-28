@@ -1,6 +1,5 @@
 ---
 title: "LDL-C Trends After Coronary Angiography With Fractional Flow Reserve in Obstructive vs Non-Obstructive Coronary Artery Disease"
-author: "Hyeri You"
 format: html
 editor: visual
 ---
@@ -11,7 +10,7 @@ Coronary angiography combined with fractional flow reserve (FFR) assessment is w
 
 In this study, we examined temporal trends in LDL-C and lipid-lowering therapy following invasive angiography with FFR, comparing patients with obstructive versus non-obstructive CAD over a 12-month follow-up period. The goal was to understand whether diagnostic classification influences the intensity and durability of secondary prevention efforts in real-world clinical practice.
 
----
+------------------------------------------------------------------------
 
 ## Data & Study Design
 
@@ -19,7 +18,7 @@ This retrospective cohort study included 721 patients who underwent coronary ang
 
 The study population reflected a clinically diverse cohort undergoing evaluation for both acute coronary syndrome and stable ischemic indications. Baseline demographic characteristics, comorbid cardiovascular risk factors, procedural findings, lipid values, and medication data were extracted from the electronic health record. Follow-up information was available at approximately 3, 6, and 12 months after the index angiographic assessment.
 
----
+------------------------------------------------------------------------
 
 ## Statistical Methods
 
@@ -29,7 +28,7 @@ Longitudinal LDL-C trends were evaluated across follow-up time points using nonp
 
 Lipid-lowering therapy utilization was analyzed descriptively across time points, and multivariable logistic regression was used to evaluate the association between CAD classification and major adverse cardiovascular events (MACE) over 12 months.
 
----
+------------------------------------------------------------------------
 
 ## Key Findings
 
@@ -41,7 +40,7 @@ Patterns of lipid-lowering therapy mirrored these findings. Although statin init
 
 In parallel, patients with obstructive CAD experienced higher rates of major adverse cardiovascular events over 12 months, reflecting their higher baseline disease burden. Nevertheless, both groups demonstrated non-trivial event rates, underscoring persistent residual cardiovascular risk across the spectrum of CAD severity.
 
----
+------------------------------------------------------------------------
 
 ## Analytical Challenges & Decisions
 
@@ -51,7 +50,7 @@ Another challenge involved distinguishing angiographically obstructive disease f
 
 Finally, missing follow-up lipid measurements and differences in patient retention over time required careful interpretation of longitudinal trends, particularly at 12 months.
 
----
+------------------------------------------------------------------------
 
 ## Impact
 
