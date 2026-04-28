@@ -1,8 +1,8 @@
 ---
-title: "about Me"
+title: "About Me"
 ---
-I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. My work focuses on analyzing large-scale surveillance and administrative health datasets to better understand health outcomes and disparities.
+I hold a Master’s degree in Epidemiology and Biostatistics from the University of California, San Francisco (UCSF) and have over five years of experience applying statistical methods to real-world clinical and public health data. My work focuses on analyzing large-scale surveillance, electronic health records, and administrative health datasets to better understand health outcomes, disparities, and patterns of healthcare utilization.
 
-I collaborate closely with clinicians, researchers, and public health stakeholders to design analytic strategies, conduct rigorous statistical analyses, and translate complex findings into clear, actionable insights. My experience includes multilevel modeling, variable selection methods, and integrating individual- and area-level data to inform program evaluation and population health initiatives.
+I collaborate closely with clinicians, researchers, and public health stakeholders to design analytic strategies, conduct rigorous statistical analyses, and translate complex findings into clear, actionable insights that can inform clinical practice and public health decision-making. My experience includes multilevel modeling, variable selection methods, and integrating individual- and area-level data to support program evaluation and population health research.
 
-I am particularly interested in using data to identify disparities, improve access to care, and support evidence-based decision-making in public health practice. I prioritize reproducible, efficient w
+I am particularly interested in using data to identify health disparities, improve access to care, and support evidence-based decision-making in public health and healthcare systems. I prioritize reproducible and efficient analytic workflows that can be directly applied to real-world public health and clinical questions.
