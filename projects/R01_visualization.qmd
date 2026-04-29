@@ -12,12 +12,12 @@ This project evaluates whether HIV transmission clustering is associated with di
 - **Population:** People with HIV (PWH) diagnosed in Miami-Dade County (2019–2021)  
 - **Unit of analysis:** ZIP Code–level aggregation  
 
-**Outcomes:**
+**Outcomes:**  
 - Viral non-suppression  
 - In-care status  
 - Late diagnosis  
 
-**Stratification:**
+**Stratification:**  
 - Clustered vs unclustered vs non-sequenced groups  
 - Race, age, transmission risk, diagnosis stage  
 

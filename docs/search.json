@@ -137,7 +137,7 @@
     "href": "projects/R01_visualization.html#data-study-design",
     "title": "HIV Clustering and Geographic Disparities in Care Outcomes (Miami-Dade, 2019–2021)",
     "section": "Data & Study Design",
-    "text": "Data & Study Design\n\nStudy design: Descriptive, cross-sectional analysis of HIV surveillance data (2019–2021)\n\nPopulation: People with HIV (PWH) diagnosed in Miami-Dade County (2019–2021)\n\nUnit of analysis: ZIP Code–level aggregation\n\nOutcomes: - Viral non-suppression\n- In-care status\n- Late diagnosis\nStratification: - Clustered vs unclustered vs non-sequenced groups\n- Race, age, transmission risk, diagnosis stage"
+    "text": "Data & Study Design\n\nStudy design: Descriptive, cross-sectional analysis of HIV surveillance data (2019–2021)\n\nPopulation: People with HIV (PWH) diagnosed in Miami-Dade County (2019–2021)\n\nUnit of analysis: ZIP Code–level aggregation\n\nOutcomes:\n- Viral non-suppression\n- In-care status\n- Late diagnosis\nStratification:\n- Clustered vs unclustered vs non-sequenced groups\n- Race, age, transmission risk, diagnosis stage"
   },
   {
     "objectID": "projects/R01_visualization.html#statistical-methods",
